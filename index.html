@@ -6646,7 +6646,7 @@ try { const r = localStorage.getItem(KEY); if (r) S = Object.assign(S, JSON.pars
 if (!S.srs) S.srs = {}; if (!S.days) S.days = {}; if (!S.notes) S.notes = {};
 const save = () => { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} };
 const unlocked = n => n === 1 || !!S.passed[n - 1];
-const ui = { rate: 0.9, playing: false, zh: false, w: null, quiz: null, rv: null, cz: null, resetArm: false, q: null, bf: { t: 0, c: "all" }, bo: null, last: "" };
+const ui = { cast: true, rate: 0.9, playing: false, zh: false, w: null, quiz: null, rv: null, cz: null, resetArm: false, q: null, bf: { t: 0, c: "all" }, bo: null, last: "" };
 
 /* ---------- helpers ---------- */
 const $ = s => document.querySelector(s);
@@ -6662,6 +6662,7 @@ const ICON = {
 let toastT;
 function toast(t) { const el = $("#toast"); el.textContent = t; el.classList.add("on"); clearTimeout(toastT); toastT = setTimeout(() => el.classList.remove("on"), 2600); }
 
+const VMAP = {"1:4":["Male"],"1:8":["Felix"],"1:12":["Finn","Finn"],"1:13":["Finn"],"1:14":["Finn"],"1:15":["Finn"],"1:16":["Felix"],"1:17":["Finn"],"1:18":["Felix"],"1:19":["Finn"],"2:4":["Finn","Finn"],"2:6":["Felix"],"2:7":["Finn"],"2:8":["Felix","Felix"],"2:10":["Finn"],"2:14":["Felix","Felix"],"3:1":["Maeve","Maeve"],"3:3":["Seamus"],"3:4":["Seamus"],"3:7":["Declan"],"3:8":["Declan"],"3:10":["Felix"],"3:11":["Declan","Declan"],"3:12":["Seamus"],"3:13":["Finn","Felix","Finn","Felix","Felix"],"4:3":["Felix"],"4:6":["Finn","Finn"],"4:7":["Felix","Felix","Finn","Felix"],"4:8":["Finn"],"4:9":["Felix","Finn","Felix"],"4:10":["Felix","Felix"],"4:11":["Felix","Felix"],"4:12":["Finn"],"4:13":["Male"],"4:15":["Felix"],"4:16":["Finn"],"4:17":["Felix"],"4:19":["Finn","Finn","Felix","Felix"],"4:20":["Felix","Felix"],"5:1":["Maeve","Maeve","Maeve"],"5:6":["Finn","Finn"],"5:7":["Felix","Felix"],"5:8":["Finn","Finn"],"5:11":["Finn"],"5:12":["Felix","Felix"],"5:13":["Finn","Finn"],"6:3":["Desmond"],"6:6":["Felix","Desmond","Desmond"],"6:7":["Felix"],"6:8":["Felix","Felix"],"6:9":["Felix"],"6:10":["Male","Felix","Felix"],"6:11":["Felix"],"7:2":["Felix","Felix"],"7:3":["Felix","Felix"],"7:4":["Finn"],"7:6":["Felix"],"7:7":["Finn","Felix"],"7:9":["Felix","Felix"],"7:10":["Finn","Finn"],"7:11":["Felix"],"7:15":["Felix","Finn","Finn"],"8:2":["Felix"],"8:3":["Finn"],"8:4":["Felix","Felix","Finn","Finn"],"8:14":["Female","Female"],"9:0":["Liam"],"9:2":["Felix"],"9:3":["Finn","Finn","Felix"],"9:4":["Felix"],"9:6":["Felix","Felix"],"9:7":["Felix","Felix"],"9:8":["Finn","Finn"],"9:9":["Felix"],"9:10":["Felix","Felix"],"9:12":["Felix"],"9:13":["Felix","Felix"],"9:14":["Finn","Finn"],"10:1":["Finn"],"10:2":["Felix","Felix"],"10:3":["Felix"],"10:4":["Felix","Finn"],"10:5":["Felix","Felix"],"10:9":["Male"],"10:10":["Felix","Felix"],"10:11":["Male","Felix","Felix"],"10:13":["Male"],"10:17":["Felix","Felix","Finn"],"11:3":["Felix"],"11:4":["Female"],"11:5":["Felix"],"11:6":["Female","Female"],"11:9":["Felix"],"11:10":["Felix"],"11:11":["Finn"],"12:3":["Felix"],"12:4":["Finn"],"12:5":["Felix"],"12:6":["Finn","Finn"],"12:8":["Felix","Felix"],"12:9":["Finn","Finn"],"13:0":["MacDonald"],"13:2":["Felix"],"13:3":["MacDonald","MacDonald"],"13:4":["MacDonald"],"13:6":["Finn","Finn"],"13:7":["MacDonald","MacDonald"],"13:9":["Felix"],"14:2":["Finn","Finn"],"14:3":["Felix","Felix"],"14:4":["Finn"],"14:5":["Finn","Finn","Felix","Felix","Felix"],"14:6":["Felix","Felix"],"14:7":["Finn","Felix","Felix"],"15:4":["Female"],"15:6":["Felix"],"15:8":["Male"],"15:9":["Finn"],"15:11":["Female"],"15:15":["Finn","Finn"],"15:16":["Felix","Finn","Finn","Felix","Felix"],"15:17":["Finn","Finn"]};
 /* ---------- British English speech ---------- */
 const synth = ("speechSynthesis" in window) ? window.speechSynthesis : null;
 let gbVoice = null;
@@ -6679,11 +6680,21 @@ function loadVoices() {
 if (synth) { loadVoices(); synth.onvoiceschanged = loadVoices; }
 let tok = 0;
 const wait = ms => new Promise(r => setTimeout(r, ms));
-function say(text, rate) {
+const MALE_RE = /male(?!.*female)|Daniel|Arthur|Oliver|Ryan|George|Thomas|Rishi|Alfie|Gordon|James|Aaron|Fred/i, FEM_RE = /female|Serena|Kate|Martha|Libby|Sonia|Hazel|Susan|Fiona|Moira|Amy|Emma|Karen|Samantha|Tessa|Stephanie|Mia/i;
+const CAST = { Felix: ["m", 0.72, 0.92], Finn: ["m", 1.0, 1.0], Declan: ["m", 0.86, 0.98], Seamus: ["m", 0.6, 0.84], Liam: ["m", 1.25, 1.06], MacDonald: ["m", 0.78, 0.9], Desmond: ["m", 0.55, 0.8], Male: ["m", 0.9, 0.98], Maeve: ["f", 1.12, 1.0], Female: ["f", 0.95, 0.95] };
+const CASTORDER = Object.keys(CAST);
+function castVoice(who) {
+  const c = CAST[who]; if (!c || !synth) return null;
+  let pool = synth.getVoices().filter(v => /^en[-_](GB|IE)$/i.test(v.lang)); if (!pool.length) pool = synth.getVoices().filter(v => /^en/i.test(v.lang));
+  const mine = pool.filter(v => c[0] === "m" ? MALE_RE.test(v.name) && !FEM_RE.test(v.name) : FEM_RE.test(v.name));
+  const p = mine.length ? mine : null;
+  return p ? p[CASTORDER.filter(k => CAST[k][0] === c[0]).indexOf(who) % p.length] : gbVoice;
+}
+function say(text, rate, who) {
   return new Promise(res => {
     if (!synth) { res(); return; }
     const u = new SpeechSynthesisUtterance(text);
-    u.lang = "en-GB"; if (gbVoice) u.voice = gbVoice; u.rate = rate || ui.rate;
+    u.lang = "en-GB"; u.voice = (who && castVoice(who)) || gbVoice || null; u.rate = (rate || ui.rate) * (who && CAST[who] ? CAST[who][2] : 1); if (who && CAST[who]) u.pitch = CAST[who][1];
     u.onend = () => res(); u.onerror = () => res();
     synth.speak(u);
   });
@@ -6708,7 +6719,11 @@ async function playSentences(st, from, to) {
       const r = el.getBoundingClientRect();
       if (r.top < 80 || r.bottom > window.innerHeight - 80) el.scrollIntoView({ block: "center", behavior: "smooth" });
     }
-    await say(st.s[i]);
+    const sp = ui.cast && VMAP[st.id + ":" + i];
+    if (sp) {
+      const parts = st.s[i].split(/(“[^”]*”)/); let q = 0;
+      for (const t of parts) { if (my !== tok) return; if (!t.trim()) continue; if (/^“/.test(t)) await say(t, 0, sp[q++]); else await say(t); }
+    } else await say(st.s[i]);
   }
   if (my === tok) { clearNow(); setPlaying(false); }
 }
@@ -6872,7 +6887,7 @@ function readHtml(st) {
     (st.recap ? '<div class="recap"><b>前情提要</b>' + st.recap + "</div>" : "") +
     '<div class="audio"><button type="button" class="btn" id="playall" data-act="playall">' + ICON.play + '英式朗讀全文</button>' +
     '<div class="seg" role="group" aria-label="朗讀速度">' + [["慢", 0.7], ["中", 0.9], ["正常", 1.0]].map(a => '<button type="button" data-rate="' + a[1] + '" aria-pressed="' + (ui.rate === a[1]) + '">' + a[0] + "</button>").join("") + '</div>' +
-    '<button type="button" class="btn ghost" data-act="togglezh" aria-pressed="' + ui.zh + '">中文對照</button><p class="voice" id="voicelab"></p></div>' +
+    '<button type="button" class="btn ghost" data-act="togglezh" aria-pressed="' + ui.zh + '">中文對照</button><button type="button" class="btn ghost" data-act="togglecast" aria-pressed="' + ui.cast + '">角色分聲</button><p class="voice" id="voicelab"></p></div>' +
     '<div class="passage">' + body + "</div>" +
     '<div class="wordcard" id="wordcard">' + wordCardHtml(st, ui.w && ui.w.sid === st.id ? ui.w.i : null) + "</div>" +
     '<p class="next"><b>' + (st.id < TOTAL ? "下一章預告" : "") + "</b>" + st.next + "</p>" +
@@ -7076,6 +7091,7 @@ document.addEventListener("click", e => {
   const act = a.dataset.act, r = route();
   if (act === "closesheet") closeSheet();
   else if (act === "note") { toggleNote(ui.sheet); $("#sheet").innerHTML = sheetHtml(ui.sheet); if (route().v === "notes" || route().v === "bank") render(false); }
+  else if (act === "togglecast") { ui.cast = !ui.cast; a.setAttribute("aria-pressed", String(ui.cast)); toast(ui.cast ? "角色分聲：開（依角色換音高與語速）" : "角色分聲：關"); }
   else if (act === "sharecard") openShare(null);
   else if (act === "sharequiz") openShare({ st: STORIES[r.id - 1], score: ui.quiz.score });
   else if (act === "doshare") doShare();
