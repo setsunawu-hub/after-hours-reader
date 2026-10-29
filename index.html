@@ -65,14 +65,14 @@ h1, h2, h3, p { margin: 0; }
 .tabs button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
 
 /* the line: fifteen stations */
-.line { position: relative; list-style: none; margin: 30px 0 0; padding: 0; display: grid; grid-template-columns: repeat(15, 1fr); }
-.line::before, .line .fill { content: ""; position: absolute; top: 8px; height: 5px; left: 3.4%; border-radius: 3px; }
+.line { position: relative; list-style: none; margin: 30px 0 0; padding: 0; display: grid; grid-template-columns: repeat(20, 1fr); }
+.line::before, .line .fill { content: ""; position: absolute; top: 6px; height: 4px; left: 2.5%; border-radius: 3px; }
 .line::before { right: 3.4%; background: var(--rule); }
-.line .fill { background: var(--accent); width: calc(93.2% * var(--p, 0)); transition: width .5s ease; }
+.line .fill { background: var(--accent); width: calc(95% * var(--p, 0)); transition: width .5s ease; }
 .st { position: relative; display: flex; justify-content: center; text-align: center; min-width: 0; }
 .st button { border: 0; background: none; padding: 0; display: flex; flex-direction: column; align-items: center; gap: 6px; width: 100%; min-width: 0; }
 .st button:disabled { cursor: not-allowed; }
-.dot { width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; font-size: 11px; background: var(--surface); border: 2px solid var(--accent); color: var(--accent); }
+.dot { width: 17px; height: 17px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; font-size: 9px; background: var(--surface); border: 2px solid var(--accent); color: var(--accent); }
 .st.done .dot { background: var(--accent); color: var(--accent-ink); }
 .st.lock .dot { border: 2px dashed var(--muted); color: var(--muted); }
 .st.cur .dot { box-shadow: 0 0 0 4px var(--accent-soft); }
@@ -80,7 +80,7 @@ h1, h2, h3, p { margin: 0; }
 .st.lock .nm { color: var(--muted); }
 @media (min-width: 620px) {
   .line::before, .line .fill { top: 12px; }
-  .dot { width: 30px; height: 30px; font-size: 13px; }
+  .dot { width: 28px; height: 28px; font-size: 12px; }
   .st .nm { display: block; }
 }
 
@@ -6336,7 +6336,7 @@ const STORIES = [
  "title": "The Day of Judgement",
  "zh": "審判日",
  "recap": "風暴前夜，菲利克斯押上整個家族的繼承權，芬恩選擇陪他走完最後一程。",
- "next": "（連載完結）",
+ "next": "三個月後，奧康納家族打出了最後一張牌。",
  "paras": [
   [
    [
@@ -6613,6 +6613,1382 @@ const STORIES = [
    ]
   }
  ]
+},
+{
+ "id": 16,
+ "name": "The Spotlight",
+ "band": "7.0",
+ "title": "The Spotlight",
+ "zh": "法庭上的聚光燈",
+ "recap": "法官把案卷轉交檢方，但奧康納家族還有最後一張牌：一場損害賠償的終局審理。",
+ "next": "法官宣布休庭三十分鐘，走廊盡頭有人在等菲利克斯。",
+ "paras": [
+  [
+   [
+    "Three months after the judge’s referral, the dome of the High Court in Dublin hung over a hall as tense as a drawn bowstring. It was the final hearing of the O’Connor family trust’s claim for damages, and the gallery had been full since seven in the morning.",
+    "法官移送案卷三個月後，都柏林高等法院的穹頂籠罩著一座緊繃如滿弓的大廳。這是奧康納家族信託提出損害賠償的終局審理，旁聽席從早上七點就已坐滿。"
+   ]
+  ],
+  [
+   [
+    "For the claimants, the family’s chief counsel rose and read slowly, handing the judge one carefully edited internal audit after another. He needed only one picture: a disloyal heir who had leaked commercial secrets and ruined an international supply chain.",
+    "原告方的首席大律師起身，緩緩宣讀，一份接一份把精心剪裁的內部審計報告呈給法官。他只需要一幅畫面：一個洩露商業機密、毀掉國際供應鏈的不忠繼承人。"
+   ],
+   [
+    "“Mr Felix O’Connor,” he concluded, “has not only breached the confidentiality agreement of the family trust. He has also encouraged an unregistered assistant to tamper with the European green-channel data model, and the loss to the Dublin head office and its warehouse in London runs to several million euros.”",
+    "「菲利克斯·奧康納先生，」他總結道，「不僅違反了家族信託的保密協議，還縱容一名未登記的助理竄改歐盟綠色通關的數據模型，使都柏林總部及其倫敦倉庫的損失高達數百萬歐元。」"
+   ]
+  ],
+  [
+   [
+    "A low murmur rose in the gallery. Desmond O’Connor sat in the front row, white-haired and unmoved, wearing the faint smile of a man who believes the ending is already written. Two rows behind him, MacDonald sat beside his own solicitor, pale and silent. Since the referral to the prosecutors, the family had stopped sitting next to him.",
+    "旁聽席響起一陣低低的議論。德斯蒙德·奧康納坐在前排，白髮、紋風不動，帶著那種相信結局早已寫定的人才有的淺笑。他身後兩排，麥克唐納與自己的事務律師並肩而坐，臉色蒼白，一言不發。自從案卷移送檢方後，家族就不再坐在他旁邊了。"
+   ]
+  ],
+  [
+   [
+    "At the defendant’s table Felix did not lift his eyes. He turned a page, then looked at the man beside him. “Our turn, Assistant Mercer,” he said, his voice low and level.",
+    "被告席上，菲利克斯連眼皮都沒抬。他翻過一頁，才看向身旁的人。「輪到我們了，默瑟助理，」他說，聲音低沉而平穩。"
+   ],
+   [
+    "Finn nodded and pushed his gold-rimmed glasses up his nose. He rose without a glance at the claimants’ table, handed an encrypted drive to the court officer, and a stream of clean data lit the great screen.",
+    "芬恩點頭，把金邊眼鏡往鼻樑上推了推。他起身，沒看原告席一眼，把一塊加密硬碟交給法警，一組清晰的數據流照亮了大螢幕。"
+   ],
+   [
+    "“My lord, the audit reports of the claimants omit the most important fact.” His voice was clear and firm through the microphone. In his dark-blue suit, with a straight spine and the cold poise of someone weathered by storms, he drew every eye in the room.",
+    "「法官大人，原告方的審計報告遺漏了最重要的事實。」他的聲音透過麥克風清晰而堅定。身穿深藍色西裝，脊背挺直，帶著歷經風雨磨練出的冷靜氣場，他吸引了全場的目光。"
+   ]
+  ],
+  [
+   [
+    "On the screen appeared a map of money: three years of hidden flows between a transit warehouse in London and a shell company in the Caribbean. “According to first-hand data from the southern Irish ports and EU customs, the shell entities of the O’Connor family have for years used gaps in cross-border logistics to issue fictitious trade invoices. Their purpose was never ordinary business. It was systematic capital flight and tax evasion. The ‘loss’ claimed in London is the value of goods that never existed.”",
+    "螢幕上出現一張資金地圖：倫敦一座中轉倉與加勒比海一家空殼公司之間，長達三年的隱祕資金流向。「根據愛爾蘭南部港口與歐盟海關的第一手數據，奧康納家族名下的空殼實體多年來利用跨國物流的漏洞，開立虛假貿易發票。他們的目的從來不是正常經營，而是系統性的資本外逃與逃稅。倫敦那筆所謂的『損失』，是根本不存在的貨物價值。」"
+   ]
+  ],
+  [
+   [
+    "The hall fell into a dead silence. The claimants’ counsel went white, sprang to his feet and cried, “Objection! This is a baseless accusation, and it touches irrelevant commercial privacy!”",
+    "大廳陷入死一般的寂靜。原告律師臉色煞白，猛地站起來大喊：「異議！這是無端指控，而且涉及無關的商業隱私！」"
+   ],
+   [
+    "“Overruled.” The presiding judge swept a cold glance across the claimants’ table. “The chain of evidence is complete, and the material falls within the Protected Disclosures Act and the European anti-money-laundering directives. The court will allow the statement to continue.”",
+    "「異議無效。」主審法官冷冷掃了原告席一眼。「證據鏈完整，這些材料屬於《保護性揭露法》與歐盟反洗錢指令的範圍。本庭允許繼續陳述。」"
+   ]
+  ],
+  [
+   [
+    "Finn gave them no time to breathe. He moved to the next slide. “Every compliance review we carried out in the Cork branch was lawful, and it was done to stop this laundering network from spreading. The ‘loss’ the claimants describe is the lie that appears when an illegal chain of assets is cut.”",
+    "芬恩沒有給他們喘息的機會。他切到下一張投影片。「我們在科克分所執行的每一項合規審查都合法，目的正是阻止這個洗錢網絡繼續蔓延。原告所說的『損失』，是非法資產鏈被切斷時冒出來的謊言。」"
+   ],
+   [
+    "Then he enlarged a page of the claimants’ own audit. “And this audit has been trimmed. Pages forty-one to fifty-eight were removed. I hold the originals. The authorisation at the bottom of page fifty-eight is not MacDonald’s.” He paused. “It is Mr Desmond O’Connor’s.”",
+    "接著他放大了原告自己那份審計報告的一頁。「而且這份審計被剪裁過。第四十一頁到第五十八頁被抽掉了。我手上有原件。第五十八頁底部的授權簽名，不是麥克唐納的。」他停了一下。「是德斯蒙德·奧康納先生的。」"
+   ],
+   [
+    "The reporters’ shutters rattled like hail, and the faint smile on the front row died. From that moment the trial became the public humiliation of the O’Connor family.",
+    "記者們的快門像冰雹般作響，前排那抹淺笑消失了。從這一刻起，這場審判成了奧康納家族的公開羞辱。"
+   ]
+  ]
+ ],
+ "quiz": [
+  {
+   "q": "What did the family’s counsel accuse Felix of?",
+   "o": [
+    "Breaching the trust’s confidentiality and encouraging an assistant to tamper with a data model",
+    "Stealing a shipment",
+    "Missing a hearing",
+    "Forging a visa"
+   ],
+   "a": 0,
+   "why": "He claimed Felix breached the confidentiality agreement and had an unregistered assistant tamper with the model."
+  },
+  {
+   "q": "Where did Finn’s money map show the hidden flows going?",
+   "o": [
+    "Between a London transit warehouse and a Caribbean shell company",
+    "Between Cork and Galway",
+    "Between two farms",
+    "Between two banks in Dublin"
+   ],
+   "a": 0,
+   "why": "The map showed three years of flows between a London warehouse and a Caribbean shell company."
+  },
+  {
+   "q": "On what grounds did the judge overrule the objection?",
+   "o": [
+    "The evidence chain was complete and fell under disclosure and anti-money-laundering law",
+    "The jury was absent",
+    "Finn was a lawyer",
+    "The hearing was private"
+   ],
+   "a": 0,
+   "why": "She said the chain of evidence was complete and protected."
+  },
+  {
+   "q": "What was missing from the claimants’ audit?",
+   "o": [
+    "Pages forty-one to fifty-eight",
+    "The cover page",
+    "The signature of the judge",
+    "Every table"
+   ],
+   "a": 0,
+   "why": "Those pages had been removed."
+  },
+  {
+   "q": "Whose authorisation was at the bottom of page fifty-eight?",
+   "o": [
+    "Desmond O’Connor’s",
+    "MacDonald’s",
+    "Felix’s",
+    "Maeve’s"
+   ],
+   "a": 0,
+   "why": "Finn said it was Desmond O’Connor’s."
+  }
+ ],
+ "vocab": [
+  {
+   "w": "fictitious",
+   "pos": "adj.",
+   "zh": "虛構的"
+  },
+  {
+   "w": "shell company",
+   "pos": "n.",
+   "zh": "空殼公司"
+  },
+  {
+   "w": "tax evasion",
+   "pos": "n.",
+   "zh": "逃稅"
+  },
+  {
+   "w": "capital flight",
+   "pos": "n.",
+   "zh": "資本外逃"
+  },
+  {
+   "w": "network",
+   "pos": "n.",
+   "zh": "網路、網絡",
+   "f": [
+    "network"
+   ]
+  },
+  {
+   "w": "data",
+   "pos": "n.",
+   "zh": "資料、數據",
+   "f": [
+    "data"
+   ]
+  },
+  {
+   "w": "privacy",
+   "pos": "n.",
+   "zh": "隱私",
+   "f": [
+    "privacy"
+   ]
+  },
+  {
+   "w": "encrypt",
+   "pos": "v.",
+   "zh": "加密",
+   "f": [
+    "encrypted"
+   ]
+  },
+  {
+   "w": "deadline",
+   "pos": "n.",
+   "zh": "截止期限",
+   "f": [
+    "dead"
+   ]
+  },
+  {
+   "w": "tax",
+   "pos": "n.",
+   "zh": "稅",
+   "f": [
+    "tax"
+   ]
+  },
+  {
+   "w": "evidence",
+   "pos": "n.",
+   "zh": "證據",
+   "f": [
+    "evidence"
+   ]
+  },
+  {
+   "w": "conclude",
+   "pos": "v.",
+   "zh": "下結論、結束",
+   "f": [
+    "concluded"
+   ]
+  },
+  {
+   "w": "comply",
+   "pos": "v.",
+   "zh": "遵守",
+   "f": [
+    "compliance"
+   ]
+  },
+  {
+   "w": "customs",
+   "pos": "n.",
+   "zh": "海關",
+   "f": [
+    "customs"
+   ]
+  },
+  {
+   "w": "logistics",
+   "pos": "n.",
+   "zh": "物流",
+   "f": [
+    "logistics"
+   ]
+  },
+  {
+   "w": "supplier",
+   "pos": "n.",
+   "zh": "供應商",
+   "f": [
+    "supply"
+   ]
+  },
+  {
+   "w": "invoice",
+   "pos": "n.",
+   "zh": "發票、請款單",
+   "f": [
+    "invoices"
+   ]
+  },
+  {
+   "w": "audit",
+   "pos": "n.",
+   "zh": "稽核",
+   "f": [
+    "audit"
+   ]
+  },
+  {
+   "w": "compliance",
+   "pos": "n.",
+   "zh": "合規、遵守",
+   "f": [
+    "compliance"
+   ]
+  },
+  {
+   "w": "directive",
+   "pos": "n.",
+   "zh": "指令",
+   "f": [
+    "directives"
+   ]
+  },
+  {
+   "w": "disclose",
+   "pos": "v.",
+   "zh": "揭露、公開",
+   "f": [
+    "disclosures"
+   ]
+  }
+ ]
+},
+{
+ "id": 17,
+ "name": "The Recess",
+ "band": "7.0",
+ "title": "The Recess",
+ "zh": "休庭時分的密室交鋒",
+ "recap": "芬恩在法庭上亮出被抽走的審計頁，簽名屬於德斯蒙德本人。",
+ "next": "三十分鐘後，法庭重新開門，法官手裡拿著判決書。",
+ "paras": [
+  [
+   [
+    "The judge struck the gavel and announced a recess of thirty minutes, so that the court could consider its decision.",
+    "法官敲下槌子，宣布休庭三十分鐘，讓法庭考慮裁決。"
+   ],
+   [
+    "On the claimants’ side there was chaos. Desmond sat very straight and spoke to no one, while the family counsel was gathering his papers with shaking hands.",
+    "原告那一側亂成一團。德斯蒙德坐得筆直，不與任何人說話，家族的大律師則用發抖的手收拾他的文件。"
+   ],
+   [
+    "Shareholders whispered about penalties, about a subsidiary that might face bankruptcy, and about who would be held accountable for the fraud.",
+    "股東們低聲議論著罰款、可能破產的子公司，以及誰要為這場詐欺負責。"
+   ]
+  ],
+  [
+   [
+    "Felix and Finn walked side by side out of the courtroom and down the long corridor. At the far end Maeve was waiting with a folded note. “MacDonald’s solicitor has asked to negotiate with the prosecutors,” she said quietly. “His client is ready to make a statement about the corruption behind the pages that went missing.”",
+    "菲利克斯和芬恩並肩走出法庭，穿過長長的走廊。走廊盡頭，梅芙拿著一張摺好的紙條等著。「麥克唐納的事務律師要求與檢察官協商，」她輕聲說。「他的當事人準備就那些失蹤頁面背後的貪腐作出陳述。」"
+   ],
+   [
+    "“Fear makes the best witness,” said Felix, taking the note. “Scrutiny will do the rest. Let them carry it from here.” Maeve smiled, said nothing, and opened the door of a quiet lawyers’ lounge for them.",
+    "「恐懼造就最好的證人，」菲利克斯接過紙條說。「剩下的由嚴格的審查來完成。接下來讓他們去辦。」梅芙微微一笑，沒說什麼，替他們打開了一間安靜的律師休息室的門。"
+   ]
+  ],
+  [
+   [
+    "The moment the door closed, the pressure of the courtroom broke. Felix let out a long breath, crossed the room in a few strides and pulled Finn into his arms. He bent his head and kissed him hard.",
+    "門一關上，法庭裡的壓迫感就被打破了。菲利克斯長長吐出一口氣，幾步走到芬恩面前，把他擁進懷裡。他低下頭，重重地吻了他。"
+   ],
+   [
+    "It was a kiss full of relief and fierce gratitude, domineering and yet gentle, and Finn was startled only for a moment. He set down his folder, wound his arms around Felix’s neck, and answered, awkward and fierce, the kiss that had waited so long in the spotlight of the court.",
+    "那是一個滿是慶幸與激動的吻，霸道卻又溫柔，芬恩只愣了一瞬。他放下資料夾，雙手環住菲利克斯的脖子，生澀而熱烈地回應這個在法院聚光燈下壓抑已久的吻。"
+   ],
+   [
+    "When their breath grew short, they leaned forehead against forehead and breathed together.",
+    "直到呼吸變得急促，兩人額頭抵著額頭，一起喘息。"
+   ]
+  ],
+  [
+   [
+    "“In there you were as calm as a veteran senior counsel,” said Felix, and his eyes held an open smile and an open admiration. His thumb brushed Finn’s cheek. “I almost stood up to applaud.”",
+    "「你在裡面冷靜得像一位身經百戰的首席大律師，」菲利克斯說，眼裡帶著毫不掩飾的笑意與讚賞。他的拇指輕撫過芬恩的臉頰。「我差點站起來鼓掌。」"
+   ],
+   [
+    "“Spare me.” Finn teased, but the tips of his ears turned red as he pushed up his glasses. “That data model cost me three sleepless nights, cleaning up your mess. And the old O’Connor capitalists are rotten to the bone.”",
+    "「少來。」芬恩嘴上調侃，耳尖卻紅了，推了推眼鏡。「那套數據模型，是我熬了三個通宵替你收拾爛攤子換來的。而且奧康納家那群老派資本家，爛到骨子裡了。」"
+   ],
+   [
+    "“Their rotten days are over,” said Felix, and his eyes turned cold and resolute. “When the verdict comes, the family board will be forced to restructure, and every stakeholder will demand a transparent account. No more disputes over who owns Cork, and I will finally be free of that hollow shell of a trust.”",
+    "「他們爛透的日子到頭了，」菲利克斯說，眼神轉為冷冽而決絕。「判決一下來，家族理事會就會被迫重組，每一位利害關係人都會要求一份透明的交代。不會再有誰擁有科克的爭執，而我終於能擺脫那個名存實亡的信託枷鎖。」"
+   ]
+  ]
+ ],
+ "quiz": [
+  {
+   "q": "What did Maeve tell Felix in the corridor?",
+   "o": [
+    "MacDonald’s solicitor wanted to see the prosecutors",
+    "The judge had resigned",
+    "Desmond had left Ireland",
+    "The hearing was cancelled"
+   ],
+   "a": 0,
+   "why": "MacDonald was ready to make a statement about the missing pages."
+  },
+  {
+   "q": "How did Felix describe a frightened man?",
+   "o": [
+    "As the best witness",
+    "As a liar",
+    "As a threat",
+    "As a fool"
+   ],
+   "a": 0,
+   "why": "He said fear makes the best witness."
+  },
+  {
+   "q": "Where did Felix and Finn go during the recess?",
+   "o": [
+    "To a quiet lawyers’ lounge",
+    "To a bar",
+    "To the harbour",
+    "To the press room"
+   ],
+   "a": 0,
+   "why": "Maeve opened a lawyers’ lounge for them."
+  },
+  {
+   "q": "What did Finn say the data model had cost him?",
+   "o": [
+    "Three sleepless nights",
+    "A month’s rent",
+    "His visa",
+    "His job"
+   ],
+   "a": 0,
+   "why": "It cost him three nights without sleep."
+  },
+  {
+   "q": "What did Felix expect after the verdict?",
+   "o": [
+    "The family board would be forced to restructure and he would be free of the trust",
+    "He would lose his licence",
+    "He would move to London",
+    "He would retire"
+   ],
+   "a": 0,
+   "why": "He expected to be free of the hollow trust."
+  }
+ ],
+ "vocab": [
+  {
+   "w": "recess",
+   "pos": "n.",
+   "zh": "休庭"
+  },
+  {
+   "w": "data",
+   "pos": "n.",
+   "zh": "資料、數據",
+   "f": [
+    "data"
+   ]
+  },
+  {
+   "w": "verdict",
+   "pos": "n.",
+   "zh": "裁決、判決",
+   "f": [
+    "verdict"
+   ]
+  },
+  {
+   "w": "negotiate",
+   "pos": "v.",
+   "zh": "談判、協商",
+   "f": [
+    "negotiate"
+   ]
+  },
+  {
+   "w": "shareholder",
+   "pos": "n.",
+   "zh": "股東",
+   "f": [
+    "shareholders"
+   ]
+  },
+  {
+   "w": "stakeholder",
+   "pos": "n.",
+   "zh": "利害關係人",
+   "f": [
+    "stakeholder"
+   ]
+  },
+  {
+   "w": "bankruptcy",
+   "pos": "n.",
+   "zh": "破產",
+   "f": [
+    "bankruptcy"
+   ]
+  },
+  {
+   "w": "transparent",
+   "pos": "adj.",
+   "zh": "透明的",
+   "f": [
+    "transparent"
+   ]
+  },
+  {
+   "w": "accountable",
+   "pos": "adj.",
+   "zh": "須負責的",
+   "f": [
+    "accountable",
+    "account"
+   ]
+  },
+  {
+   "w": "fraud",
+   "pos": "n.",
+   "zh": "詐欺",
+   "f": [
+    "fraud"
+   ]
+  },
+  {
+   "w": "corruption",
+   "pos": "n.",
+   "zh": "貪腐",
+   "f": [
+    "corruption"
+   ]
+  },
+  {
+   "w": "penalty",
+   "pos": "n.",
+   "zh": "處罰",
+   "f": [
+    "penalties"
+   ]
+  },
+  {
+   "w": "dispute",
+   "pos": "n.",
+   "zh": "爭議、糾紛",
+   "f": [
+    "disputes"
+   ]
+  },
+  {
+   "w": "subsidiary",
+   "pos": "n.",
+   "zh": "子公司",
+   "f": [
+    "subsidiary"
+   ]
+  },
+  {
+   "w": "scrutiny",
+   "pos": "n.",
+   "zh": "嚴格審查",
+   "f": [
+    "scrutiny"
+   ]
+  }
+ ]
+},
+{
+ "id": 18,
+ "name": "The Verdict",
+ "band": "7.5",
+ "title": "The Verdict",
+ "zh": "世紀判決與財閥的崩塌",
+ "recap": "休庭室裡，兩人終於在聚光燈之外吻了彼此，等待判決。",
+ "next": "幾天後，科克分所迎來久違的寧靜。",
+ "paras": [
+  [
+   [
+    "Thirty minutes later the doors of the courtroom opened again. The judge entered with a grave face and read the final judgment aloud.",
+    "三十分鐘後，法庭的門再次打開。法官神情嚴肅地入席，宣讀最終判決。"
+   ],
+   [
+    "“…The court dismisses the claim of the O’Connor family trust against the defendant, with costs. The disclosures made by the defendant were protected. The court further finds that the trust was used to conceal the transfers shown in evidence. It orders the accounts named in the schedule frozen with immediate effect, and it declares void the resolutions that suspended Mr O’Connor and seized the assets of the Cork branch. It lifts the injunction that had barred the Cork branch from transferring its data, and it holds the trustees liable to pay compensation to the Lee Valley farmers and a penalty to the Revenue. The court notes with concern the evidence of fraud and corruption in the preparation of the audit, and it imposes a sanction on the claimants’ counsel. The branch is restored to full control of its own assets and operations under an independent supervisor appointed by this court. The file, together with the pages that were removed, will be sent again to the Director of Public Prosecutions.”",
+    "「……本庭駁回奧康納家族信託對被告的請求，並由原告負擔訴訟費用。被告所作的揭露受到保護。本庭另認定，該信託被用於隱匿證據中所示的資金轉移。本庭下令即日起凍結附表所列帳戶，並宣告停止奧康納先生職務、扣押科克分所資產的各項決議無效。本庭撤銷禁止科克分所傳送數據的禁制令，並認定受託人須向李河谷農民支付賠償，向稅務機關繳納罰款。本庭關切地注意到審計報告編製過程中存在詐欺與貪腐的證據，並對原告的大律師施以制裁。科克分所恢復對自身資產與營運的完全控制，由本庭指派的獨立監督人監督。案卷連同被抽走的頁面，將再次移送公訴總監。」"
+   ]
+  ],
+  [
+   [
+    "“Knock!” The gavel fell, and the dust settled.",
+    "「叩！」法槌落下，塵埃落定。"
+   ],
+   [
+    "An uproar broke out in the gallery. Several family shareholders turned the colour of ash and left the hall on the arms of their attendants. MacDonald rose without a word and walked, with his solicitor, straight towards the prosecutors’ table.",
+    "旁聽席一片譁然。幾位家族股東臉色灰敗，由隨從攙扶著離開大廳。麥克唐納一言不發地站起，與他的事務律師一起，徑直走向檢察官席。"
+   ],
+   [
+    "Desmond stayed in his seat until the hall was almost empty. As he passed the defendant’s table, he stopped. “Your mother would have done the same,” he said quietly, and he did not wait for an answer. Felix stood very still. It was the first time in years that his father had spoken of her.",
+    "德斯蒙德一直坐到大廳幾乎空了。經過被告席時，他停下腳步。「你母親也會這麼做，」他輕聲說，沒有等待回答。菲利克斯一動不動地站著。這是多年來，他父親第一次提起她。"
+   ]
+  ],
+  [
+   [
+    "When Felix and Finn stepped out of the court building again, the reporters surged up like a tide, and flashbulbs and microphones swallowed them.",
+    "當菲利克斯和芬恩再次走出法院大門，記者像潮水般湧上來，閃光燈與麥克風將他們淹沒。"
+   ],
+   [
+    "“Mr O’Connor, what does the end of the O’Connor family’s era mean to you?” “Mr Mercer, as the data analyst at the heart of this case, will you stay in Ireland?” “Will the ruling reopen the export routes for the farmers’ cargo, and what does the trust’s bankruptcy mean for its stakeholders?”",
+    "「奧康納先生，對於奧康納家族時代的結束，您有什麼看法？」「默瑟先生，身為這起案件核心的數據分析師，您會留在愛爾蘭發展嗎？」「這項判決會重新打開農民貨物的出口路線嗎？信託的破產對其利害關係人又意味著什麼？」"
+   ],
+   [
+    "Felix answered none of them. He simply put out a hand, drew Finn in by the shoulder, and shielded him through the crowd to the black car that had been waiting for hours. The door closed and shut out the noise and the flashing lights, as if they belonged to another world.",
+    "菲利克斯一個問題也沒有回答。他只是伸出手，攬住芬恩的肩膀，護著他穿過人群，走向等候多時的黑色轎車。車門關上，把喧囂與閃光燈隔絕在另一個世界。"
+   ]
+  ]
+ ],
+ "quiz": [
+  {
+   "q": "What did the court do with the family trust’s claim?",
+   "o": [
+    "Dismissed it with costs",
+    "Granted it",
+    "Postponed it",
+    "Sent it to Cork"
+   ],
+   "a": 0,
+   "why": "The claim was dismissed with costs."
+  },
+  {
+   "q": "What happened to the accounts named in the schedule?",
+   "o": [
+    "They were frozen with immediate effect",
+    "They were closed",
+    "They were sold",
+    "They were given to Felix"
+   ],
+   "a": 0,
+   "why": "The court ordered them frozen."
+  },
+  {
+   "q": "Who now supervises the Cork branch?",
+   "o": [
+    "An independent supervisor appointed by the court",
+    "MacDonald",
+    "Desmond",
+    "The family board"
+   ],
+   "a": 0,
+   "why": "The court appointed an independent supervisor."
+  },
+  {
+   "q": "What did Desmond say as he passed Felix?",
+   "o": [
+    "“Your mother would have done the same.”",
+    "“You will regret this.”",
+    "“Come home.”",
+    "Nothing at all"
+   ],
+   "a": 0,
+   "why": "He spoke of Felix’s mother for the first time in years."
+  },
+  {
+   "q": "How did Felix respond to the reporters?",
+   "o": [
+    "He answered none and shielded Finn to the car",
+    "He gave a long speech",
+    "He called the police",
+    "He walked away alone"
+   ],
+   "a": 0,
+   "why": "He ignored the questions and led Finn to the car."
+  }
+ ],
+ "vocab": [
+  {
+   "w": "supervisor",
+   "pos": "n.",
+   "zh": "監督人"
+  },
+  {
+   "w": "restore",
+   "pos": "v.",
+   "zh": "恢復、修復",
+   "f": [
+    "restored"
+   ]
+  },
+  {
+   "w": "data",
+   "pos": "n.",
+   "zh": "資料、數據",
+   "f": [
+    "data"
+   ]
+  },
+  {
+   "w": "revenue",
+   "pos": "n.",
+   "zh": "收入、歲入",
+   "f": [
+    "revenue"
+   ]
+  },
+  {
+   "w": "export",
+   "pos": "v.",
+   "zh": "出口",
+   "f": [
+    "export"
+   ]
+  },
+  {
+   "w": "sanction",
+   "pos": "n.",
+   "zh": "制裁",
+   "f": [
+    "sanction"
+   ]
+  },
+  {
+   "w": "evidence",
+   "pos": "n.",
+   "zh": "證據",
+   "f": [
+    "evidence"
+   ]
+  },
+  {
+   "w": "analyse",
+   "pos": "v.",
+   "zh": "分析",
+   "f": [
+    "analyst"
+   ]
+  },
+  {
+   "w": "transfer",
+   "pos": "v.",
+   "zh": "轉移、調動",
+   "f": [
+    "transfers",
+    "transferring"
+   ]
+  },
+  {
+   "w": "liability",
+   "pos": "n.",
+   "zh": "法律責任",
+   "f": [
+    "liable"
+   ]
+  },
+  {
+   "w": "compensation",
+   "pos": "n.",
+   "zh": "賠償",
+   "f": [
+    "compensation"
+   ]
+  },
+  {
+   "w": "shareholder",
+   "pos": "n.",
+   "zh": "股東",
+   "f": [
+    "shareholders"
+   ]
+  },
+  {
+   "w": "stakeholder",
+   "pos": "n.",
+   "zh": "利害關係人",
+   "f": [
+    "stakeholders"
+   ]
+  },
+  {
+   "w": "bankruptcy",
+   "pos": "n.",
+   "zh": "破產",
+   "f": [
+    "bankruptcy"
+   ]
+  },
+  {
+   "w": "accountable",
+   "pos": "adj.",
+   "zh": "須負責的",
+   "f": [
+    "accounts"
+   ]
+  },
+  {
+   "w": "fraud",
+   "pos": "n.",
+   "zh": "詐欺",
+   "f": [
+    "fraud"
+   ]
+  },
+  {
+   "w": "corruption",
+   "pos": "n.",
+   "zh": "貪腐",
+   "f": [
+    "corruption"
+   ]
+  },
+  {
+   "w": "penalty",
+   "pos": "n.",
+   "zh": "處罰",
+   "f": [
+    "penalty"
+   ]
+  },
+  {
+   "w": "cargo",
+   "pos": "n.",
+   "zh": "貨物",
+   "f": [
+    "cargo"
+   ]
+  },
+  {
+   "w": "audit",
+   "pos": "n.",
+   "zh": "稽核",
+   "f": [
+    "audit"
+   ]
+  },
+  {
+   "w": "injunction",
+   "pos": "n.",
+   "zh": "禁制令",
+   "f": [
+    "injunction"
+   ]
+  },
+  {
+   "w": "trustee",
+   "pos": "n.",
+   "zh": "受託人",
+   "f": [
+    "trustees"
+   ]
+  },
+  {
+   "w": "disclose",
+   "pos": "v.",
+   "zh": "揭露、公開",
+   "f": [
+    "disclosures"
+   ]
+  },
+  {
+   "w": "seize",
+   "pos": "v.",
+   "zh": "扣押、奪取",
+   "f": [
+    "seized"
+   ]
+  }
+ ]
+},
+{
+ "id": 19,
+ "name": "Sunset over the Harbour",
+ "band": "7.0",
+ "title": "Sunset over the Harbour",
+ "zh": "科克港口的夕陽",
+ "recap": "判決落下，家族崩塌，菲利克斯護著芬恩穿過閃光燈上了車。",
+ "next": "夜色降下，兩人走上李河畔。",
+ "paras": [
+  [
+   [
+    "A few days later the Cork branch finally knew peace again. The Atlantic wind had blown away weeks of rain, and the setting sun painted the metal containers of the harbour and the water of the River Lee a warm orange-red.",
+    "幾天後，科克分所終於又有了久違的寧靜。大西洋的風吹散了連週的陰雨，夕陽把港口的金屬貨櫃和李河的水面染成溫暖的橘紅色。"
+   ],
+   [
+    "In the office the heavy legal files had been put in order. Finn sat at his desk and uploaded the final draft of his master’s thesis, which assessed how automated ports might reshape export revenue, to the academic system of University College Cork, then let out a long, slow breath.",
+    "辦公室裡，厚重的法律卷宗已經整理妥當。芬恩坐在桌前，把碩士論文的最後定稿上傳到科克大學的學術系統，那篇論文評估了自動化港口可能如何重塑出口收入，然後長長地、緩緩地舒了一口氣。"
+   ]
+  ],
+  [
+   [
+    "“Thesis sent?”",
+    "「論文交了？」"
+   ],
+   [
+    "The low voice came from behind him. Felix carried in two cups of fresh coffee and set one on the desk. Today he had taken off his black suit and put on a navy sweater. He looked less like a partner of a cold law firm and more like a man who had been allowed to be warm.",
+    "低沉的聲音從身後傳來。菲利克斯端著兩杯剛煮好的咖啡走進來，把其中一杯放在桌上。他今天脫下了黑西裝，換上一件深藍色毛衣。他看起來不太像一間冰冷律所的合夥人，倒像一個終於被允許溫暖的人。"
+   ]
+  ],
+  [
+   [
+    "“Yes, just now.” Finn took the cup and leaned back in his chair, looking out at the sunset. “Professor Lynch, my mentor since the first week, messaged me a minute ago. She says the topic and the first-hand data impressed her, a first-class degree looks safe, and she has put my name forward for a scholarship.”",
+    "「嗯，剛送出。」芬恩端起杯子，靠在椅背上，望向窗外的夕陽。「從第一週起就指導我的林奇教授剛才傳訊息給我。她說選題和第一手數據讓她印象深刻，一等榮譽學位應該穩了，還推薦我申請獎學金。」"
+   ],
+   [
+    "“Naturally.” Felix pulled out a chair and sat beside him, his gaze resting gently on Finn. “Although I should remind the ethics committee that your data is anonymised and approved, and still the best-kept secret in Ireland.”",
+    "「那是當然。」菲利克斯拉開椅子，在他身旁坐下，目光溫柔地落在他身上。「不過我得提醒倫理委員會，你的數據是匿名化且經過核准的，而且依然是全愛爾蘭保守得最好的祕密。」"
+   ]
+  ],
+  [
+   [
+    "Finn laughed softly and turned to meet his eyes. “Seriously, Felix. You have been struck off the heir list, your trust dividends are frozen, and the grand barrister from Dublin has turned into a ‘disappointed middle-aged man’ living on the thin profits of a Cork branch. No regrets?”",
+    "芬恩輕笑一聲，轉頭迎上他的目光。「說真的，菲利克斯。你被劃掉繼承人名單，信託的紅利被凍結，堂堂都柏林的大律師變成了靠科克分所微薄利潤過日子的『失意中年人』。不後悔嗎？」"
+   ],
+   [
+    "Felix raised an eyebrow and leaned a little closer. “A disappointed middle-aged man? I am only thirty, Mr Mercer.”",
+    "菲利克斯挑起一邊眉毛，身體微微前傾。「失意中年人？我才三十歲，默瑟先生。」"
+   ],
+   [
+    "He reached out and laid his long fingertips over the back of Finn’s hand on the desk. “And the supervisor has approved it: you are promoted, with a proper salary and a flexible schedule. Even the colleagues downstairs applauded when they heard.” His voice warmed. “I traded a pile of cold family capital for a future that is truly my own, and for a partner who complains that I am old. No, I mean a business partner. I got a bargain.”",
+    "他伸出手，修長的指尖輕輕覆在芬恩放在桌上的手背上。「而且監督人批准了：你升職了，有像樣的薪水和彈性的工時。連樓下的同事聽到都鼓掌了。」他的聲音變得溫暖。「我用一堆冰冷的家族資本，換來一個真正屬於我自己的未來，還有一個嫌我老的伴侶。不對，我是說合夥人。這筆買賣，我賺大了。」"
+   ],
+   [
+    "Finn burst out laughing at the sudden tease, turned his hand over, and locked his fingers with Felix’s. His eyes shone with a light he had never shown before.",
+    "芬恩被這突如其來的調侃逗得大笑，翻過手掌，與菲利克斯十指相扣。他的眼底閃著前所未有的光。"
+   ]
+  ]
+ ],
+ "quiz": [
+  {
+   "q": "What did Finn upload to the university system?",
+   "o": [
+    "The final draft of his master’s thesis",
+    "A visa form",
+    "A contract",
+    "A bank statement"
+   ],
+   "a": 0,
+   "why": "He uploaded his thesis draft to UCC."
+  },
+  {
+   "q": "What did Professor Lynch say about Finn’s degree?",
+   "o": [
+    "A first-class degree looked safe",
+    "He had failed",
+    "He must repeat a year",
+    "She had retired"
+   ],
+   "a": 0,
+   "why": "She said a first-class degree looked safe."
+  },
+  {
+   "q": "What had changed about Felix’s situation?",
+   "o": [
+    "He was off the heir list and his trust dividends were frozen",
+    "He was promoted in Dublin",
+    "He moved to London",
+    "He became a judge"
+   ],
+   "a": 0,
+   "why": "Felix had lost the inheritance and his dividends were frozen."
+  },
+  {
+   "q": "How old did Felix say he was?",
+   "o": [
+    "Thirty",
+    "Fifty",
+    "Forty-five",
+    "Twenty"
+   ],
+   "a": 0,
+   "why": "He said, “I am only thirty.”"
+  },
+  {
+   "q": "What did Felix say about his bargain?",
+   "o": [
+    "He traded cold capital for a future of his own and a partner",
+    "He lost everything",
+    "He sold the branch",
+    "He wanted the trust back"
+   ],
+   "a": 0,
+   "why": "He called it a bargain."
+  }
+ ],
+ "vocab": [
+  {
+   "w": "draft",
+   "pos": "n.",
+   "zh": "草稿"
+  },
+  {
+   "w": "automate",
+   "pos": "v.",
+   "zh": "使自動化",
+   "f": [
+    "automated"
+   ]
+  },
+  {
+   "w": "data",
+   "pos": "n.",
+   "zh": "資料、數據",
+   "f": [
+    "data"
+   ]
+  },
+  {
+   "w": "scholarship",
+   "pos": "n.",
+   "zh": "獎學金",
+   "f": [
+    "scholarship"
+   ]
+  },
+  {
+   "w": "assess",
+   "pos": "v.",
+   "zh": "評估、評量",
+   "f": [
+    "assessed"
+   ]
+  },
+  {
+   "w": "thesis",
+   "pos": "n.",
+   "zh": "論文",
+   "f": [
+    "thesis"
+   ]
+  },
+  {
+   "w": "salary",
+   "pos": "n.",
+   "zh": "薪水",
+   "f": [
+    "salary"
+   ]
+  },
+  {
+   "w": "promote",
+   "pos": "v.",
+   "zh": "晉升、促進",
+   "f": [
+    "promoted"
+   ]
+  },
+  {
+   "w": "flexible",
+   "pos": "adj.",
+   "zh": "彈性的",
+   "f": [
+    "flexible"
+   ]
+  },
+  {
+   "w": "colleague",
+   "pos": "n.",
+   "zh": "同事",
+   "f": [
+    "colleagues"
+   ]
+  },
+  {
+   "w": "revenue",
+   "pos": "n.",
+   "zh": "收入、歲入",
+   "f": [
+    "revenue"
+   ]
+  },
+  {
+   "w": "export",
+   "pos": "v.",
+   "zh": "出口",
+   "f": [
+    "export"
+   ]
+  },
+  {
+   "w": "profit",
+   "pos": "n.",
+   "zh": "利潤",
+   "f": [
+    "profits"
+   ]
+  },
+  {
+   "w": "dividend",
+   "pos": "n.",
+   "zh": "股利",
+   "f": [
+    "dividends"
+   ]
+  },
+  {
+   "w": "ethical",
+   "pos": "adj.",
+   "zh": "道德的、倫理的",
+   "f": [
+    "ethics"
+   ]
+  },
+  {
+   "w": "mentor",
+   "pos": "n.",
+   "zh": "導師",
+   "f": [
+    "mentor"
+   ]
+  },
+  {
+   "w": "container",
+   "pos": "n.",
+   "zh": "貨櫃",
+   "f": [
+    "containers"
+   ]
+  },
+  {
+   "w": "harbour",
+   "pos": "n.",
+   "zh": "港口",
+   "f": [
+    "harbour"
+   ]
+  }
+ ]
+},
+{
+ "id": 20,
+ "name": "An Ordinary Evening",
+ "band": "6.5",
+ "title": "An Ordinary Evening",
+ "zh": "風暴過後的尋常巷陌",
+ "recap": "論文交出，夕陽下兩人十指相扣，故事要落幕了。",
+ "next": "（連載完結）",
+ "paras": [
+  [
+   [
+    "When night fell, the old streets of Cork lit up with yellow lamps. They did not take a car. They walked side by side along the path beside the River Lee, in a cool sea breeze, and from a distant pub came the faint sound of a guitar and a ballad.",
+    "夜幕降臨，科克老城的石板街亮起昏黃的路燈。他們沒有坐車，而是並肩走在李河畔的小徑上，海風微涼，遠處酒吧隱約傳來吉他與民謠的歌聲。"
+   ],
+   [
+    "They passed the old Customs House, a landmark on the quay, and the pedestrian bridge where a few tourists still lingered. Cork was a small destination, but its heritage, its community and its stubborn tradition of music had survived every recession.",
+    "他們經過老海關大樓，那是碼頭邊的地標，又經過行人橋，幾位遊客仍在橋上流連。科克是個小小的旅遊目的地，但它的文化遺產、社區與固執的音樂傳統，撐過了每一次經濟衰退。"
+   ],
+   [
+    "Beyond the quay, the cranes and the infrastructure of the port stood dark against the sky, and a last cargo ship waited for the tide.",
+    "碼頭之外，港口的起重機與基礎設施在天空下呈現暗影，最後一艘貨輪正等著潮水。"
+   ]
+  ],
+  [
+   [
+    "“Does the bar need cover tonight?” Felix asked, turning his head.",
+    "「今晚酒吧需要人代班嗎？」菲利克斯側過頭問。"
+   ],
+   [
+    "“No. I am a soon-to-graduate master’s student and chief data partner of the Cork branch, and I no longer commute to the bar on the last bus.” Finn stopped walking and raised an eyebrow. “Why, does Professor O’Connor want to take me to dinner?”",
+    "「不用。我是即將畢業的碩士生，也是科克分所的首席數據合夥人，我也不用再搭末班公車通勤去酒吧了。」芬恩停下腳步，挑起眉梢。「怎麼，奧康納教授想請我吃晚飯嗎？」"
+   ],
+   [
+    "“Yes. The seafood restaurant you always call too expensive, with the very good wine cellar.” Felix laid a hand on Finn’s shoulder and drew him a little closer.",
+    "「對。就是那家你老嫌貴、但酒窖很棒的海鮮餐廳。」菲利克斯把手搭在芬恩肩上，把他往自己這邊帶了帶。"
+   ],
+   [
+    "“You are paying with the last of your salary, so of course I am going to eat like a king.” Finn smiled and did not pull away, letting that warm breath wrap around him.",
+    "「你要用僅剩的薪水請客，我當然得吃得像國王。」芬恩笑了笑，沒有掙脫，任由那股溫暖的氣息將他包裹。"
+   ]
+  ],
+  [
+   [
+    "The first drops of rain began to fall. Felix opened a black umbrella and held it out. “Term two,” he said. “It is yours.”",
+    "第一滴雨落下。菲利克斯撐開一把黑傘，遞了過去。「第二條，」他說。「是你的。」"
+   ],
+   [
+    "Finn took it, tilted it over both of them, and said nothing, because nothing needed to be said.",
+    "芬恩接過傘，傾向兩人頭頂，什麼也沒說，因為什麼都不必說。"
+   ]
+  ],
+  [
+   [
+    "From the cold, hidden rooms of head office to the wind and rain of Cork harbour; from the distance and distrust of class to standing under the same sunset: it had been a long game of tariffs, quotas and invoices, played with data and capital.",
+    "從總部冰冷的隱祕密室，到科克港口的風雨交加；從階級的距離與不信任，到站在同一片夕陽下：這是一場關於關稅、配額與發票，以數據與資本進行的漫長博弈。"
+   ],
+   [
+    "It ended at last in the southern Irish night, under the gentlest curtain. And their real story was only just beginning.",
+    "它終於在愛爾蘭南部的夜色裡，落下最溫柔的帷幕。而他們真正的故事，才正要開始。"
+   ]
+  ]
+ ],
+ "quiz": [
+  {
+   "q": "Where did Felix and Finn walk in the evening?",
+   "o": [
+    "Along the River Lee",
+    "Along the sea wall in Dublin",
+    "Through a farm",
+    "Across a bridge in London"
+   ],
+   "a": 0,
+   "why": "They walked beside the River Lee."
+  },
+  {
+   "q": "What is Finn’s new title?",
+   "o": [
+    "Chief data partner of the Cork branch",
+    "Junior clerk",
+    "Barman",
+    "Judge’s assistant"
+   ],
+   "a": 0,
+   "why": "He called himself chief data partner."
+  },
+  {
+   "q": "Where did Felix suggest they have dinner?",
+   "o": [
+    "A seafood restaurant with a good wine cellar",
+    "A fast-food shop",
+    "The Raven",
+    "Dublin Castle"
+   ],
+   "a": 0,
+   "why": "The seafood restaurant Finn thinks is too expensive."
+  },
+  {
+   "q": "What did Felix hand to Finn when the rain began?",
+   "o": [
+    "A black umbrella",
+    "A letter",
+    "A contract",
+    "A coat"
+   ],
+   "a": 0,
+   "why": "He passed him the black umbrella, term two of the contract."
+  },
+  {
+   "q": "How does the story end?",
+   "o": [
+    "With a gentle night in southern Ireland and a story just beginning",
+    "With a trial",
+    "With a quarrel",
+    "With Finn leaving"
+   ],
+   "a": 0,
+   "why": "The curtain falls gently while their story begins."
+  }
+ ],
+ "vocab": [
+  {
+   "w": "umbrella",
+   "pos": "n.",
+   "zh": "雨傘"
+  },
+  {
+   "w": "data",
+   "pos": "n.",
+   "zh": "資料、數據",
+   "f": [
+    "data"
+   ]
+  },
+  {
+   "w": "graduate",
+   "pos": "n.",
+   "zh": "畢業生",
+   "f": [
+    "graduate"
+   ]
+  },
+  {
+   "w": "community",
+   "pos": "n.",
+   "zh": "社區、群體",
+   "f": [
+    "community"
+   ]
+  },
+  {
+   "w": "tradition",
+   "pos": "n.",
+   "zh": "傳統",
+   "f": [
+    "tradition"
+   ]
+  },
+  {
+   "w": "salary",
+   "pos": "n.",
+   "zh": "薪水",
+   "f": [
+    "salary"
+   ]
+  },
+  {
+   "w": "commute",
+   "pos": "v.",
+   "zh": "通勤",
+   "f": [
+    "commute"
+   ]
+  },
+  {
+   "w": "recession",
+   "pos": "n.",
+   "zh": "經濟衰退",
+   "f": [
+    "recession"
+   ]
+  },
+  {
+   "w": "heritage",
+   "pos": "n.",
+   "zh": "遺產",
+   "f": [
+    "heritage"
+   ]
+  },
+  {
+   "w": "infrastructure",
+   "pos": "n.",
+   "zh": "基礎建設",
+   "f": [
+    "infrastructure"
+   ]
+  },
+  {
+   "w": "pedestrian",
+   "pos": "n.",
+   "zh": "行人",
+   "f": [
+    "pedestrian"
+   ]
+  },
+  {
+   "w": "landmark",
+   "pos": "n.",
+   "zh": "地標",
+   "f": [
+    "landmark"
+   ]
+  },
+  {
+   "w": "tourism",
+   "pos": "n.",
+   "zh": "觀光業",
+   "f": [
+    "tourists"
+   ]
+  },
+  {
+   "w": "destination",
+   "pos": "n.",
+   "zh": "目的地",
+   "f": [
+    "destination"
+   ]
+  },
+  {
+   "w": "tariff",
+   "pos": "n.",
+   "zh": "關稅",
+   "f": [
+    "tariffs"
+   ]
+  },
+  {
+   "w": "quota",
+   "pos": "n.",
+   "zh": "配額",
+   "f": [
+    "quotas"
+   ]
+  },
+  {
+   "w": "customs",
+   "pos": "n.",
+   "zh": "海關",
+   "f": [
+    "customs"
+   ]
+  },
+  {
+   "w": "cargo",
+   "pos": "n.",
+   "zh": "貨物",
+   "f": [
+    "cargo"
+   ]
+  },
+  {
+   "w": "shipment",
+   "pos": "n.",
+   "zh": "一批出貨",
+   "f": [
+    "ship"
+   ]
+  },
+  {
+   "w": "invoice",
+   "pos": "n.",
+   "zh": "發票、請款單",
+   "f": [
+    "invoices"
+   ]
+  },
+  {
+   "w": "harbour",
+   "pos": "n.",
+   "zh": "港口",
+   "f": [
+    "harbour"
+   ]
+  }
+ ]
 }
 ]; /*END_STORIES*/
 const BANK = [{"w":"environment","p":"n.","i":"/ɪnˈvaɪrənmənt/","t":1,"c":"env","d":"the natural world, including land, water and air","z":"環境","e":"Factories must protect the environment from harmful waste.","u":"environment","ez":"工廠必須保護環境，避免有害廢棄物。","k":"protect the environment; working environment","s":"surroundings, habitat","f":"environmental (adj.), environmentalist (n.)","id":1,"a":1},{"w":"resource","p":"n.","i":"/rɪˈzɔːs/","t":1,"c":"env","d":"something useful that a country or person can use, such as water or money","z":"資源","e":"Water is a precious resource in dry regions.","u":"resource","ez":"在乾燥地區，水是珍貴的資源。","k":"natural resources; limited resources","s":"supply, asset","f":"resourceful (adj.)","id":2,"a":2},{"w":"sustain","p":"v.","i":"/səˈsteɪn/","t":2,"c":"env","d":"to keep something going for a long time without harming it","z":"維持、支撐","e":"Farmers must sustain the soil for future generations.","u":"sustain","ez":"農民必須為後代維持土壤的肥力。","k":"sustain growth; sustain life","s":"maintain, support","f":"sustainable (adj.), sustainability (n.)","id":3,"a":5},{"w":"consume","p":"v.","i":"/kənˈsjuːm/","t":2,"c":"env","d":"to use food, energy or goods","z":"消耗、消費","e":"Large cities consume enormous amounts of electricity.","u":"consume","ez":"大城市消耗大量的電力。","k":"consume energy; consume goods","s":"use up, spend","f":"consumer (n.), consumption (n.)","id":4,"a":2},{"w":"restore","p":"v.","i":"/rɪˈstɔː/","t":2,"c":"env","d":"to bring something back to its earlier good condition","z":"恢復、修復","e":"Volunteers worked to restore the damaged wetland.","u":"restore","ez":"志工努力修復受損的濕地。","k":"restore order; restore a habitat","s":"repair, renew","f":"restoration (n.)","id":5,"a":8},{"w":"impact","p":"n.","i":"/ˈɪmpækt/","t":2,"c":"env","d":"a strong effect on something","z":"影響、衝擊","e":"Tourism has a serious impact on fragile coastlines.","u":"impact","ez":"觀光對脆弱的海岸線造成嚴重影響。","k":"have an impact on; environmental impact","s":"effect, influence","f":"impact (v.)","id":6,"a":2},{"w":"minimise","p":"v.","i":"/ˈmɪnɪmaɪz/","t":3,"c":"env","d":"to reduce something to the smallest possible amount","z":"使減到最少","e":"New rules aim to minimise plastic waste in oceans.","u":"minimise","ez":"新規定旨在把海洋中的塑膠廢棄物減到最少。","k":"minimise risk; minimise damage","s":"reduce, lessen","f":"minimum (n.), minimal (adj.)","id":7,"a":8},{"w":"generate","p":"v.","i":"/ˈdʒenəreɪt/","t":2,"c":"env","d":"to produce energy, power or ideas","z":"產生、發（電）","e":"Wind farms generate power without burning fuel.","u":"generate","ez":"風力發電場不必燃燒燃料就能發電。","k":"generate electricity; generate income","s":"produce, create","f":"generation (n.), generator (n.)","id":8,"a":5},{"w":"energy","p":"n.","i":"/ˈenədʒi/","t":1,"c":"env","d":"power that is used to make machines work or heat buildings","z":"能源、能量","e":"Many countries are investing in clean energy.","u":"energy","ez":"許多國家正在投資潔淨能源。","k":"renewable energy; save energy","s":"power, fuel","f":"energetic (adj.)","id":9,"a":5},{"w":"region","p":"n.","i":"/ˈriːdʒən/","t":1,"c":"env","d":"a large area of a country or the world","z":"地區、區域","e":"The northern region suffers from severe flooding every spring.","u":"region","ez":"北部地區每年春天都受到嚴重水災之苦。","k":"in the region; coastal region","s":"area, zone","f":"regional (adj.)","id":10,"a":2},{"w":"chemical","p":"n.","i":"/ˈkemɪkl/","t":2,"c":"env","d":"a substance made by or used in chemistry","z":"化學物質","e":"Farmers should limit the chemicals they spray on crops.","u":"chemicals","ez":"農民應該限制噴灑在作物上的化學物質。","k":"toxic chemicals; chemical waste","s":"substance, compound","f":"chemistry (n.), chemist (n.)","id":11,"a":7},{"w":"eliminate","p":"v.","i":"/ɪˈlɪmɪneɪt/","t":3,"c":"env","d":"to remove something completely","z":"消除、淘汰","e":"The city hopes to eliminate coal from its power stations.","u":"eliminate","ez":"這座城市希望讓發電廠完全不再使用煤。","k":"eliminate waste; eliminate the need for","s":"remove, eradicate","f":"elimination (n.)","id":12,"a":7},{"w":"widespread","p":"adj.","i":"/ˈwaɪdspred/","t":3,"c":"env","d":"existing or happening in many places or among many people","z":"普遍的、廣泛的","e":"Widespread flooding forced thousands to leave their homes.","u":"Widespread","ez":"大範圍的水災迫使數千人離開家園。","k":"widespread damage; widespread belief","s":"common, extensive","f":"spread (v.)","id":13,"a":8},{"w":"erode","p":"v.","i":"/ɪˈrəʊd/","t":4,"c":"env","d":"to wear away gradually by wind, water or other forces","z":"侵蝕、逐漸削弱","e":"Heavy rain can erode fertile soil within a few years.","u":"erode","ez":"大雨可能在數年內侵蝕肥沃的土壤。","k":"erode the coastline; erode confidence","s":"wear away, weaken","f":"erosion (n.)","id":14,"a":9},{"w":"alter","p":"v.","i":"/ˈɔːltə/","t":2,"c":"env","d":"to change something, usually slightly","z":"改變、更改","e":"Rising temperatures have altered the migration of birds.","u":"altered","ez":"氣溫上升改變了鳥類的遷徙。","k":"alter plans; alter the course","s":"change, modify","f":"alteration (n.)","id":15,"a":5},{"w":"pollution","p":"n.","i":"/pəˈluːʃn/","t":1,"c":"env","d":"harmful substances that damage air, water or land","z":"污染","e":"Air pollution is a major cause of breathing problems.","u":"pollution","ez":"空氣污染是呼吸問題的主要原因。","k":"air pollution; reduce pollution","s":"contamination","f":"pollute (v.), pollutant (n.)","id":16},{"w":"emission","p":"n.","i":"/ɪˈmɪʃn/","t":2,"c":"env","d":"gas or other substances sent out into the air","z":"排放（物）","e":"Governments agreed to cut carbon emissions by half.","u":"emissions","ez":"各國政府同意把碳排放量減半。","k":"carbon emissions; greenhouse gas emissions","s":"discharge, release","f":"emit (v.)","id":17},{"w":"renewable","p":"adj.","i":"/rɪˈnjuːəbl/","t":2,"c":"env","d":"able to be replaced naturally, so not used up","z":"可再生的","e":"Solar and wind are the cheapest renewable sources today.","u":"renewable","ez":"太陽能與風能是目前最便宜的可再生能源。","k":"renewable energy; renewable sources","s":"sustainable","f":"renew (v.), renewal (n.)","id":18},{"w":"biodiversity","p":"n.","i":"/ˌbaɪəʊdaɪˈvɜːsəti/","t":3,"c":"env","d":"the variety of plant and animal life in a place","z":"生物多樣性","e":"Coral reefs support an extraordinary level of biodiversity.","u":"biodiversity","ez":"珊瑚礁維繫著驚人的生物多樣性。","k":"protect biodiversity; loss of biodiversity","s":"ecological variety","f":"diverse (adj.)","id":19},{"w":"deforestation","p":"n.","i":"/diːˌfɒrɪˈsteɪʃn/","t":3,"c":"env","d":"the cutting down of large areas of forest","z":"森林砍伐","e":"Deforestation has destroyed the homes of many rare animals.","u":"Deforestation","ez":"森林砍伐毀了許多稀有動物的家。","k":"tropical deforestation; halt deforestation","s":"forest clearance","f":"forest (n.)","id":20},{"w":"habitat","p":"n.","i":"/ˈhæbɪtæt/","t":2,"c":"env","d":"the natural home of an animal or plant","z":"棲息地","e":"Road building is destroying the natural habitat of tigers.","u":"habitat","ez":"道路建設正在破壞老虎的自然棲息地。","k":"natural habitat; habitat loss","s":"home, environment","f":"inhabit (v.)","id":21},{"w":"ecosystem","p":"n.","i":"/ˈiːkəʊsɪstəm/","t":3,"c":"env","d":"all the living things in an area and how they affect each other","z":"生態系統","e":"A single invasive species can disturb an entire ecosystem.","u":"ecosystem","ez":"單一入侵物種就可能擾亂整個生態系統。","k":"fragile ecosystem; marine ecosystem","s":"ecological system","f":"ecology (n.), ecological (adj.)","id":22},{"w":"endangered","p":"adj.","i":"/ɪnˈdeɪndʒəd/","t":2,"c":"env","d":"at risk of no longer existing","z":"瀕危的","e":"Rangers patrol the park to protect endangered rhinos.","u":"endangered","ez":"護管員在公園巡邏，保護瀕危的犀牛。","k":"endangered species; endangered animals","s":"threatened, at risk","f":"danger (n.), endanger (v.)","id":23},{"w":"conservation","p":"n.","i":"/ˌkɒnsəˈveɪʃn/","t":3,"c":"env","d":"the protection of nature and natural resources","z":"保育、保護","e":"Conservation groups are fighting to save the ancient forest.","u":"Conservation","ez":"保育團體正努力拯救這片古老森林。","k":"wildlife conservation; energy conservation","s":"protection, preservation","f":"conserve (v.), conservationist (n.)","id":24},{"w":"drought","p":"n.","i":"/draʊt/","t":3,"c":"env","d":"a long period with very little or no rain","z":"乾旱","e":"A severe drought ruined the harvest across the country.","u":"drought","ez":"嚴重乾旱毀掉了全國的收成。","k":"severe drought; drought-hit","s":"dry spell","f":"dry (adj.)","id":25},{"w":"extinction","p":"n.","i":"/ɪkˈstɪŋkʃn/","t":3,"c":"env","d":"the state of no longer existing, said of a species","z":"絕種、滅絕","e":"Hunting pushed the species to the edge of extinction.","u":"extinction","ez":"狩獵把這個物種推到了絕種的邊緣。","k":"on the brink of extinction; mass extinction","s":"dying out","f":"extinct (adj.)","id":26},{"w":"landfill","p":"n.","i":"/ˈlændfɪl/","t":3,"c":"env","d":"a place where rubbish is buried in the ground","z":"垃圾掩埋場","e":"Most household rubbish still ends up in landfill sites.","u":"landfill","ez":"大部分家庭垃圾最後仍被送到掩埋場。","k":"landfill site; send to landfill","s":"rubbish dump","f":"fill (v.)","id":27},{"w":"contaminate","p":"v.","i":"/kənˈtæmɪneɪt/","t":3,"c":"env","d":"to make something dirty or poisonous by adding a harmful substance","z":"污染、弄髒","e":"Leaking oil can contaminate drinking water for years.","u":"contaminate","ez":"漏出的油可能污染飲用水達數年之久。","k":"contaminate water; contaminated soil","s":"pollute, poison","f":"contamination (n.)","id":28},{"w":"wildlife","p":"n.","i":"/ˈwaɪldlaɪf/","t":2,"c":"env","d":"animals and plants that live in nature","z":"野生動植物","e":"The reserve is famous for its rich wildlife.","u":"wildlife","ez":"這座保護區以豐富的野生動植物聞名。","k":"protect wildlife; wildlife reserve","s":"fauna and flora","f":"wild (adj.)","id":29},{"w":"recycle","p":"v.","i":"/ˌriːˈsaɪkl/","t":1,"c":"env","d":"to treat used materials so they can be used again","z":"回收再利用","e":"Residents are asked to recycle glass, paper and plastic.","u":"recycle","ez":"居民被要求回收玻璃、紙張與塑膠。","k":"recycle paper; recycling bin","s":"reuse, reprocess","f":"recycling (n.), recyclable (adj.)","id":30},{"w":"technology","p":"n.","i":"/tekˈnɒlədʒi/","t":1,"c":"tech","d":"scientific knowledge used in practical ways, especially in industry","z":"科技","e":"New technology has changed the way people shop.","u":"technology","ez":"新科技改變了人們購物的方式。","k":"modern technology; information technology","s":"engineering, know-how","f":"technological (adj.), technician (n.)","id":31,"a":3},{"w":"device","p":"n.","i":"/dɪˈvaɪs/","t":2,"c":"tech","d":"a small machine or tool made for a particular purpose","z":"裝置、設備","e":"Many students use a mobile device to revise vocabulary.","u":"device","ez":"許多學生用行動裝置來複習單字。","k":"electronic device; handheld device","s":"gadget, tool","f":"devise (v.)","id":32,"a":9},{"w":"automate","p":"v.","i":"/ˈɔːtəmeɪt/","t":3,"c":"tech","d":"to make a process work by machine without people","z":"使自動化","e":"Banks plan to automate many routine office tasks.","u":"automate","ez":"銀行打算把許多例行的辦公室工作自動化。","k":"automate a process; automated system","s":"mechanise","f":"automation (n.), automatic (adj.)","id":33,"a":8},{"w":"virtual","p":"adj.","i":"/ˈvɜːtʃuəl/","t":3,"c":"tech","d":"existing on a computer or online rather than in the real world","z":"虛擬的","e":"Virtual classrooms allow students to study from home.","u":"Virtual","ez":"虛擬教室讓學生可以在家學習。","k":"virtual reality; virtual meeting","s":"online, simulated","f":"virtually (adv.)","id":34,"a":8},{"w":"network","p":"n.","i":"/ˈnetwɜːk/","t":1,"c":"tech","d":"a system of connected computers, people or lines","z":"網路、網絡","e":"The school network was down for most of the morning.","u":"network","ez":"學校的網路整個上午大部分時間都斷線。","k":"social network; computer network","s":"system, web","f":"network (v.)","id":35,"a":5},{"w":"data","p":"n.","i":"/ˈdeɪtə/","t":1,"c":"tech","d":"facts or numbers collected for study or use","z":"資料、數據","e":"Companies collect data about what customers buy.","u":"data","ez":"企業蒐集顧客購買內容的數據。","k":"collect data; data analysis","s":"information, statistics","f":"database (n.)","id":36,"a":1},{"w":"innovate","p":"v.","i":"/ˈɪnəveɪt/","t":3,"c":"tech","d":"to introduce new ideas or methods","z":"創新","e":"Firms must innovate constantly to stay ahead of rivals.","u":"innovate","ez":"企業必須不斷創新才能領先對手。","k":"innovate quickly; innovative idea","s":"invent, pioneer","f":"innovation (n.), innovative (adj.)","id":37,"a":7},{"w":"transmit","p":"v.","i":"/trænzˈmɪt/","t":3,"c":"tech","d":"to send a signal, message or disease from one place to another","z":"傳送、傳播","e":"Satellites transmit television signals across the world.","u":"transmit","ez":"衛星把電視訊號傳送到世界各地。","k":"transmit data; transmit a disease","s":"send, broadcast","f":"transmission (n.), transmitter (n.)","id":38,"a":7},{"w":"simulate","p":"v.","i":"/ˈsɪmjuleɪt/","t":3,"c":"tech","d":"to copy the conditions of something using a model or computer","z":"模擬","e":"Pilots use software to simulate dangerous weather conditions.","u":"simulate","ez":"飛行員用軟體來模擬危險的天氣狀況。","k":"simulate conditions; computer simulation","s":"imitate, model","f":"simulation (n.)","id":39,"a":7},{"w":"access","p":"n.","i":"/ˈækses/","t":2,"c":"tech","d":"the ability or right to use or enter something","z":"取用、使用權","e":"Rural villages often lack access to fast internet.","u":"access","ez":"鄉村往往無法使用高速網路。","k":"gain access to; internet access","s":"entry, admission","f":"accessible (adj.), access (v.)","id":40,"a":4},{"w":"interact","p":"v.","i":"/ˌɪntərˈækt/","t":3,"c":"tech","d":"to communicate or work with something or someone","z":"互動","e":"Children interact with smart toys in surprising ways.","u":"interact","ez":"孩子們以令人驚訝的方式與智慧玩具互動。","k":"interact with; interact online","s":"communicate, engage","f":"interaction (n.), interactive (adj.)","id":41,"a":3},{"w":"compute","p":"v.","i":"/kəmˈpjuːt/","t":3,"c":"tech","d":"to calculate an amount or result","z":"計算","e":"The program can compute the results in a few seconds.","u":"compute","ez":"這個程式可以在幾秒內算出結果。","k":"compute the cost; computing power","s":"calculate, work out","f":"computer (n.), computation (n.)","id":42,"a":2},{"w":"input","p":"n.","i":"/ˈɪnpʊt/","t":3,"c":"tech","d":"information put into a computer, or ideas given to a project","z":"輸入、投入","e":"The system needs input from users to improve.","u":"input","ez":"這個系統需要使用者的意見回饋才能進步。","k":"user input; valuable input","s":"contribution, data entry","f":"input (v.)","id":43,"a":6},{"w":"output","p":"n.","i":"/ˈaʊtpʊt/","t":3,"c":"tech","d":"the amount of something produced, or information a computer gives","z":"產量、輸出","e":"Factory output rose sharply after the new machines arrived.","u":"output","ez":"新機器到位後，工廠的產量大幅上升。","k":"industrial output; output of energy","s":"production, yield","f":"output (v.)","id":44,"a":4},{"w":"version","p":"n.","i":"/ˈvɜːʃn/","t":2,"c":"tech","d":"a particular form of something that differs from earlier ones","z":"版本","e":"The latest version of the app runs much faster.","u":"version","ez":"這款應用程式的最新版本運行快得多。","k":"latest version; updated version","s":"edition, form","f":"convert (v.)","id":45,"a":5},{"w":"artificial","p":"adj.","i":"/ˌɑːtɪˈfɪʃl/","t":2,"c":"tech","d":"made by people rather than occurring naturally","z":"人工的、人造的","e":"Artificial intelligence can now translate speech instantly.","u":"Artificial","ez":"人工智慧現在可以即時翻譯語音。","k":"artificial intelligence; artificial light","s":"man-made, synthetic","f":"artificially (adv.)","id":46},{"w":"algorithm","p":"n.","i":"/ˈælɡərɪðəm/","t":4,"c":"tech","d":"a set of rules a computer follows to solve a problem","z":"演算法","e":"The search algorithm ranks pages by how useful they are.","u":"algorithm","ez":"搜尋演算法依照網頁的實用程度排序。","k":"search algorithm; develop an algorithm","s":"procedure, formula","f":"algorithmic (adj.)","id":47},{"w":"software","p":"n.","i":"/ˈsɒftweə/","t":2,"c":"tech","d":"programs that tell a computer what to do","z":"軟體","e":"The company sells accounting software to small businesses.","u":"software","ez":"這家公司向小型企業販售會計軟體。","k":"install software; software update","s":"program, application","f":"hardware (n.)","id":48},{"w":"hardware","p":"n.","i":"/ˈhɑːdweə/","t":3,"c":"tech","d":"the physical parts of a computer system","z":"硬體","e":"Old hardware often cannot run modern software.","u":"hardware","ez":"老舊的硬體往往無法執行現代軟體。","k":"computer hardware; hardware store","s":"equipment, machinery","f":"software (n.)","id":49},{"w":"digital","p":"adj.","i":"/ˈdɪdʒɪtl/","t":2,"c":"tech","d":"using electronic signals or computer technology","z":"數位的","e":"Many newspapers have moved to digital editions.","u":"digital","ez":"許多報紙已改為數位版本。","k":"digital age; digital payment","s":"electronic, online","f":"digit (n.), digitally (adv.)","id":50},{"w":"robot","p":"n.","i":"/ˈrəʊbɒt/","t":2,"c":"tech","d":"a machine that can perform tasks automatically","z":"機器人","e":"Robots now assemble cars in most large factories.","u":"Robots","ez":"現在大多數大型工廠都用機器人組裝汽車。","k":"industrial robot; robot arm","s":"machine, automaton","f":"robotic (adj.), robotics (n.)","id":51},{"w":"privacy","p":"n.","i":"/ˈprɪvəsi/","t":3,"c":"tech","d":"the right to keep personal information secret","z":"隱私","e":"Many users worry about privacy on social media.","u":"privacy","ez":"許多使用者擔心社群媒體上的隱私問題。","k":"protect privacy; invade privacy","s":"confidentiality, secrecy","f":"private (adj.)","id":52},{"w":"surveillance","p":"n.","i":"/səˈveɪləns/","t":4,"c":"tech","d":"close watching of a person or place, often by cameras","z":"監視","e":"Constant surveillance makes some citizens feel uneasy.","u":"surveillance","ez":"持續不斷的監視讓部分市民感到不安。","k":"under surveillance; surveillance camera","s":"monitoring, observation","f":"surveil (v.)","id":53},{"w":"encrypt","p":"v.","i":"/ɪnˈkrɪpt/","t":4,"c":"tech","d":"to change information into a secret code","z":"加密","e":"Banks encrypt customer data to prevent theft.","u":"encrypt","ez":"銀行會把客戶資料加密以防被竊。","k":"encrypt data; encrypted message","s":"scramble, code","f":"encryption (n.)","id":54},{"w":"wireless","p":"adj.","i":"/ˈwaɪələs/","t":3,"c":"tech","d":"using radio signals instead of wires","z":"無線的","e":"The café offers free wireless internet to customers.","u":"wireless","ez":"這間咖啡館提供顧客免費無線網路。","k":"wireless network; wireless headphones","s":"cordless","f":"wire (n.)","id":55},{"w":"satellite","p":"n.","i":"/ˈsætəlaɪt/","t":3,"c":"tech","d":"an object sent into space to collect or send information","z":"衛星","e":"Satellites track storms long before they reach land.","u":"Satellites","ez":"衛星在風暴登陸前很久就開始追蹤它們。","k":"satellite image; launch a satellite","s":"orbiter","f":"orbit (n.)","id":56},{"w":"gadget","p":"n.","i":"/ˈɡædʒɪt/","t":3,"c":"tech","d":"a small useful electronic tool or machine","z":"小型電子裝置","e":"He loves buying the latest kitchen gadgets.","u":"gadgets","ez":"他喜歡買最新的廚房小器具。","k":"electronic gadget; handy gadget","s":"device, appliance","f":"gadgetry (n.)","id":57},{"w":"obsolete","p":"adj.","i":"/ˈɒbsəliːt/","t":4,"c":"tech","d":"no longer used because something better exists","z":"過時的、已淘汰的","e":"Typewriters became obsolete after personal computers appeared.","u":"obsolete","ez":"個人電腦出現後，打字機就過時了。","k":"become obsolete; obsolete technology","s":"outdated, old-fashioned","f":"obsolescence (n.)","id":58},{"w":"breakthrough","p":"n.","i":"/ˈbreɪkθruː/","t":3,"c":"tech","d":"an important discovery or development","z":"突破","e":"Scientists announced a breakthrough in battery design.","u":"breakthrough","ez":"科學家宣布在電池設計上取得突破。","k":"major breakthrough; medical breakthrough","s":"advance, discovery","f":"break through (v.)","id":59},{"w":"interface","p":"n.","i":"/ˈɪntəfeɪs/","t":4,"c":"tech","d":"the way a user communicates with a computer or program","z":"介面","e":"The app has a simple interface that anyone can learn.","u":"interface","ez":"這款應用程式有任何人都能學會的簡單介面。","k":"user interface; graphical interface","s":"screen, connection","f":"interface (v.)","id":60},{"w":"curriculum","p":"n.","i":"/kəˈrɪkjələm/","t":3,"c":"edu","d":"the subjects taught in a school or course","z":"課程、課綱","e":"The school added coding to its curriculum last year.","u":"curriculum","ez":"這所學校去年把程式設計加入課程。","s":"syllabus, course","f":"curricular (adj.)","id":61},{"w":"tuition","p":"n.","i":"/tjuˈɪʃn/","t":3,"c":"edu","d":"teaching, or the fee paid for it","z":"學費、教學","e":"Tuition fees have risen sharply at many universities.","u":"Tuition","ez":"許多大學的學費大幅上漲。","s":"teaching, fees","f":"tutor (n.)","id":62},{"w":"literacy","p":"n.","i":"/ˈlɪtərəsi/","t":3,"c":"edu","d":"the ability to read and write","z":"讀寫能力","e":"The charity works to improve adult literacy in rural areas.","u":"literacy","ez":"這個慈善機構致力於提升鄉村地區成人的讀寫能力。","s":"reading ability","f":"literate (adj.), illiterate (adj.)","id":63},{"w":"enrol","p":"v.","i":"/ɪnˈrəʊl/","t":3,"c":"edu","d":"to officially join a course or school","z":"註冊、入學","e":"More mature students now enrol in evening courses.","u":"enrol","ez":"現在有更多成年學生報名夜間課程。","s":"register, sign up","f":"enrolment (n.)","id":64},{"w":"graduate","p":"n.","i":"/ˈɡrædʒuət/","t":2,"c":"edu","d":"a person who has completed a university degree","z":"畢業生","e":"Each graduate received a certificate at the ceremony.","u":"graduate","ez":"每位畢業生都在典禮上領到證書。","s":"alumnus","f":"graduation (n.), graduate (v.)","id":65},{"w":"scholarship","p":"n.","i":"/ˈskɒləʃɪp/","t":3,"c":"edu","d":"money given to a student to pay for study","z":"獎學金","e":"She won a scholarship to study medicine abroad.","u":"scholarship","ez":"她獲得獎學金，出國學醫。","s":"grant, bursary","f":"scholar (n.)","id":66},{"w":"compulsory","p":"adj.","i":"/kəmˈpʌlsəri/","t":3,"c":"edu","d":"required by law or rules","z":"強制的、必修的","e":"Maths is compulsory for all students until sixteen.","u":"compulsory","ez":"數學在十六歲前對所有學生都是必修。","s":"obligatory, mandatory","f":"compel (v.)","id":67},{"w":"assess","p":"v.","i":"/əˈses/","t":2,"c":"edu","d":"to judge the quality or level of something","z":"評估、評量","e":"Teachers assess pupils through projects and exams.","u":"assess","ez":"老師透過專題與考試來評量學生。","s":"evaluate, judge","f":"assessment (n.)","id":68,"a":1},{"w":"peer","p":"n.","i":"/pɪə/","t":3,"c":"edu","d":"a person of the same age or status","z":"同儕","e":"Students often learn faster from their peers.","u":"peers","ez":"學生往往向同儕學得更快。","s":"equal, classmate","f":"peer pressure (n.)","id":69},{"w":"discipline","p":"n.","i":"/ˈdɪsəplɪn/","t":3,"c":"edu","d":"training that makes people obey rules, or a subject of study","z":"紀律、學科","e":"Good discipline helps children focus in the classroom.","u":"discipline","ez":"良好的紀律幫助孩子在教室專心。","s":"order, subject","f":"disciplinary (adj.)","id":70},{"w":"lecture","p":"n.","i":"/ˈlektʃə/","t":2,"c":"edu","d":"a talk given to a group of students","z":"講課、演講","e":"The lecture on climate change lasted almost two hours.","u":"lecture","ez":"那場氣候變遷的講座持續了將近兩小時。","s":"talk, presentation","f":"lecturer (n.)","id":71,"a":6},{"w":"thesis","p":"n.","i":"/ˈθiːsɪs/","t":3,"c":"edu","d":"a long piece of writing for a university degree","z":"論文","e":"He spent a year writing his thesis on marine biology.","u":"thesis","ez":"他花了一年寫海洋生物學的論文。","s":"dissertation","f":"theses (pl.)","id":72,"a":7},{"w":"vocational","p":"adj.","i":"/vəʊˈkeɪʃənl/","t":4,"c":"edu","d":"relating to the skills needed for a particular job","z":"職業的","e":"Vocational training prepares young people for skilled trades.","u":"Vocational","ez":"職業訓練讓年輕人為專業技術工作做準備。","s":"practical, job-related","f":"vocation (n.)","id":73},{"w":"acquire","p":"v.","i":"/əˈkwaɪə/","t":2,"c":"edu","d":"to gain a skill or knowledge","z":"獲得、習得","e":"Children acquire language skills very quickly.","u":"acquire","ez":"孩子很快就能習得語言能力。","s":"gain, obtain","f":"acquisition (n.)","id":74,"a":2},{"w":"cognitive","p":"adj.","i":"/ˈkɒɡnətɪv/","t":4,"c":"edu","d":"relating to thinking and understanding","z":"認知的","e":"Reading daily supports cognitive development in children.","u":"cognitive","ez":"每天閱讀有助於孩子的認知發展。","s":"mental, intellectual","f":"cognition (n.)","id":75},{"w":"revise","p":"v.","i":"/rɪˈvaɪz/","t":2,"c":"edu","d":"to study again before an exam, or to change a text","z":"複習、修訂","e":"She stayed up late to revise for the biology exam.","u":"revise","ez":"她熬夜複習生物考試。","s":"review, edit","f":"revision (n.)","id":76,"a":8},{"w":"diagnose","p":"v.","i":"/ˈdaɪəɡnəʊz/","t":3,"c":"health","d":"to identify an illness by examining signs","z":"診斷","e":"Doctors can diagnose the disease with a simple blood test.","u":"diagnose","ez":"醫生可以用簡單的驗血來診斷這種疾病。","s":"identify, detect","f":"diagnosis (n.)","id":77},{"w":"symptom","p":"n.","i":"/ˈsɪmptəm/","t":2,"c":"health","d":"a sign that a person has an illness","z":"症狀","e":"A high temperature is a common symptom of flu.","u":"symptom","ez":"高燒是流感的常見症狀。","s":"sign, indication","f":"symptomatic (adj.)","id":78},{"w":"obesity","p":"n.","i":"/əʊˈbiːsəti/","t":3,"c":"health","d":"the condition of being very overweight","z":"肥胖","e":"Childhood obesity has become a serious public concern.","u":"obesity","ez":"兒童肥胖已成為嚴重的公共問題。","s":"overweight","f":"obese (adj.)","id":79},{"w":"chronic","p":"adj.","i":"/ˈkrɒnɪk/","t":4,"c":"health","d":"lasting a long time or constantly returning","z":"慢性的","e":"Chronic stress can damage both mind and body.","u":"Chronic","ez":"慢性壓力可能傷害身心。","s":"long-term, persistent","f":"chronically (adv.)","id":80},{"w":"immune","p":"adj.","i":"/ɪˈmjuːn/","t":3,"c":"health","d":"protected against a disease","z":"免疫的","e":"A healthy diet keeps your immune system strong.","u":"immune","ez":"健康飲食讓你的免疫系統保持強健。","s":"resistant, protected","f":"immunity (n.), immunise (v.)","id":81},{"w":"vaccine","p":"n.","i":"/ˈvæksiːn/","t":3,"c":"health","d":"a medicine that protects the body against a disease","z":"疫苗","e":"The new vaccine was tested on thousands of volunteers.","u":"vaccine","ez":"新疫苗在數千名志願者身上進行了測試。","s":"jab, inoculation","f":"vaccinate (v.), vaccination (n.)","id":82},{"w":"nutrition","p":"n.","i":"/njuˈtrɪʃn/","t":3,"c":"health","d":"the food a body needs to stay healthy","z":"營養","e":"Good nutrition is essential for growing children.","u":"nutrition","ez":"良好的營養對成長中的孩子至關重要。","s":"nourishment","f":"nutrient (n.), nutritious (adj.)","id":83},{"w":"sedentary","p":"adj.","i":"/ˈsedntri/","t":4,"c":"health","d":"involving a lot of sitting and little exercise","z":"久坐的","e":"A sedentary lifestyle increases the risk of heart disease.","u":"sedentary","ez":"久坐的生活方式會增加心臟病風險。","s":"inactive, desk-bound","f":"sedentary (n.)","id":84},{"w":"epidemic","p":"n.","i":"/ˌepɪˈdemɪk/","t":4,"c":"health","d":"a disease that spreads quickly among many people","z":"流行病","e":"The epidemic spread across the region within weeks.","u":"epidemic","ez":"這場流行病在數週內蔓延到整個地區。","s":"outbreak, plague","f":"pandemic (n.)","id":85},{"w":"therapy","p":"n.","i":"/ˈθerəpi/","t":3,"c":"health","d":"treatment of an illness over a period of time","z":"治療、療法","e":"Physical therapy helped him walk again after the accident.","u":"therapy","ez":"物理治療幫助他在意外後重新走路。","s":"treatment, remedy","f":"therapist (n.)","id":86},{"w":"hygiene","p":"n.","i":"/ˈhaɪdʒiːn/","t":3,"c":"health","d":"practices that keep people and places clean","z":"衛生","e":"Poor hygiene in kitchens can cause food poisoning.","u":"hygiene","ez":"廚房衛生不良可能導致食物中毒。","s":"cleanliness","f":"hygienic (adj.)","id":87},{"w":"longevity","p":"n.","i":"/lɒnˈdʒevəti/","t":4,"c":"health","d":"long life","z":"長壽","e":"Diet and exercise both contribute to longevity.","u":"longevity","ez":"飲食與運動都有助於長壽。","s":"long life","f":"long-lived (adj.)","id":88},{"w":"prescription","p":"n.","i":"/prɪˈskrɪpʃn/","t":3,"c":"health","d":"a doctor's written order for medicine","z":"處方","e":"You need a prescription to buy this medicine.","u":"prescription","ez":"買這種藥需要處方箋。","s":"medical order","f":"prescribe (v.)","id":89},{"w":"stress","p":"n.","i":"/stres/","t":2,"c":"health","d":"worry or pressure that affects the mind or body","z":"壓力","e":"Heavy workloads cause stress for many employees.","u":"stress","ez":"繁重的工作量給許多員工造成壓力。","s":"pressure, strain","f":"stressful (adj.)","id":90,"a":4},{"w":"addiction","p":"n.","i":"/əˈdɪkʃn/","t":3,"c":"health","d":"being unable to stop doing or using something harmful","z":"成癮","e":"Phone addiction is common among teenagers.","u":"addiction","ez":"手機成癮在青少年之間很常見。","s":"dependence","f":"addict (n.), addictive (adj.)","id":91},{"w":"urban","p":"adj.","i":"/ˈɜːbən/","t":2,"c":"society","d":"relating to towns and cities","z":"都市的","e":"Urban populations are growing faster than rural ones.","u":"Urban","ez":"都市人口的成長速度比鄉村快。","s":"city, metropolitan","f":"urbanise (v.), urbanisation (n.)","id":92},{"w":"inequality","p":"n.","i":"/ˌɪnɪˈkwɒləti/","t":3,"c":"society","d":"an unfair difference between groups of people","z":"不平等","e":"Income inequality has widened over the past decade.","u":"inequality","ez":"過去十年間，所得不平等持續擴大。","s":"disparity, imbalance","f":"equal (adj.), equality (n.)","id":93},{"w":"poverty","p":"n.","i":"/ˈpɒvəti/","t":2,"c":"society","d":"the state of being extremely poor","z":"貧窮","e":"Millions of families still live in poverty.","u":"poverty","ez":"數百萬個家庭仍生活在貧窮之中。","s":"hardship, destitution","f":"poor (adj.)","id":94},{"w":"migrate","p":"v.","i":"/maɪˈɡreɪt/","t":3,"c":"society","d":"to move from one place to another to live or work","z":"遷移","e":"Many young people migrate to cities to find work.","u":"migrate","ez":"許多年輕人遷往城市找工作。","s":"relocate, move","f":"migration (n.), migrant (n.)","id":95,"a":6},{"w":"minority","p":"n.","i":"/maɪˈnɒrəti/","t":3,"c":"society","d":"a small group within a larger population","z":"少數、少數群體","e":"Only a small minority of residents opposed the plan.","u":"minority","ez":"只有一小部分居民反對這項計畫。","s":"small group","f":"majority (n.)","id":96},{"w":"ageing","p":"adj.","i":"/ˈeɪdʒɪŋ/","t":3,"c":"society","d":"becoming older, used of a population or machine","z":"老化的","e":"An ageing population puts pressure on health services.","u":"ageing","ez":"人口老化對醫療服務造成壓力。","s":"elderly, getting older","f":"age (v.)","id":97},{"w":"unemployment","p":"n.","i":"/ˌʌnɪmˈplɔɪmənt/","t":2,"c":"society","d":"the situation of having no job","z":"失業","e":"Youth unemployment remains stubbornly high.","u":"unemployment","ez":"青年失業率依然居高不下。","s":"joblessness","f":"unemployed (adj.)","id":98},{"w":"welfare","p":"n.","i":"/ˈwelfeə/","t":3,"c":"society","d":"help given by the state to people in need","z":"福利","e":"The welfare system supports families on low incomes.","u":"welfare","ez":"福利制度支持低收入家庭。","s":"benefits, wellbeing","f":"welfare state (n.)","id":99,"a":5},{"w":"discrimination","p":"n.","i":"/dɪˌskrɪmɪˈneɪʃn/","t":3,"c":"society","d":"unfair treatment of people because of who they are","z":"歧視","e":"Laws now prohibit discrimination in hiring.","u":"discrimination","ez":"法律現在禁止在僱用上的歧視。","s":"prejudice, bias","f":"discriminate (v.)","id":100},{"w":"stereotype","p":"n.","i":"/ˈsteriətaɪp/","t":4,"c":"society","d":"a fixed, oversimplified idea about a group","z":"刻板印象","e":"Films often reinforce harmful stereotypes about older people.","u":"stereotypes","ez":"電影常常強化對老年人的有害刻板印象。","s":"cliché, preconception","f":"stereotypical (adj.)","id":101},{"w":"homeless","p":"adj.","i":"/ˈhəʊmləs/","t":2,"c":"society","d":"having no place to live","z":"無家可歸的","e":"The charity provides meals for homeless people each night.","u":"homeless","ez":"這個慈善機構每晚為無家可歸的人提供餐食。","s":"roofless","f":"homelessness (n.)","id":102},{"w":"community","p":"n.","i":"/kəˈmjuːnəti/","t":1,"c":"society","d":"the people living in one area, or a group with shared interests","z":"社區、群體","e":"The local community raised money for a new library.","u":"community","ez":"當地社區籌錢興建新圖書館。","s":"neighbourhood, society","f":"communal (adj.)","id":103,"a":2},{"w":"generation","p":"n.","i":"/ˌdʒenəˈreɪʃn/","t":2,"c":"society","d":"all people born at about the same time","z":"世代","e":"Each generation faces its own set of challenges.","u":"generation","ez":"每一個世代都面對自己的挑戰。","s":"age group","f":"generate (v.)","id":104,"a":5},{"w":"tradition","p":"n.","i":"/trəˈdɪʃn/","t":2,"c":"society","d":"a custom passed down over many years","z":"傳統","e":"Sharing a meal is an old tradition in many cultures.","u":"tradition","ez":"共享一餐在許多文化中是古老的傳統。","s":"custom, convention","f":"traditional (adj.)","id":105,"a":2},{"w":"crime","p":"n.","i":"/kraɪm/","t":1,"c":"society","d":"an act that breaks the law","z":"犯罪","e":"Street lighting can help reduce crime in towns.","u":"crime","ez":"街燈有助於減少城鎮的犯罪。","s":"offence","f":"criminal (n./adj.)","id":106},{"w":"vulnerable","p":"adj.","i":"/ˈvʌlnərəbl/","t":4,"c":"society","d":"easily harmed or hurt","z":"脆弱的、易受傷害的","e":"Elderly people are especially vulnerable during heatwaves.","u":"vulnerable","ez":"長者在熱浪期間特別脆弱。","s":"exposed, at risk","f":"vulnerability (n.)","id":107},{"w":"awareness","p":"n.","i":"/əˈweənəs/","t":3,"c":"society","d":"knowledge that something exists or is important","z":"意識、認知","e":"The campaign raised public awareness of mental health.","u":"awareness","ez":"這項活動提高了大眾對心理健康的認識。","s":"consciousness","f":"aware (adj.)","id":108},{"w":"employ","p":"v.","i":"/ɪmˈplɔɪ/","t":2,"c":"work","d":"to pay someone to work for you","z":"僱用","e":"The factory employs over two thousand local people.","u":"employs","ez":"這家工廠僱用了兩千多位當地人。","s":"hire, recruit","f":"employer (n.), employee (n.)","id":109},{"w":"salary","p":"n.","i":"/ˈsæləri/","t":2,"c":"work","d":"fixed pay received monthly from an employer","z":"薪水","e":"Her salary rose after she was promoted.","u":"salary","ez":"她升職後薪水提高了。","s":"pay, wage","f":"salaried (adj.)","id":110},{"w":"promote","p":"v.","i":"/prəˈməʊt/","t":2,"c":"work","d":"to move someone to a higher position, or to support something","z":"晉升、促進","e":"The company promoted her to manager last spring.","u":"promoted","ez":"公司去年春天把她升為經理。","s":"advance, encourage","f":"promotion (n.)","id":111,"a":4},{"w":"retire","p":"v.","i":"/rɪˈtaɪə/","t":2,"c":"work","d":"to stop working permanently because of age","z":"退休","e":"Many workers hope to retire before sixty-five.","u":"retire","ez":"許多勞工希望在六十五歲前退休。","s":"stop working","f":"retirement (n.), retiree (n.)","id":112},{"w":"flexible","p":"adj.","i":"/ˈfleksəbl/","t":2,"c":"work","d":"able to change easily to suit new conditions","z":"彈性的","e":"Flexible hours help parents balance work and family.","u":"Flexible","ez":"彈性工時幫助父母平衡工作與家庭。","s":"adaptable","f":"flexibility (n.)","id":113,"a":6},{"w":"productivity","p":"n.","i":"/ˌprɒdʌkˈtɪvəti/","t":3,"c":"work","d":"the rate at which goods or work are produced","z":"生產力","e":"Shorter meetings can raise productivity in offices.","u":"productivity","ez":"縮短會議可以提升辦公室的生產力。","s":"efficiency, output","f":"productive (adj.), produce (v.)","id":114},{"w":"commute","p":"v.","i":"/kəˈmjuːt/","t":3,"c":"work","d":"to travel regularly between home and work","z":"通勤","e":"Millions of people commute into the capital every day.","u":"commute","ez":"每天有數百萬人通勤進入首都。","s":"travel to work","f":"commuter (n.)","id":115},{"w":"freelance","p":"adj.","i":"/ˈfriːlɑːns/","t":4,"c":"work","d":"working for different companies rather than one employer","z":"自由接案的","e":"Many designers choose freelance work for greater independence.","u":"freelance","ez":"許多設計師選擇自由接案以獲得更大的獨立性。","s":"self-employed","f":"freelancer (n.)","id":116},{"w":"colleague","p":"n.","i":"/ˈkɒliːɡ/","t":2,"c":"work","d":"a person you work with","z":"同事","e":"A colleague offered to cover her shift.","u":"colleague","ez":"一位同事主動提出替她代班。","s":"co-worker","f":"colleagues (pl.)","id":117,"a":10},{"w":"deadline","p":"n.","i":"/ˈdedlaɪn/","t":2,"c":"work","d":"the latest time by which something must be done","z":"截止期限","e":"The team worked all weekend to meet the deadline.","u":"deadline","ez":"團隊整個週末加班趕上截止期限。","s":"time limit","f":"dead (adj.)","id":118},{"w":"inflation","p":"n.","i":"/ɪnˈfleɪʃn/","t":3,"c":"economy","d":"a general rise in prices over time","z":"通貨膨脹","e":"High inflation reduces what people can buy with their wages.","u":"inflation","ez":"高通膨降低了人們用薪水能買到的東西。","s":"price rises","f":"inflate (v.)","id":119},{"w":"recession","p":"n.","i":"/rɪˈseʃn/","t":4,"c":"economy","d":"a period when a country's economy shrinks","z":"經濟衰退","e":"Many shops closed during the recession.","u":"recession","ez":"許多商店在經濟衰退期間倒閉。","s":"downturn, slump","f":"recede (v.)","id":120},{"w":"invest","p":"v.","i":"/ɪnˈvest/","t":2,"c":"economy","d":"to put money into something to make a profit","z":"投資","e":"Firms invest heavily in training new staff.","u":"invest","ez":"企業大量投資於培訓新員工。","s":"fund, finance","f":"investment (n.), investor (n.)","id":121,"a":2},{"w":"revenue","p":"n.","i":"/ˈrevənjuː/","t":3,"c":"economy","d":"money received by a company or government","z":"收入、歲入","e":"Tourism brings considerable revenue to the island.","u":"revenue","ez":"觀光為這座島帶來可觀的收入。","s":"income, earnings","f":"revenues (pl.)","id":122,"a":5},{"w":"commodity","p":"n.","i":"/kəˈmɒdəti/","t":4,"c":"economy","d":"a raw material or product that can be bought and sold","z":"商品、大宗物資","e":"Oil is still the world's most traded commodity.","u":"commodity","ez":"石油仍是全球交易量最大的大宗商品。","s":"product, goods","f":"commodities (pl.)","id":123,"a":8},{"w":"export","p":"v.","i":"/ɪkˈspɔːt/","t":2,"c":"economy","d":"to sell goods to another country","z":"出口","e":"Ireland exports large quantities of dairy products.","u":"exports","ez":"愛爾蘭出口大量乳製品。","s":"sell abroad","f":"exporter (n.), import (v.)","id":124,"a":1},{"w":"subsidy","p":"n.","i":"/ˈsʌbsədi/","t":4,"c":"economy","d":"money given by the government to help an industry","z":"補助、補貼","e":"A government subsidy made electric cars cheaper.","u":"subsidy","ez":"政府補貼讓電動車變得更便宜。","s":"grant, support","f":"subsidise (v.)","id":125,"a":6},{"w":"currency","p":"n.","i":"/ˈkʌrənsi/","t":3,"c":"economy","d":"the money used in a particular country","z":"貨幣","e":"The local currency lost value against the euro.","u":"currency","ez":"當地貨幣對歐元貶值。","s":"money, legal tender","f":"current (adj.)","id":126,"a":8},{"w":"entrepreneur","p":"n.","i":"/ˌɒntrəprəˈnɜː/","t":4,"c":"economy","d":"a person who starts a business and takes risks","z":"企業家","e":"The young entrepreneur opened her first shop at twenty.","u":"entrepreneur","ez":"這位年輕的企業家二十歲開了第一間店。","s":"businessperson","f":"entrepreneurial (adj.)","id":127},{"w":"consumer","p":"n.","i":"/kənˈsjuːmə/","t":2,"c":"economy","d":"a person who buys goods or services","z":"消費者","e":"Consumers are paying more for basic food.","u":"Consumers","ez":"消費者為基本食物付出更多錢。","s":"customer, buyer","f":"consume (v.)","id":128},{"w":"tax","p":"n.","i":"/tæks/","t":1,"c":"economy","d":"money paid to the government from income or purchases","z":"稅","e":"A new tax on sugary drinks was introduced last year.","u":"tax","ez":"去年開始對含糖飲料課徵新稅。","s":"levy, duty","f":"taxation (n.), taxpayer (n.)","id":129},{"w":"profit","p":"n.","i":"/ˈprɒfɪt/","t":1,"c":"economy","d":"money gained when income is greater than costs","z":"利潤","e":"The business made a small profit in its first year.","u":"profit","ez":"這家企業第一年賺了小額利潤。","s":"gain, earnings","f":"profitable (adj.)","id":130},{"w":"globalisation","p":"n.","i":"/ˌɡləʊbəlaɪˈzeɪʃn/","t":4,"c":"economy","d":"the way businesses and cultures spread across the world","z":"全球化","e":"Globalisation has linked markets that were once separate.","u":"Globalisation","ez":"全球化把原本各自獨立的市場連結在一起。","s":"worldwide integration","f":"global (adj.)","id":131},{"w":"legislation","p":"n.","i":"/ˌledʒɪsˈleɪʃn/","t":3,"c":"gov","d":"laws made by a government","z":"立法、法律","e":"New legislation will protect workers' rights.","u":"legislation","ez":"新法律將保障勞工的權益。","s":"laws, statutes","f":"legislate (v.), legislative (adj.)","id":132},{"w":"regulate","p":"v.","i":"/ˈreɡjuleɪt/","t":3,"c":"gov","d":"to control something by rules","z":"管制、規範","e":"Authorities regulate the sale of tobacco strictly.","u":"regulate","ez":"主管機關嚴格管制菸草的銷售。","s":"control, govern","f":"regulation (n.)","id":133,"a":2},{"w":"enforce","p":"v.","i":"/ɪnˈfɔːs/","t":3,"c":"gov","d":"to make sure that people obey a law","z":"執行、強制實施","e":"Police must enforce the speed limit near schools.","u":"enforce","ez":"警方必須在學校附近執行速限。","s":"implement, apply","f":"enforcement (n.)","id":134,"a":5},{"w":"policy","p":"n.","i":"/ˈpɒləsi/","t":1,"c":"gov","d":"a plan of action agreed by a government or organisation","z":"政策","e":"The government announced a new housing policy.","u":"policy","ez":"政府宣布了新的住房政策。","s":"strategy, plan","f":"policymaker (n.)","id":135,"a":1},{"w":"constitution","p":"n.","i":"/ˌkɒnstɪˈtjuːʃn/","t":4,"c":"gov","d":"the basic laws of a country","z":"憲法","e":"The constitution guarantees freedom of speech.","u":"constitution","ez":"憲法保障言論自由。","s":"charter","f":"constitutional (adj.)","id":136},{"w":"citizen","p":"n.","i":"/ˈsɪtɪzn/","t":2,"c":"gov","d":"a person with legal rights in a country","z":"公民","e":"Every citizen has the right to vote.","u":"citizen","ez":"每位公民都有投票的權利。","s":"national, resident","f":"citizenship (n.)","id":137},{"w":"parliament","p":"n.","i":"/ˈpɑːləmənt/","t":3,"c":"gov","d":"the group of people who make a country's laws","z":"國會","e":"Parliament voted to approve the budget.","u":"Parliament","ez":"國會投票通過了預算。","s":"legislature, assembly","f":"parliamentary (adj.)","id":138},{"w":"authority","p":"n.","i":"/ɔːˈθɒrəti/","t":2,"c":"gov","d":"the power to give orders, or an official organisation","z":"權力、當局","e":"The local authority plans to build new homes.","u":"authority","ez":"地方當局計畫興建新住宅。","s":"power, council","f":"authorise (v.)","id":139,"a":1},{"w":"abolish","p":"v.","i":"/əˈbɒlɪʃ/","t":4,"c":"gov","d":"to officially end a law or system","z":"廢除","e":"The council voted to abolish the old parking charge.","u":"abolish","ez":"議會投票廢除舊的停車費。","s":"scrap, end","f":"abolition (n.)","id":140},{"w":"bureaucracy","p":"n.","i":"/bjʊəˈrɒkrəsi/","t":4,"c":"gov","d":"a complicated system of official rules and procedures","z":"官僚體制","e":"Too much bureaucracy slows down small businesses.","u":"bureaucracy","ez":"過多的官僚程序拖慢了小型企業。","s":"red tape","f":"bureaucratic (adj.)","id":141},{"w":"sanction","p":"n.","i":"/ˈsæŋkʃn/","t":4,"c":"gov","d":"a penalty used to force a country to obey rules","z":"制裁","e":"Several nations imposed sanctions on the regime.","u":"sanctions","ez":"數個國家對該政權實施制裁。","s":"penalty, embargo","f":"sanction (v.)","id":142},{"w":"verdict","p":"n.","i":"/ˈvɜːdɪkt/","t":3,"c":"gov","d":"the decision of a court about guilt","z":"裁決、判決","e":"The jury reached a verdict after two days.","u":"verdict","ez":"陪審團在兩天後作出裁決。","s":"judgement, ruling","f":"verdict (n.)","id":143},{"w":"campaign","p":"n.","i":"/kæmˈpeɪn/","t":2,"c":"gov","d":"organised activities to achieve a social or political aim","z":"運動、競選活動","e":"The campaign to save the park attracted thousands of supporters.","u":"campaign","ez":"拯救公園的運動吸引了數千名支持者。","s":"drive, crusade","f":"campaigner (n.)","id":144},{"w":"heritage","p":"n.","i":"/ˈherɪtɪdʒ/","t":3,"c":"culture","d":"traditions and buildings passed down from the past","z":"遺產","e":"The old fortress is part of the nation's cultural heritage.","u":"heritage","ez":"這座古堡壘是國家文化遺產的一部分。","s":"legacy, inheritance","f":"inherit (v.)","id":145},{"w":"exhibit","p":"v.","i":"/ɪɡˈzɪbɪt/","t":3,"c":"culture","d":"to show something publicly, such as art","z":"展出","e":"The gallery will exhibit works by local painters.","u":"exhibit","ez":"這家畫廊將展出當地畫家的作品。","s":"display, show","f":"exhibition (n.)","id":146,"a":8},{"w":"broadcast","p":"v.","i":"/ˈbrɔːdkɑːst/","t":3,"c":"culture","d":"to send out a programme on television or radio","z":"播送、廣播","e":"The match will be broadcast live across Europe.","u":"broadcast","ez":"這場比賽將在歐洲各地現場轉播。","s":"transmit, air","f":"broadcaster (n.)","id":147},{"w":"censorship","p":"n.","i":"/ˈsensəʃɪp/","t":4,"c":"culture","d":"the act of banning parts of books, films or news","z":"審查制度","e":"Censorship limited what newspapers could publish.","u":"Censorship","ez":"審查制度限制了報紙可以刊登的內容。","s":"suppression","f":"censor (v.)","id":148},{"w":"literature","p":"n.","i":"/ˈlɪtrətʃə/","t":2,"c":"culture","d":"written works such as novels, poems and plays","z":"文學","e":"She studied English literature at university.","u":"literature","ez":"她在大學主修英國文學。","s":"writing, texts","f":"literary (adj.)","id":149},{"w":"folklore","p":"n.","i":"/ˈfəʊklɔː/","t":4,"c":"culture","d":"traditional stories and beliefs of a community","z":"民間傳說","e":"Irish folklore is full of fairies and ancient heroes.","u":"folklore","ez":"愛爾蘭民間傳說充滿了精靈與古代英雄。","s":"legends, myths","f":"folk (n.)","id":150},{"w":"sculpture","p":"n.","i":"/ˈskʌlptʃə/","t":3,"c":"culture","d":"a figure made by carving or shaping materials","z":"雕塑","e":"A bronze sculpture stands in the town square.","u":"sculpture","ez":"小鎮廣場上矗立著一座青銅雕塑。","s":"statue","f":"sculptor (n.)","id":151},{"w":"audience","p":"n.","i":"/ˈɔːdiəns/","t":1,"c":"culture","d":"the people who watch or listen to a performance","z":"觀眾","e":"The audience applauded for several minutes.","u":"audience","ez":"觀眾鼓掌了好幾分鐘。","s":"spectators, viewers","f":"audible (adj.)","id":152},{"w":"influential","p":"adj.","i":"/ˌɪnfluˈenʃl/","t":3,"c":"culture","d":"having a strong effect on people's ideas or behaviour","z":"有影響力的","e":"She is one of the most influential writers of her time.","u":"influential","ez":"她是當代最有影響力的作家之一。","s":"powerful, important","f":"influence (n./v.)","id":153},{"w":"portray","p":"v.","i":"/pɔːˈtreɪ/","t":4,"c":"culture","d":"to show or describe someone in a particular way","z":"描繪、刻畫","e":"The film portrays rural life with great warmth.","u":"portrays","ez":"這部電影帶著極大的溫情描繪鄉村生活。","s":"depict, represent","f":"portrayal (n.)","id":154},{"w":"hypothesis","p":"n.","i":"/haɪˈpɒθəsɪs/","t":3,"c":"science","d":"an idea suggested as an explanation, to be tested","z":"假設","e":"The experiment supported the researchers' hypothesis.","u":"hypothesis","ez":"這項實驗支持了研究人員的假設。","s":"theory, assumption","f":"hypothetical (adj.)","id":155,"a":4},{"w":"evidence","p":"n.","i":"/ˈevɪdəns/","t":1,"c":"science","d":"facts that show something is true","z":"證據","e":"There is strong evidence that exercise improves memory.","u":"evidence","ez":"有強力證據顯示運動能改善記憶。","s":"proof, data","f":"evident (adj.)","id":156},{"w":"observe","p":"v.","i":"/əbˈzɜːv/","t":2,"c":"science","d":"to watch carefully","z":"觀察","e":"Scientists observe the behaviour of whales from boats.","u":"observe","ez":"科學家從船上觀察鯨魚的行為。","s":"watch, monitor","f":"observation (n.)","id":157},{"w":"experiment","p":"n.","i":"/ɪkˈsperɪmənt/","t":1,"c":"science","d":"a test done to learn something or prove an idea","z":"實驗","e":"The students carried out an experiment on plant growth.","u":"experiment","ez":"學生們進行了植物生長的實驗。","s":"trial, test","f":"experimental (adj.)","id":158},{"w":"correlation","p":"n.","i":"/ˌkɒrəˈleɪʃn/","t":4,"c":"science","d":"a link between two things that change together","z":"相關性","e":"The study found a correlation between sleep and grades.","u":"correlation","ez":"這項研究發現睡眠與成績之間有相關性。","s":"connection, link","f":"correlate (v.)","id":159},{"w":"species","p":"n.","i":"/ˈspiːʃiːz/","t":2,"c":"science","d":"a group of living things of the same kind","z":"物種","e":"Thousands of new species are discovered every year.","u":"species","ez":"每年都有數千種新物種被發現。","s":"type, kind","f":"specific (adj.)","id":160},{"w":"mutation","p":"n.","i":"/mjuːˈteɪʃn/","t":4,"c":"science","d":"a change in the genes of a living thing","z":"突變","e":"A single mutation can alter how a virus spreads.","u":"mutation","ez":"單一突變就能改變病毒的傳播方式。","s":"genetic change","f":"mutate (v.)","id":161},{"w":"verify","p":"v.","i":"/ˈverɪfaɪ/","t":3,"c":"science","d":"to check that something is true","z":"查證、核實","e":"Other teams must verify the results independently.","u":"verify","ez":"其他團隊必須獨立查證這些結果。","s":"confirm, validate","f":"verification (n.)","id":162},{"w":"fossil","p":"n.","i":"/ˈfɒsl/","t":3,"c":"science","d":"the remains of an ancient animal or plant in rock","z":"化石","e":"A fossil of a giant fish was found in the cliff.","u":"fossil","ez":"人們在懸崖中發現了一條巨大魚類的化石。","s":"remains, relic","f":"fossilise (v.)","id":163},{"w":"laboratory","p":"n.","i":"/ləˈbɒrətri/","t":2,"c":"science","d":"a room where scientific tests are done","z":"實驗室","e":"The laboratory is equipped with modern microscopes.","u":"laboratory","ez":"這間實驗室配備了現代化顯微鏡。","s":"lab","f":"lab (n.)","id":164},{"w":"phenomenon","p":"n.","i":"/fəˈnɒmɪnən/","t":3,"c":"science","d":"something that exists or happens and can be observed","z":"現象","e":"Aurora lights are a spectacular natural phenomenon.","u":"phenomenon","ez":"極光是壯觀的自然現象。","s":"occurrence, event","f":"phenomena (pl.)","id":165,"a":7},{"w":"theory","p":"n.","i":"/ˈθɪəri/","t":1,"c":"science","d":"an idea that explains why something happens","z":"理論","e":"Einstein's theory changed how we understand time.","u":"theory","ez":"愛因斯坦的理論改變了我們對時間的理解。","s":"hypothesis, principle","f":"theoretical (adj.)","id":166,"a":1},{"w":"infrastructure","p":"n.","i":"/ˈɪnfrəstrʌktʃə/","t":4,"c":"urban","d":"basic systems such as roads, power and water supply","z":"基礎建設","e":"Poor infrastructure makes it hard to reach remote villages.","u":"infrastructure","ez":"基礎建設不佳讓偏遠村莊難以抵達。","s":"facilities, network","f":"structure (n.)","id":167,"a":8},{"w":"congestion","p":"n.","i":"/kənˈdʒestʃən/","t":4,"c":"urban","d":"too much traffic or too many people in one place","z":"擁擠、壅塞","e":"Traffic congestion costs the city millions each year.","u":"congestion","ez":"交通壅塞每年讓這座城市損失數百萬。","s":"jam, overcrowding","f":"congested (adj.)","id":168},{"w":"suburb","p":"n.","i":"/ˈsʌbɜːb/","t":3,"c":"urban","d":"a residential area on the edge of a city","z":"郊區","e":"They moved to a quiet suburb for cheaper housing.","u":"suburb","ez":"他們搬到安靜的郊區以尋求較便宜的住房。","s":"outskirts","f":"suburban (adj.)","id":169},{"w":"skyscraper","p":"n.","i":"/ˈskaɪskreɪpə/","t":3,"c":"urban","d":"a very tall building","z":"摩天大樓","e":"A new skyscraper now dominates the city skyline.","u":"skyscraper","ez":"一棟新的摩天大樓如今主宰了城市天際線。","s":"high-rise","f":"sky (n.)","id":170},{"w":"pedestrian","p":"n.","i":"/pəˈdestriən/","t":3,"c":"urban","d":"a person who is walking, not driving","z":"行人","e":"The main street is now closed to traffic and open to pedestrians.","u":"pedestrians","ez":"主要街道現在禁止車輛通行，只開放給行人。","s":"walker","f":"pedestrian (adj.)","id":171},{"w":"accommodation","p":"n.","i":"/əˌkɒməˈdeɪʃn/","t":3,"c":"urban","d":"a place to live or stay","z":"住宿","e":"Student accommodation is difficult to find in the city.","u":"accommodation","ez":"在這座城市很難找到學生住宿。","s":"housing, lodging","f":"accommodate (v.)","id":172},{"w":"landmark","p":"n.","i":"/ˈlændmɑːk/","t":3,"c":"urban","d":"a building or place that is easy to recognise","z":"地標","e":"The cathedral is the best-known landmark in the town.","u":"landmark","ez":"大教堂是這個小鎮最著名的地標。","s":"monument","f":"land (n.)","id":173},{"w":"expand","p":"v.","i":"/ɪkˈspænd/","t":2,"c":"urban","d":"to become larger in size or amount","z":"擴張、擴大","e":"The airport plans to expand its terminal next year.","u":"expand","ez":"機場計畫明年擴建航廈。","s":"grow, enlarge","f":"expansion (n.)","id":174,"a":5},{"w":"renovate","p":"v.","i":"/ˈrenəveɪt/","t":4,"c":"urban","d":"to repair and improve an old building","z":"翻新","e":"The council will renovate the old railway station.","u":"renovate","ez":"市議會將翻新舊火車站。","s":"refurbish, restore","f":"renovation (n.)","id":175},{"w":"tourism","p":"n.","i":"/ˈtɔːrɪzəm/","t":2,"c":"urban","d":"the business of providing services for visitors","z":"觀光業","e":"Tourism is the main source of income for the island.","u":"Tourism","ez":"觀光是這座島的主要收入來源。","s":"travel industry","f":"tourist (n.)","id":176},{"w":"destination","p":"n.","i":"/ˌdestɪˈneɪʃn/","t":2,"c":"urban","d":"the place where someone is going","z":"目的地","e":"Lisbon has become a popular destination for young travellers.","u":"destination","ez":"里斯本已成為年輕旅人的熱門目的地。","s":"goal, stop","f":"destined (adj.)","id":177},{"w":"itinerary","p":"n.","i":"/aɪˈtɪnərəri/","t":4,"c":"urban","d":"a planned route or list of places to visit","z":"行程","e":"Our itinerary includes three days in the countryside.","u":"itinerary","ez":"我們的行程包含在鄉間度過三天。","s":"schedule, route","f":"itinerary (n.)","id":178},{"w":"transport","p":"n.","i":"/ˈtrænspɔːt/","t":1,"c":"urban","d":"a system for moving people or goods","z":"交通運輸","e":"Cheap public transport encourages people to leave their cars at home.","u":"transport","ez":"便宜的大眾運輸鼓勵人們把車留在家。","s":"transit, conveyance","f":"transport (v.)","id":179,"a":6},{"w":"analyse","p":"v.","i":"/ˈænəlaɪz/","t":2,"c":"gen","d":"to examine something carefully to understand it","z":"分析","e":"Researchers analyse the survey results in detail.","u":"analyse","ez":"研究人員詳細分析問卷結果。","s":"examine, study","f":"analysis (n.), analyst (n.)","id":180,"a":1},{"w":"approach","p":"n.","i":"/əˈprəʊtʃ/","t":2,"c":"gen","d":"a way of dealing with something","z":"方法、途徑","e":"A new approach to teaching raised test scores.","u":"approach","ez":"新的教學方法提高了考試成績。","s":"method, strategy","f":"approach (v.)","id":181,"a":1},{"w":"assume","p":"v.","i":"/əˈsjuːm/","t":2,"c":"gen","d":"to accept something as true without proof","z":"假定、認為","e":"Many people assume that older workers dislike change.","u":"assume","ez":"許多人以為年長的員工不喜歡改變。","s":"suppose, presume","f":"assumption (n.)","id":182,"a":1},{"w":"benefit","p":"n.","i":"/ˈbenɪfɪt/","t":1,"c":"gen","d":"a helpful or good effect","z":"益處","e":"Regular exercise has many health benefits.","u":"benefits","ez":"規律運動有許多健康益處。","s":"advantage, gain","f":"beneficial (adj.)","id":183,"a":1},{"w":"concept","p":"n.","i":"/ˈkɒnsept/","t":2,"c":"gen","d":"an abstract idea","z":"概念","e":"The concept of fairness differs between cultures.","u":"concept","ez":"公平的概念在不同文化中各不相同。","s":"idea, notion","f":"conceptual (adj.)","id":184,"a":1},{"w":"context","p":"n.","i":"/ˈkɒntekst/","t":2,"c":"gen","d":"the situation in which something happens","z":"背景、語境","e":"You can guess a word's meaning from its context.","u":"context","ez":"你可以從語境猜出單字的意思。","s":"background, setting","f":"contextual (adj.)","id":185,"a":1},{"w":"derive","p":"v.","i":"/dɪˈraɪv/","t":3,"c":"gen","d":"to get something from a source","z":"源自、取得","e":"Many English words derive from Latin.","u":"derive","ez":"許多英文單字源自拉丁文。","s":"originate, obtain","f":"derivative (n.)","id":186,"a":1},{"w":"establish","p":"v.","i":"/ɪˈstæblɪʃ/","t":2,"c":"gen","d":"to set up or start something that will last","z":"建立、確立","e":"The university was established in 1845.","u":"established","ez":"這所大學成立於一八四五年。","s":"found, set up","f":"establishment (n.)","id":187,"a":1},{"w":"factor","p":"n.","i":"/ˈfæktə/","t":2,"c":"gen","d":"one of the things that influence a result","z":"因素","e":"Cost is the main factor in most decisions.","u":"factor","ez":"成本是大多數決定中的主要因素。","s":"element, cause","f":"factor (v.)","id":188,"a":1},{"w":"function","p":"n.","i":"/ˈfʌŋkʃn/","t":2,"c":"gen","d":"the purpose or job of something","z":"功能","e":"The main function of the heart is to pump blood.","u":"function","ez":"心臟的主要功能是輸送血液。","s":"role, purpose","f":"functional (adj.)","id":189,"a":1},{"w":"identify","p":"v.","i":"/aɪˈdentɪfaɪ/","t":2,"c":"gen","d":"to recognise and name something","z":"辨識、確認","e":"Engineers identified the cause of the failure.","u":"identified","ez":"工程師找出了故障的原因。","s":"recognise, pinpoint","f":"identity (n.)","id":190,"a":1},{"w":"indicate","p":"v.","i":"/ˈɪndɪkeɪt/","t":2,"c":"gen","d":"to show or point to something","z":"顯示、表明","e":"Figures indicate that sales are falling.","u":"indicate","ez":"數字顯示銷售正在下滑。","s":"show, suggest","f":"indication (n.), indicator (n.)","id":191,"a":1},{"w":"interpret","p":"v.","i":"/ɪnˈtɜːprɪt/","t":3,"c":"gen","d":"to explain the meaning of something","z":"詮釋、解讀","e":"Different readers interpret the poem in different ways.","u":"interpret","ez":"不同的讀者對這首詩有不同的解讀。","s":"explain, decode","f":"interpretation (n.)","id":192,"a":1},{"w":"method","p":"n.","i":"/ˈmeθəd/","t":1,"c":"gen","d":"a particular way of doing something","z":"方法","e":"This method saves time and money.","u":"method","ez":"這個方法節省時間與金錢。","s":"technique, way","f":"methodical (adj.)","id":193,"a":1},{"w":"occur","p":"v.","i":"/əˈkɜː/","t":2,"c":"gen","d":"to happen","z":"發生","e":"Most accidents occur at home.","u":"occur","ez":"大多數意外發生在家中。","s":"happen, take place","f":"occurrence (n.)","id":194,"a":1},{"w":"principle","p":"n.","i":"/ˈprɪnsəpl/","t":2,"c":"gen","d":"a basic rule or belief","z":"原則","e":"Honesty is a principle he never abandoned.","u":"principle","ez":"誠實是他從未放棄的原則。","s":"rule, standard","f":"principled (adj.)","id":195,"a":1},{"w":"require","p":"v.","i":"/rɪˈkwaɪə/","t":2,"c":"gen","d":"to need something or make it necessary","z":"需要、要求","e":"This job requires strong communication skills.","u":"requires","ez":"這份工作需要很強的溝通技巧。","s":"need, demand","f":"requirement (n.)","id":196,"a":1},{"w":"significant","p":"adj.","i":"/sɪɡˈnɪfɪkənt/","t":2,"c":"gen","d":"large or important enough to notice","z":"重大的、顯著的","e":"There was a significant increase in applications.","u":"significant","ez":"申請人數顯著增加。","s":"notable, major","f":"significance (n.)","id":197,"a":1},{"w":"structure","p":"n.","i":"/ˈstrʌktʃə/","t":2,"c":"gen","d":"the way parts are arranged to form a whole","z":"結構","e":"The structure of the essay was clear and logical.","u":"structure","ez":"這篇文章的結構清晰而有邏輯。","s":"framework, organisation","f":"structural (adj.)","id":198,"a":1},{"w":"achieve","p":"v.","i":"/əˈtʃiːv/","t":1,"c":"gen","d":"to succeed in reaching a goal","z":"達成","e":"She worked hard to achieve her goal.","u":"achieve","ez":"她努力工作以達成目標。","s":"accomplish, attain","f":"achievement (n.)","id":199,"a":2},{"w":"affect","p":"v.","i":"/əˈfekt/","t":1,"c":"gen","d":"to influence or change something","z":"影響","e":"Poor sleep can affect your concentration.","u":"affect","ez":"睡眠不佳可能影響你的專注力。","s":"influence, impact","f":"affection (n.)","id":200,"a":2},{"w":"aspect","p":"n.","i":"/ˈæspekt/","t":2,"c":"gen","d":"one part or feature of a situation","z":"方面","e":"Every aspect of the plan was carefully checked.","u":"aspect","ez":"計畫的每個方面都經過仔細檢查。","s":"feature, side","f":"aspects (pl.)","id":201,"a":2},{"w":"conclude","p":"v.","i":"/kənˈkluːd/","t":2,"c":"gen","d":"to decide something after thinking, or to end","z":"下結論、結束","e":"The report concluded that the scheme was too costly.","u":"concluded","ez":"報告的結論是這項方案成本太高。","s":"decide, end","f":"conclusion (n.)","id":202,"a":2},{"w":"conduct","p":"v.","i":"/kənˈdʌkt/","t":2,"c":"gen","d":"to organise and carry out an activity","z":"進行、實施","e":"The team conducted a survey of three hundred households.","u":"conducted","ez":"團隊對三百戶家庭進行了調查。","s":"carry out, perform","f":"conductor (n.)","id":203,"a":2},{"w":"construct","p":"v.","i":"/kənˈstrʌkt/","t":3,"c":"gen","d":"to build something","z":"建造","e":"Workers will construct a new bridge across the river.","u":"construct","ez":"工人將在河上建造一座新橋。","s":"build, assemble","f":"construction (n.)","id":204,"a":2},{"w":"contrast","p":"n.","i":"/ˈkɒntrɑːst/","t":3,"c":"gen","d":"a clear difference between two things","z":"對比","e":"There is a sharp contrast between city and village life.","u":"contrast","ez":"城市與鄉村生活形成鮮明對比。","s":"difference, opposition","f":"contrast (v.)","id":205,"a":4},{"w":"despite","p":"prep.","i":"/dɪˈspaɪt/","t":2,"c":"gen","d":"without being affected by something","z":"儘管","e":"Despite the rain, the match went ahead.","u":"Despite","ez":"儘管下雨，比賽仍照常進行。","s":"in spite of","f":"spite (n.)","id":206,"a":4},{"w":"emerge","p":"v.","i":"/ɪˈmɜːdʒ/","t":3,"c":"gen","d":"to come out or become known","z":"出現、浮現","e":"New evidence began to emerge last week.","u":"emerge","ez":"新證據上週開始浮現。","s":"appear, arise","f":"emergence (n.), emergency (n.)","id":207,"a":4},{"w":"ensure","p":"v.","i":"/ɪnˈʃɔː/","t":2,"c":"gen","d":"to make certain that something happens","z":"確保","e":"Teachers must ensure that every child feels safe.","u":"ensure","ez":"老師必須確保每個孩子都感到安全。","s":"guarantee, secure","f":"sure (adj.)","id":208,"a":3},{"w":"evaluate","p":"v.","i":"/ɪˈvæljueɪt/","t":3,"c":"gen","d":"to judge how good or useful something is","z":"評價、評估","e":"Managers evaluate staff performance every year.","u":"evaluate","ez":"經理每年評估員工的表現。","s":"assess, appraise","f":"evaluation (n.)","id":209,"a":2},{"w":"feature","p":"n.","i":"/ˈfiːtʃə/","t":2,"c":"gen","d":"an important or typical part of something","z":"特色、特徵","e":"A key feature of the app is its simple design.","u":"feature","ez":"這款應用程式的主要特色是簡潔的設計。","s":"characteristic, trait","f":"feature (v.)","id":210,"a":2},{"w":"focus","p":"v.","i":"/ˈfəʊkəs/","t":1,"c":"gen","d":"to give attention to one thing","z":"專注、聚焦","e":"The study will focus on teenagers in cities.","u":"focus","ez":"這項研究將聚焦於都市的青少年。","s":"concentrate","f":"focused (adj.)","id":211,"a":2},{"w":"maintain","p":"v.","i":"/meɪnˈteɪn/","t":2,"c":"gen","d":"to keep something in good condition or at the same level","z":"維持、保養","e":"It costs a lot to maintain old roads.","u":"maintain","ez":"維護老舊道路花費很高。","s":"preserve, keep","f":"maintenance (n.)","id":212,"a":2},{"w":"obtain","p":"v.","i":"/əbˈteɪn/","t":2,"c":"gen","d":"to get something","z":"取得","e":"Visitors must obtain a permit before entering the park.","u":"obtain","ez":"遊客進入公園前必須取得許可證。","s":"get, acquire","f":"obtainable (adj.)","id":213,"a":2},{"w":"participate","p":"v.","i":"/pɑːˈtɪsɪpeɪt/","t":2,"c":"gen","d":"to take part in an activity","z":"參與","e":"Over a thousand people participate in the annual race.","u":"participate","ez":"超過一千人參加年度賽跑。","s":"take part, join in","f":"participant (n.), participation (n.)","id":214,"a":2},{"w":"perceive","p":"v.","i":"/pəˈsiːv/","t":3,"c":"gen","d":"to notice or understand something in a certain way","z":"察覺、認為","e":"Some customers perceive the brand as too expensive.","u":"perceive","ez":"有些顧客認為這個品牌太貴。","s":"see, regard","f":"perception (n.)","id":215,"a":2},{"w":"potential","p":"n.","i":"/pəˈtenʃl/","t":2,"c":"gen","d":"the ability to develop in the future","z":"潛力","e":"The young player has enormous potential.","u":"potential","ez":"這位年輕球員擁有巨大的潛力。","s":"capacity, promise","f":"potentially (adv.)","id":216,"a":2},{"w":"previous","p":"adj.","i":"/ˈpriːviəs/","t":2,"c":"gen","d":"happening or existing before","z":"先前的","e":"Previous studies reached a different conclusion.","u":"Previous","ez":"先前的研究得出不同的結論。","s":"earlier, former","f":"previously (adv.)","id":217,"a":2},{"w":"primary","p":"adj.","i":"/ˈpraɪməri/","t":2,"c":"gen","d":"most important or first in order","z":"首要的、初級的","e":"The primary cause of the delay was bad weather.","u":"primary","ez":"延誤的主要原因是天氣不好。","s":"main, chief","f":"primarily (adv.)","id":218,"a":2},{"w":"range","p":"n.","i":"/reɪndʒ/","t":2,"c":"gen","d":"a set of things of different kinds, or the limits between two values","z":"範圍、種類","e":"The shop sells a wide range of organic products.","u":"range","ez":"這家店販售各式各樣的有機產品。","s":"variety, scope","f":"range (v.)","id":219,"a":2},{"w":"restrict","p":"v.","i":"/rɪˈstrɪkt/","t":3,"c":"gen","d":"to limit something","z":"限制","e":"New rules restrict the number of visitors to the cave.","u":"restrict","ez":"新規定限制進入洞穴的遊客人數。","s":"limit, curb","f":"restriction (n.)","id":220,"a":2},{"w":"select","p":"v.","i":"/sɪˈlekt/","t":2,"c":"gen","d":"to choose carefully","z":"挑選","e":"Candidates were selected after three interviews.","u":"selected","ez":"應徵者在經過三輪面試後被選出。","s":"choose, pick","f":"selection (n.)","id":221,"a":2},{"w":"strategy","p":"n.","i":"/ˈstrætədʒi/","t":2,"c":"gen","d":"a plan for achieving a long-term aim","z":"策略","e":"The company changed its marketing strategy.","u":"strategy","ez":"公司改變了行銷策略。","s":"plan, tactic","f":"strategic (adj.)","id":222,"a":2},{"w":"survey","p":"n.","i":"/ˈsɜːveɪ/","t":2,"c":"gen","d":"a set of questions asked to many people","z":"問卷調查","e":"A recent survey shows most people prefer remote work.","u":"survey","ez":"最近一項調查顯示，多數人偏好遠距工作。","s":"poll, questionnaire","f":"survey (v.)","id":223,"a":2},{"w":"transfer","p":"v.","i":"/trænsˈfɜː/","t":2,"c":"gen","d":"to move from one place or person to another","z":"轉移、調動","e":"She transferred to a larger branch in Dublin.","u":"transferred","ez":"她轉調到都柏林一間較大的分公司。","s":"move, relocate","f":"transference (n.)","id":224,"a":2},{"w":"alternative","p":"n.","i":"/ɔːlˈtɜːnətɪv/","t":2,"c":"gen","d":"another possible choice","z":"替代方案","e":"Cycling is a cheap alternative to driving.","u":"alternative","ez":"騎單車是開車之外的廉價替代方案。","s":"option, substitute","f":"alternate (v.)","id":225,"a":3},{"w":"circumstance","p":"n.","i":"/ˈsɜːkəmstəns/","t":3,"c":"gen","d":"a condition connected with an event or situation","z":"情況、環境","e":"Under no circumstance should the door be left open.","u":"circumstance","ez":"無論在任何情況下，門都不應該敞開。","s":"situation, condition","f":"circumstantial (adj.)","id":226,"a":3},{"w":"considerable","p":"adj.","i":"/kənˈsɪdərəbl/","t":3,"c":"gen","d":"fairly large in amount or importance","z":"相當大的","e":"The project required a considerable amount of effort.","u":"considerable","ez":"這個專案需要相當多的心力。","s":"substantial, sizeable","f":"considerably (adv.)","id":227,"a":3},{"w":"contribute","p":"v.","i":"/kənˈtrɪbjuːt/","t":2,"c":"gen","d":"to give something to help achieve a result","z":"貢獻、促成","e":"Poor diet can contribute to heart disease.","u":"contribute","ez":"不良飲食可能導致心臟病。","s":"add, donate","f":"contribution (n.)","id":228,"a":3},{"w":"demonstrate","p":"v.","i":"/ˈdemənstreɪt/","t":3,"c":"gen","d":"to show clearly that something is true","z":"證明、示範","e":"The results demonstrate the value of early treatment.","u":"demonstrate","ez":"結果證明了早期治療的價值。","s":"show, prove","f":"demonstration (n.)","id":229,"a":3},{"w":"dominate","p":"v.","i":"/ˈdɒmɪneɪt/","t":3,"c":"gen","d":"to have the most power or influence over something","z":"支配、佔主導","e":"A few large firms dominate the market.","u":"dominate","ez":"少數幾家大企業主導著市場。","s":"control, lead","f":"dominant (adj.)","id":230,"a":3},{"w":"emphasis","p":"n.","i":"/ˈemfəsɪs/","t":3,"c":"gen","d":"special importance given to something","z":"強調、重點","e":"The school places great emphasis on creativity.","u":"emphasis","ez":"這所學校非常強調創造力。","s":"stress, priority","f":"emphasise (v.)","id":231,"a":3},{"w":"exclude","p":"v.","i":"/ɪkˈskluːd/","t":3,"c":"gen","d":"to leave out or keep out","z":"排除","e":"The figures exclude tax and delivery costs.","u":"exclude","ez":"這些數字不包含稅金與運費。","s":"omit, rule out","f":"exclusion (n.)","id":232,"a":3},{"w":"framework","p":"n.","i":"/ˈfreɪmwɜːk/","t":3,"c":"gen","d":"a basic structure of ideas or rules","z":"架構、框架","e":"The law provides a framework for protecting wildlife.","u":"framework","ez":"這項法律為保護野生動物提供了架構。","s":"structure, outline","f":"frame (n.)","id":233,"a":3},{"w":"illustrate","p":"v.","i":"/ˈɪləstreɪt/","t":3,"c":"gen","d":"to explain or show something with examples or pictures","z":"說明、圖解","e":"The graph illustrates how prices have changed.","u":"illustrates","ez":"這張圖說明了價格是如何變化的。","s":"show, demonstrate","f":"illustration (n.)","id":234,"a":3},{"w":"imply","p":"v.","i":"/ɪmˈplaɪ/","t":3,"c":"gen","d":"to suggest something without saying it directly","z":"暗示、意味著","e":"Her silence seemed to imply disagreement.","u":"imply","ez":"她的沉默似乎暗示不同意。","s":"suggest, hint","f":"implication (n.)","id":235,"a":3},{"w":"justify","p":"v.","i":"/ˈdʒʌstɪfaɪ/","t":3,"c":"gen","d":"to show that something is reasonable","z":"證明合理","e":"Nothing can justify such a harsh punishment.","u":"justify","ez":"沒有任何理由可以為如此嚴厲的處罰辯護。","s":"defend, explain","f":"justification (n.)","id":236,"a":3},{"w":"outcome","p":"n.","i":"/ˈaʊtkʌm/","t":2,"c":"gen","d":"the final result of an event or process","z":"結果","e":"The outcome of the election surprised everyone.","u":"outcome","ez":"選舉結果讓所有人感到意外。","s":"result, consequence","f":"outcomes (pl.)","id":237,"a":3},{"w":"proportion","p":"n.","i":"/prəˈpɔːʃn/","t":3,"c":"gen","d":"a part of a whole, or the relationship between amounts","z":"比例","e":"A large proportion of students live off campus.","u":"proportion","ez":"很大比例的學生住在校外。","s":"percentage, share","f":"proportional (adj.)","id":238,"a":3},{"w":"sufficient","p":"adj.","i":"/səˈfɪʃnt/","t":3,"c":"gen","d":"enough for a particular purpose","z":"足夠的","e":"There was sufficient food for everyone.","u":"sufficient","ez":"食物足夠供所有人享用。","s":"adequate, enough","f":"suffice (v.)","id":239,"a":3},{"w":"adequate","p":"adj.","i":"/ˈædɪkwət/","t":3,"c":"gen","d":"good enough for a particular need","z":"足夠的、適當的","e":"Many villages lack adequate medical care.","u":"adequate","ez":"許多村莊缺乏足夠的醫療照護。","s":"sufficient, acceptable","f":"adequately (adv.)","id":240,"a":4},{"w":"apparent","p":"adj.","i":"/əˈpærənt/","t":3,"c":"gen","d":"clearly seen or understood","z":"明顯的","e":"It soon became apparent that the plan would fail.","u":"apparent","ez":"很快就明顯看出這項計畫會失敗。","s":"obvious, evident","f":"apparently (adv.)","id":241,"a":4},{"w":"attitude","p":"n.","i":"/ˈætɪtjuːd/","t":2,"c":"gen","d":"the way you think or feel about something","z":"態度","e":"A positive attitude helps learners keep going.","u":"attitude","ez":"積極的態度幫助學習者堅持下去。","s":"opinion, outlook","f":"attitudinal (adj.)","id":242,"a":4},{"w":"debate","p":"n.","i":"/dɪˈbeɪt/","t":2,"c":"gen","d":"a discussion in which people give different views","z":"辯論","e":"There is a heated debate about school uniforms.","u":"debate","ez":"關於學校制服有一場激烈的辯論。","s":"discussion, argument","f":"debatable (adj.)","id":243,"a":4},{"w":"overall","p":"adj.","i":"/ˌəʊvərˈɔːl/","t":2,"c":"gen","d":"including everything or everyone","z":"整體的","e":"The overall result was better than expected.","u":"overall","ez":"整體結果比預期的好。","s":"general, total","f":"overall (adv.)","id":244,"a":4},{"w":"predict","p":"v.","i":"/prɪˈdɪkt/","t":2,"c":"gen","d":"to say what will happen in the future","z":"預測","e":"Experts predict that sea levels will keep rising.","u":"predict","ez":"專家預測海平面會持續上升。","s":"forecast, foresee","f":"prediction (n.)","id":245,"a":4},{"w":"retain","p":"v.","i":"/rɪˈteɪn/","t":3,"c":"gen","d":"to keep something","z":"保留、留住","e":"Firms offer bonuses to retain talented staff.","u":"retain","ez":"企業提供獎金以留住有才華的員工。","s":"keep, hold","f":"retention (n.)","id":246,"a":4},{"w":"subsequent","p":"adj.","i":"/ˈsʌbsɪkwənt/","t":4,"c":"gen","d":"coming after something else","z":"隨後的","e":"Subsequent research confirmed the earlier findings.","u":"Subsequent","ez":"隨後的研究證實了先前的發現。","s":"following, later","f":"subsequently (adv.)","id":247,"a":4},{"w":"undertake","p":"v.","i":"/ˌʌndəˈteɪk/","t":3,"c":"gen","d":"to begin and take responsibility for a task","z":"承擔、從事","e":"The council will undertake a review of bus routes.","u":"undertake","ez":"市議會將對公車路線進行檢討。","s":"take on, begin","f":"undertaking (n.)","id":248,"a":4},{"w":"consequence","p":"n.","i":"/ˈkɒnsɪkwəns/","t":2,"c":"gen","d":"a result of an action","z":"後果","e":"Ignoring the warning had serious consequences.","u":"consequences","ez":"忽視警告造成了嚴重後果。","s":"result, outcome","f":"consequently (adv.)","id":249},{"w":"controversy","p":"n.","i":"/ˈkɒntrəvɜːsi/","t":4,"c":"gen","d":"public disagreement about something","z":"爭議","e":"The new law caused great controversy.","u":"controversy","ez":"新法引起極大的爭議。","s":"dispute, argument","f":"controversial (adj.)","id":250,"a":9},{"w":"diminish","p":"v.","i":"/dɪˈmɪnɪʃ/","t":4,"c":"gen","d":"to become or make smaller or less","z":"減少、縮小","e":"Interest in the project began to diminish.","u":"diminish","ez":"人們對這個專案的興趣開始減退。","s":"decrease, reduce","f":"diminishing (adj.)","id":251,"a":9},{"w":"anticipate","p":"v.","i":"/ænˈtɪsɪpeɪt/","t":3,"c":"gen","d":"to expect something and prepare for it","z":"預期","e":"Officials anticipate heavy traffic during the festival.","u":"anticipate","ez":"官員預期慶典期間交通會很壅塞。","s":"expect, foresee","f":"anticipation (n.)","id":252,"a":9},{"w":"inevitable","p":"adj.","i":"/ɪnˈevɪtəbl/","t":4,"c":"gen","d":"certain to happen and impossible to avoid","z":"無可避免的","e":"Some delay was inevitable after the storm.","u":"inevitable","ez":"暴風雨之後一些延誤是無可避免的。","s":"unavoidable","f":"inevitably (adv.)","id":253,"a":8},{"w":"crucial","p":"adj.","i":"/ˈkruːʃl/","t":3,"c":"gen","d":"extremely important","z":"至關重要的","e":"Early diagnosis is crucial for successful treatment.","u":"crucial","ez":"早期診斷對成功治療至關重要。","s":"vital, essential","f":"crucially (adv.)","id":254,"a":8},{"w":"enhance","p":"v.","i":"/ɪnˈhɑːns/","t":3,"c":"gen","d":"to improve the quality or value of something","z":"提升、增進","e":"Good lighting can enhance the look of a room.","u":"enhance","ez":"良好的照明能提升房間的質感。","s":"improve, boost","f":"enhancement (n.)","id":255,"a":6},{"w":"facilitate","p":"v.","i":"/fəˈsɪlɪteɪt/","t":4,"c":"gen","d":"to make a process easier","z":"促進、使便利","e":"Online tools facilitate communication between teams.","u":"facilitate","ez":"線上工具促進團隊之間的溝通。","s":"ease, assist","f":"facility (n.)","id":256,"a":5},{"w":"fundamental","p":"adj.","i":"/ˌfʌndəˈmentl/","t":3,"c":"gen","d":"forming the basis of something","z":"基本的、根本的","e":"Clean water is a fundamental human need.","u":"fundamental","ez":"乾淨的水是人類的基本需求。","s":"basic, essential","f":"fundamentally (adv.)","id":257,"a":5},{"w":"implement","p":"v.","i":"/ˈɪmplɪment/","t":3,"c":"gen","d":"to put a plan or system into action","z":"實施、執行","e":"The school plans to implement the new timetable in September.","u":"implement","ez":"學校計畫在九月實施新課表。","s":"carry out, apply","f":"implementation (n.)","id":258,"a":4},{"w":"reluctant","p":"adj.","i":"/rɪˈlʌktənt/","t":4,"c":"gen","d":"unwilling and hesitating to do something","z":"不情願的","e":"Many drivers are reluctant to switch to electric cars.","u":"reluctant","ez":"許多駕駛不願意改開電動車。","s":"unwilling, hesitant","f":"reluctance (n.)","id":259},{"w":"substantial","p":"adj.","i":"/səbˈstænʃl/","t":3,"c":"gen","d":"large in amount or importance","z":"大量的、實質的","e":"The project received substantial funding from the state.","u":"substantial","ez":"這個專案獲得了國家大量的資金。","s":"considerable, significant","f":"substance (n.)","id":260},{"w":"negotiate","p":"v.","i":"/nɪˈɡəʊʃieɪt/","t":3,"c":"law","d":"to discuss something to reach an agreement","z":"談判、協商","e":"The union will negotiate a fair deal with the company.","u":"negotiate","ez":"工會將與公司協商出公平的條件。","s":"bargain, discuss","f":"negotiation (n.), negotiator (n.)","id":261},{"w":"liability","p":"n.","i":"/ˌlaɪəˈbɪləti/","t":4,"c":"law","d":"legal responsibility for something","z":"法律責任","e":"The firm denied liability for the accident.","u":"liability","ez":"這家公司否認對意外負有責任。","s":"responsibility, accountability","f":"liable (adj.)","id":262},{"w":"compensation","p":"n.","i":"/ˌkɒmpenˈseɪʃn/","t":3,"c":"law","d":"money paid to someone for loss or injury","z":"賠償","e":"Workers received compensation after the factory closed.","u":"compensation","ez":"工廠關閉後，工人獲得了賠償。","s":"damages, payment","f":"compensate (v.)","id":263},{"w":"comply","p":"v.","i":"/kəmˈplaɪ/","t":3,"c":"law","d":"to obey a rule or request","z":"遵守","e":"All restaurants must comply with the new safety rules.","u":"comply","ez":"所有餐廳都必須遵守新的安全規定。","s":"obey, conform","f":"compliance (n.)","id":264},{"w":"merger","p":"n.","i":"/ˈmɜːdʒə/","t":4,"c":"law","d":"the joining of two companies into one","z":"合併","e":"The merger created the largest bank in the country.","u":"merger","ez":"這次合併創造了全國最大的銀行。","s":"union, amalgamation","f":"merge (v.)","id":265},{"w":"acquisition","p":"n.","i":"/ˌækwɪˈzɪʃn/","t":4,"c":"law","d":"the buying of one company by another","z":"收購","e":"The acquisition doubled the firm’s workforce overnight.","u":"acquisition","ez":"這次收購讓公司的員工人數一夜之間翻倍。","s":"purchase, takeover","f":"acquire (v.)","id":266},{"w":"shareholder","p":"n.","i":"/ˈʃeəhəʊldə/","t":3,"c":"law","d":"a person who owns part of a company","z":"股東","e":"Every shareholder received a letter about the vote.","u":"shareholder","ez":"每位股東都收到了關於投票的信件。","s":"investor, stockholder","f":"share (n.)","id":267},{"w":"stakeholder","p":"n.","i":"/ˈsteɪkhəʊldə/","t":4,"c":"law","d":"a person or group affected by a business decision","z":"利害關係人","e":"Employees and customers are important stakeholders in any company.","u":"stakeholders","ez":"員工與顧客是任何公司的重要利害關係人。","s":"interested party","f":"stake (n.)","id":268},{"w":"dividend","p":"n.","i":"/ˈdɪvɪdend/","t":4,"c":"law","d":"a share of profits paid to shareholders","z":"股利","e":"The bank paid a higher dividend this year.","u":"dividend","ez":"這家銀行今年發放了較高的股利。","s":"payout, bonus","f":"divide (v.)","id":269},{"w":"bankruptcy","p":"n.","i":"/ˈbæŋkrʌptsi/","t":4,"c":"law","d":"the state of being unable to pay debts","z":"破產","e":"Bad management pushed the company into bankruptcy.","u":"bankruptcy","ez":"經營不善把這家公司推向破產。","s":"insolvency, ruin","f":"bankrupt (adj.)","id":270},{"w":"transparent","p":"adj.","i":"/trænsˈpærənt/","t":3,"c":"law","d":"open and easy to understand, with nothing hidden","z":"透明的","e":"The council promised a transparent process for choosing contractors.","u":"transparent","ez":"市議會承諾以透明的程序挑選承包商。","s":"open, clear","f":"transparency (n.)","id":271},{"w":"accountable","p":"adj.","i":"/əˈkaʊntəbl/","t":4,"c":"law","d":"responsible for your actions and able to explain them","z":"須負責的","e":"Directors must be accountable to their shareholders.","u":"accountable","ez":"董事必須對股東負責。","s":"responsible, answerable","f":"account (v.), accountability (n.)","id":272},{"w":"ethical","p":"adj.","i":"/ˈeθɪkl/","t":3,"c":"law","d":"relating to what is morally right","z":"道德的、倫理的","e":"Lawyers face difficult ethical choices every day.","u":"ethical","ez":"律師每天都面臨困難的倫理抉擇。","s":"moral, principled","f":"ethics (n.)","id":273},{"w":"fraud","p":"n.","i":"/frɔːd/","t":3,"c":"law","d":"the crime of cheating someone to gain money","z":"詐欺","e":"The manager was jailed for fraud.","u":"fraud","ez":"那位經理因詐欺罪入獄。","s":"deception, scam","f":"fraudulent (adj.)","id":274},{"w":"corruption","p":"n.","i":"/kəˈrʌpʃn/","t":3,"c":"law","d":"dishonest behaviour by people in power","z":"貪腐","e":"The new law aims to reduce corruption in local government.","u":"corruption","ez":"這項新法旨在減少地方政府的貪腐。","s":"bribery, dishonesty","f":"corrupt (adj.)","id":275},{"w":"penalty","p":"n.","i":"/ˈpenlti/","t":3,"c":"law","d":"a punishment for breaking a rule","z":"處罰","e":"The penalty for late payment is ten percent.","u":"penalty","ez":"逾期付款的罰則是百分之十。","s":"fine, punishment","f":"penalise (v.)","id":276},{"w":"dispute","p":"n.","i":"/dɪˈspjuːt/","t":3,"c":"law","d":"a serious disagreement","z":"爭議、糾紛","e":"A dispute over pay led to a week-long strike.","u":"dispute","ez":"一場薪資糾紛引發了為期一週的罷工。","s":"disagreement, quarrel","f":"dispute (v.)","id":277},{"w":"delegate","p":"v.","i":"/ˈdelɪɡeɪt/","t":4,"c":"work","d":"to give part of your work or power to someone else","z":"授權、委派","e":"Good managers learn to delegate routine tasks.","u":"delegate","ez":"好的主管學會把例行工作交辦出去。","s":"assign, entrust","f":"delegation (n.)","id":278},{"w":"mentor","p":"n.","i":"/ˈmentɔː/","t":3,"c":"work","d":"an experienced person who advises a younger colleague","z":"導師","e":"Her mentor encouraged her to apply for the senior role.","u":"mentor","ez":"她的導師鼓勵她申請高階職位。","s":"adviser, coach","f":"mentor (v.)","id":279},{"w":"appraisal","p":"n.","i":"/əˈpreɪzl/","t":4,"c":"work","d":"an official judgement of how well someone works","z":"績效評估","e":"Each employee has an appraisal every six months.","u":"appraisal","ez":"每位員工每六個月都有績效評估。","s":"evaluation, review","f":"appraise (v.)","id":280},{"w":"redundant","p":"adj.","i":"/rɪˈdʌndənt/","t":4,"c":"work","d":"no longer needed at work, so losing your job","z":"被裁員的、多餘的","e":"Two hundred workers were made redundant last spring.","u":"redundant","ez":"去年春天有兩百名工人被裁員。","s":"laid off, surplus","f":"redundancy (n.)","id":281},{"w":"overtime","p":"n.","i":"/ˈəʊvətaɪm/","t":3,"c":"work","d":"extra hours worked beyond normal time","z":"加班","e":"Nurses often work overtime during the winter.","u":"overtime","ez":"護理師在冬天常常加班。","s":"extra hours","f":"time (n.)","id":282},{"w":"burnout","p":"n.","i":"/ˈbɜːnaʊt/","t":4,"c":"work","d":"extreme tiredness caused by too much work","z":"職業倦怠","e":"Long hours and low pay can lead to burnout.","u":"burnout","ez":"長時間工作與低薪可能導致職業倦怠。","s":"exhaustion","f":"burn out (v.)","id":283},{"w":"qualification","p":"n.","i":"/ˌkwɒlɪfɪˈkeɪʃn/","t":3,"c":"work","d":"an exam passed or a course completed for a job","z":"資格、學歷","e":"A law degree is the main qualification for this position.","u":"qualification","ez":"法律學位是這個職位的主要資格。","s":"certificate, credential","f":"qualify (v.)","id":284},{"w":"recruit","p":"v.","i":"/rɪˈkruːt/","t":3,"c":"work","d":"to find and hire new people","z":"招募","e":"The firm plans to recruit ten graduates this summer.","u":"recruit","ez":"事務所計畫今年夏天招募十位畢業生。","s":"hire, enlist","f":"recruitment (n.)","id":285},{"w":"perspective","p":"n.","i":"/pəˈspektɪv/","t":3,"c":"gen","d":"a particular way of thinking about something","z":"觀點、角度","e":"Living abroad gave her a new perspective on her own culture.","u":"perspective","ez":"旅居國外讓她對自己的文化有了新的看法。","s":"viewpoint, outlook","f":"perspectives (pl.)","id":286,"a":5},{"w":"sceptical","p":"adj.","i":"/ˈskeptɪkl/","t":4,"c":"gen","d":"doubting that something is true or useful","z":"懷疑的","e":"Many experts remain sceptical about the new theory.","u":"sceptical","ez":"許多專家對這個新理論仍持懷疑態度。","s":"doubtful, unconvinced","f":"scepticism (n.)","id":287},{"w":"inevitably","p":"adv.","i":"/ɪnˈevɪtəbli/","t":4,"c":"gen","d":"in a way that cannot be avoided","z":"不可避免地","e":"Rising costs will inevitably affect prices.","u":"inevitably","ez":"成本上升將不可避免地影響價格。","s":"unavoidably","f":"inevitable (adj.)","id":288},{"w":"deliberate","p":"adj.","i":"/dɪˈlɪbərət/","t":3,"c":"gen","d":"done on purpose","z":"蓄意的","e":"The delay was a deliberate attempt to confuse the public.","u":"deliberate","ez":"這次延誤是蓄意要讓大眾困惑的企圖。","s":"intentional, planned","f":"deliberately (adv.)","id":289},{"w":"dignity","p":"n.","i":"/ˈdɪɡnəti/","t":4,"c":"gen","d":"a feeling of self-respect and honour","z":"尊嚴","e":"Every worker deserves to be treated with dignity.","u":"dignity","ez":"每位工作者都應被有尊嚴地對待。","s":"self-respect, honour","f":"dignified (adj.)","id":290},{"w":"tariff","p":"n.","i":"/ˈtærɪf/","t":3,"c":"trade","d":"a tax on goods that enter or leave a country","z":"關稅","e":"The government raised the tariff on imported steel.","u":"tariff","ez":"政府提高了進口鋼鐵的關稅。","s":"duty, levy","f":"tariff-free (adj.)","id":291},{"w":"quota","p":"n.","i":"/ˈkwəʊtə/","t":4,"c":"trade","d":"a fixed amount of something that is officially allowed","z":"配額","e":"Each country has a quota for fish caught in these waters.","u":"quota","ez":"每個國家在這片海域都有捕魚配額。","s":"limit, allowance","f":"quotas (pl.)","id":292},{"w":"customs","p":"n.","i":"/ˈkʌstəmz/","t":2,"c":"trade","d":"the place or authority that checks goods entering a country","z":"海關","e":"The goods were held at customs for three days.","u":"customs","ez":"這批貨在海關被扣留了三天。","s":"border control","f":"custom (n.)","id":293},{"w":"freight","p":"n.","i":"/freɪt/","t":3,"c":"trade","d":"goods carried by ship, train, truck or plane","z":"貨運、運費","e":"Air freight is faster but much more expensive.","u":"freight","ez":"空運更快，但貴得多。","s":"cargo, haulage","f":"freighter (n.)","id":294},{"w":"cargo","p":"n.","i":"/ˈkɑːɡəʊ/","t":3,"c":"trade","d":"goods carried by a ship or aircraft","z":"貨物","e":"The ship carried a cargo of coffee beans.","u":"cargo","ez":"這艘船載著一批咖啡豆。","s":"freight, load","f":"cargoes (pl.)","id":295},{"w":"shipment","p":"n.","i":"/ˈʃɪpmənt/","t":3,"c":"trade","d":"a quantity of goods sent together to a place","z":"一批出貨","e":"The first shipment of medicine arrived on Monday.","u":"shipment","ez":"第一批藥品星期一送達。","s":"consignment, delivery","f":"ship (v.)","id":296},{"w":"logistics","p":"n.","i":"/ləˈdʒɪstɪks/","t":3,"c":"trade","d":"the organisation of moving goods from place to place","z":"物流","e":"Good logistics keep supermarket shelves full.","u":"logistics","ez":"良好的物流讓超市貨架保持充實。","s":"distribution, transport","f":"logistical (adj.)","id":297},{"w":"container","p":"n.","i":"/kənˈteɪnə(r)/","t":2,"c":"trade","d":"a large metal box used to transport goods by sea","z":"貨櫃","e":"Thousands of containers were stacked at the dock.","u":"containers","ez":"數千個貨櫃堆放在碼頭上。","s":"crate, box","f":"contain (v.)","id":298},{"w":"terminal","p":"n.","i":"/ˈtɜːmɪnl/","t":3,"c":"trade","d":"a place where ships, trains or planes load and unload","z":"終端、碼頭","e":"The new container terminal can handle larger ships.","u":"terminal","ez":"新的貨櫃碼頭可以容納更大的船。","s":"depot, station","f":"terminate (v.)","id":299},{"w":"import","p":"v.","i":"/ɪmˈpɔːt/","t":2,"c":"trade","d":"to bring goods into a country to sell them","z":"進口","e":"The country imports most of its oil.","u":"imports","ez":"這個國家的石油大多依賴進口。","s":"bring in","f":"importer (n.), import (n.)","id":300},{"w":"bilateral","p":"adj.","i":"/ˌbaɪˈlætərəl/","t":4,"c":"trade","d":"involving two sides or countries","z":"雙邊的","e":"The two nations signed a bilateral trade agreement.","u":"bilateral","ez":"兩國簽署了雙邊貿易協定。","s":"two-sided","f":"multilateral (adj.)","id":301},{"w":"subsidiary","p":"n.","i":"/səbˈsɪdiəri/","t":4,"c":"trade","d":"a company owned by a larger parent company","z":"子公司","e":"The bank sold its insurance subsidiary last year.","u":"subsidiary","ez":"這家銀行去年出售了旗下的保險子公司。","s":"branch, affiliate","f":"parent company (n.)","id":302},{"w":"consortium","p":"n.","i":"/kənˈsɔːtiəm/","t":4,"c":"trade","d":"a group of companies working together on a project","z":"聯合財團","e":"A consortium of firms built the new bridge.","u":"consortium","ez":"一個企業聯合體興建了這座新橋。","s":"alliance, syndicate","f":"consortia (pl.)","id":303},{"w":"cartel","p":"n.","i":"/kɑːˈtel/","t":4,"c":"trade","d":"a group of firms that agree to fix prices and limit competition","z":"卡特爾","e":"The oil cartel decided to cut production.","u":"cartel","ez":"石油卡特爾決定減產。","s":"price-fixing group","f":"cartelise (v.)","id":304},{"w":"rebate","p":"n.","i":"/ˈriːbeɪt/","t":4,"c":"trade","d":"a partial refund of money paid","z":"退款、回扣","e":"Customers receive a rebate if they buy in bulk.","u":"rebate","ez":"大量購買的客戶可獲得回扣。","s":"refund, discount","f":"rebates (pl.)","id":305},{"w":"embargo","p":"n.","i":"/ɪmˈbɑːɡəʊ/","t":4,"c":"trade","d":"an official ban on trade with a country","z":"禁運","e":"The embargo stopped all shipments of weapons.","u":"embargo","ez":"禁運令阻止了所有武器的運送。","s":"ban, boycott","f":"embargoes (pl.)","id":306},{"w":"tender","p":"n.","i":"/ˈtendə(r)/","t":4,"c":"trade","d":"a formal offer to supply goods or do work for a price","z":"投標","e":"Three firms submitted a tender for the road project.","u":"tender","ez":"三家公司為這項道路工程遞交了標書。","s":"bid, proposal","f":"tender (v.)","id":307},{"w":"procurement","p":"n.","i":"/prəˈkjʊəmənt/","t":4,"c":"trade","d":"the process of buying goods or services for an organisation","z":"採購","e":"The hospital reformed its procurement to save money.","u":"procurement","ez":"醫院改革採購流程以節省經費。","s":"purchasing","f":"procure (v.)","id":308},{"w":"supplier","p":"n.","i":"/səˈplaɪə(r)/","t":2,"c":"trade","d":"a company that provides goods to others","z":"供應商","e":"We changed our supplier because of late deliveries.","u":"supplier","ez":"由於送貨延遲，我們換了供應商。","s":"provider, vendor","f":"supply (v.)","id":309},{"w":"deficit","p":"n.","i":"/ˈdefɪsɪt/","t":3,"c":"trade","d":"the amount by which spending is greater than income","z":"赤字","e":"The country has a large trade deficit.","u":"deficit","ez":"這個國家有龐大的貿易赤字。","s":"shortfall","f":"surplus (n.)","id":310},{"w":"surplus","p":"n.","i":"/ˈsɜːpləs/","t":3,"c":"trade","d":"an amount that is more than needed or used","z":"盈餘","e":"Germany has a trade surplus with many countries.","u":"surplus","ez":"德國對許多國家享有貿易順差。","s":"excess","f":"surplus (adj.)","id":311},{"w":"invoice","p":"n.","i":"/ˈɪnvɔɪs/","t":3,"c":"trade","d":"a bill listing goods sent and the money owed","z":"發票、請款單","e":"Please pay the invoice within thirty days.","u":"invoice","ez":"請在三十天內付清發票款項。","s":"bill","f":"invoice (v.)","id":312},{"w":"wholesale","p":"adj.","i":"/ˈhəʊlseɪl/","t":3,"c":"trade","d":"relating to selling goods in large amounts to shops","z":"批發的","e":"Wholesale prices are lower than prices in shops.","u":"wholesale","ez":"批發價比商店售價低。","s":"bulk","f":"retail (adj.)","id":313},{"w":"retail","p":"n.","i":"/ˈriːteɪl/","t":2,"c":"trade","d":"the selling of goods to the public","z":"零售","e":"Online retail has grown rapidly in recent years.","u":"retail","ez":"近年來網路零售快速成長。","s":"selling","f":"retailer (n.)","id":314},{"w":"manufacture","p":"v.","i":"/ˌmænjuˈfæktʃə(r)/","t":2,"c":"trade","d":"to make goods in large numbers in a factory","z":"製造","e":"The company manufactures car parts for export.","u":"manufactures","ez":"這家公司製造供出口的汽車零件。","s":"produce, make","f":"manufacturer (n.)","id":315},{"w":"outsource","p":"v.","i":"/ˈaʊtsɔːs/","t":3,"c":"trade","d":"to pay another company to do part of your work","z":"外包","e":"Many firms outsource customer service to other countries.","u":"outsource","ez":"許多公司把客服外包給其他國家。","s":"contract out","f":"outsourcing (n.)","id":316},{"w":"monopoly","p":"n.","i":"/məˈnɒpəli/","t":3,"c":"trade","d":"complete control of a market by one company","z":"壟斷","e":"The company held a monopoly on the local water supply.","u":"monopoly","ez":"這家公司壟斷了當地的供水。","s":"exclusive control","f":"monopolise (v.)","id":317},{"w":"merchandise","p":"n.","i":"/ˈmɜːtʃəndaɪs/","t":4,"c":"trade","d":"goods that are bought and sold","z":"商品","e":"The store sells merchandise from many countries.","u":"merchandise","ez":"這家店販售來自許多國家的商品。","s":"goods, wares","f":"merchant (n.)","id":318},{"w":"protectionism","p":"n.","i":"/prəˈtekʃənɪzəm/","t":4,"c":"trade","d":"the policy of protecting local industries from foreign goods","z":"保護主義","e":"Protectionism often leads to higher prices for consumers.","u":"Protectionism","ez":"保護主義往往導致消費者面對更高的物價。","s":"trade restriction","f":"protectionist (adj.)","id":319},{"w":"multinational","p":"adj.","i":"/ˌmʌltiˈnæʃnəl/","t":3,"c":"trade","d":"operating in several countries","z":"跨國的","e":"A multinational company employs staff in forty countries.","u":"multinational","ez":"一家跨國公司在四十個國家僱用員工。","s":"global","f":"national (adj.)","id":320},{"w":"barrier","p":"n.","i":"/ˈbæriə(r)/","t":3,"c":"trade","d":"something that prevents movement or progress","z":"障礙、壁壘","e":"Language is often a barrier to doing business abroad.","u":"barrier","ez":"語言常是跨國做生意的障礙。","s":"obstacle, hurdle","f":"barriers (pl.)","id":321},{"w":"antitrust","p":"adj.","i":"/ˌæntiˈtrʌst/","t":4,"c":"trade","d":"intended to prevent unfair control of markets","z":"反壟斷的","e":"Antitrust officials blocked the merger of the two airlines.","u":"Antitrust","ez":"反壟斷官員阻止了這兩家航空公司合併。","s":"anti-monopoly","f":"trust (n.)","id":322},{"w":"levy","p":"v.","i":"/ˈlevi/","t":4,"c":"trade","d":"to officially charge a tax or fee","z":"徵收","e":"The state will levy a charge on plastic bags.","u":"levy","ez":"政府將對塑膠袋徵收費用。","s":"impose, charge","f":"levy (n.)","id":323,"a":10},{"w":"stockpile","p":"v.","i":"/ˈstɒkpaɪl/","t":4,"c":"trade","d":"to collect a large supply of something for future use","z":"囤積","e":"Shops began to stockpile food before the storm.","u":"stockpile","ez":"暴風雨前商店開始囤積食物。","s":"hoard, store","f":"stockpile (n.)","id":324},{"w":"bulk","p":"n.","i":"/bʌlk/","t":3,"c":"trade","d":"a large quantity of something","z":"大量","e":"It is cheaper to buy rice in bulk.","u":"bulk","ez":"大量購買米比較便宜。","s":"large amount","f":"bulky (adj.)","id":325,"a":9},{"w":"harbour","p":"n.","i":"/ˈhɑːbə(r)/","t":2,"c":"trade","d":"a sheltered area of water where ships stay","z":"港口","e":"Fishing boats returned to the harbour before dark.","u":"harbour","ez":"漁船在天黑前回到港口。","s":"port, dock","f":"harbour (v.)","id":326},{"w":"audit","p":"n.","i":"/ˈɔːdɪt/","t":3,"c":"trade","d":"an official check of accounts or records","z":"稽核","e":"The tax office ordered an audit of the firm’s accounts.","u":"audit","ez":"稅務機關下令稽核這家公司的帳目。","s":"inspection, review","f":"auditor (n.)","id":327},{"w":"compliance","p":"n.","i":"/kəmˈplaɪəns/","t":4,"c":"trade","d":"the act of obeying a rule or law","z":"合規、遵守","e":"The factory has to prove compliance with safety rules.","u":"compliance","ez":"這家工廠必須證明自己遵守安全規定。","s":"obedience, conformity","f":"comply (v.)","id":328},{"w":"allocate","p":"v.","i":"/ˈæləkeɪt/","t":4,"c":"trade","d":"to give out money or resources for a particular purpose","z":"分配、撥給","e":"The council will allocate more funds to public transport.","u":"allocate","ez":"市議會將撥更多經費給大眾運輸。","s":"assign, distribute","f":"allocation (n.)","id":329,"a":6},{"w":"finance","p":"v.","i":"/ˈfaɪnæns/","t":3,"c":"trade","d":"to provide the money for a project","z":"為…提供資金","e":"A foreign bank agreed to finance the new port.","u":"finance","ez":"一家外國銀行同意為新港口提供資金。","s":"fund, back","f":"financial (adj.), financing (n.)","id":330,"a":1},{"w":"carbon","p":"n.","i":"/ˈkɑːbən/","t":2,"c":"env","d":"a chemical element found in all living things and fuels","z":"碳","e":"Burning coal releases carbon into the air.","u":"carbon","ez":"燃燒煤炭會把碳釋放到空氣中。","s":"CO2 (informal)","f":"carbonate (n.)","id":331},{"w":"footprint","p":"n.","i":"/ˈfʊtprɪnt/","t":3,"c":"env","d":"the amount of carbon dioxide a person or company produces","z":"足跡（碳足跡）","e":"The company aims to halve its carbon footprint by 2030.","u":"footprint","ez":"這家公司的目標是在 2030 年前將碳足跡減半。","s":"impact","f":"footprints (pl.)","id":332},{"w":"circumvent","p":"v.","i":"/ˌsɜːkəmˈvent/","t":4,"c":"trade","d":"to find a way around a rule or law","z":"規避","e":"Some firms try to circumvent trade rules by changing labels.","u":"circumvent","ez":"有些公司試圖靠更換標籤來規避貿易規定。","s":"evade, bypass","f":"circumvention (n.)","id":333},{"w":"directive","p":"n.","i":"/daɪˈrektɪv/","t":4,"c":"trade","d":"an official order or instruction from an authority","z":"指令","e":"A new EU directive limits the use of single-use plastics.","u":"directive","ez":"歐盟的一項新指令限制了一次性塑膠的使用。","s":"order, instruction","f":"directives (pl.)","id":334},{"w":"takeover","p":"n.","i":"/ˈteɪkəʊvə(r)/","t":3,"c":"trade","d":"the act of gaining control of a company","z":"接管、收購","e":"The takeover created the largest airline in Europe.","u":"takeover","ez":"這次收購創造出歐洲最大的航空公司。","s":"buyout","f":"takeovers (pl.)","id":335},{"w":"mandate","p":"n.","i":"/ˈmændeɪt/","t":4,"c":"gov","d":"official authority to do something","z":"授權、任務","e":"The committee has a clear mandate to investigate the accident.","u":"mandate","ez":"委員會有明確的授權調查這起事故。","s":"authority, commission","f":"mandatory (adj.)","id":336},{"w":"mechanism","p":"n.","i":"/ˈmekənɪzəm/","t":3,"c":"trade","d":"a system or method for doing something","z":"機制","e":"The mechanism taxes imported goods according to their emissions.","u":"mechanism","ez":"這項機制依進口商品的排放量課稅。","s":"system, process","f":"mechanical (adj.)","id":337,"a":4},{"w":"adjustment","p":"n.","i":"/əˈdʒʌstmənt/","t":3,"c":"trade","d":"a small change made to improve something","z":"調整","e":"The company made a small adjustment to its pricing.","u":"adjustment","ez":"公司對定價做了小幅調整。","s":"modification","f":"adjust (v.)","id":338},{"w":"transition","p":"n.","i":"/trænˈzɪʃn/","t":3,"c":"gen","d":"a change from one state or system to another","z":"轉型、過渡","e":"The transition to clean energy will take decades.","u":"transition","ez":"轉向潔淨能源需要數十年。","s":"shift, change","f":"transitional (adj.)","id":339},{"w":"warrant","p":"n.","i":"/ˈwɒrənt/","t":4,"c":"law","d":"an official paper that gives the police permission to act","z":"搜索令","e":"The officers arrived with a warrant to search the office.","u":"warrant","ez":"警員持搜索令抵達辦公室。","s":"authorisation","f":"warrant (v.)","id":340},{"w":"injunction","p":"n.","i":"/ɪnˈdʒʌŋkʃn/","t":4,"c":"law","d":"a court order that stops someone doing something","z":"禁制令","e":"The court issued an injunction to stop the sale.","u":"injunction","ez":"法院發出禁制令阻止這項出售。","s":"court order","f":"enjoin (v.)","id":341},{"w":"trustee","p":"n.","i":"/ˌtrʌˈstiː/","t":4,"c":"law","d":"a person who manages money or property for others","z":"受託人","e":"The trustee must act in the interests of the family.","u":"trustee","ez":"受託人必須為家族的利益行事。","s":"guardian, administrator","f":"trustees (pl.)","id":342},{"w":"scrutiny","p":"n.","i":"/ˈskruːtəni/","t":4,"c":"gov","d":"careful and critical examination","z":"嚴格審查","e":"The merger faced intense scrutiny from regulators.","u":"scrutiny","ez":"這項合併受到監管機關的嚴格審查。","s":"examination","f":"scrutinise (v.)","id":343},{"w":"obstruct","p":"v.","i":"/əbˈstrʌkt/","t":4,"c":"law","d":"to block or make something difficult","z":"阻礙","e":"The guard tried to obstruct the inspectors at the door.","u":"obstruct","ez":"警衛試圖在門口阻擋檢查人員。","s":"block, hinder","f":"obstruction (n.)","id":344},{"w":"disclose","p":"v.","i":"/dɪsˈkləʊz/","t":4,"c":"law","d":"to make secret information known","z":"揭露、公開","e":"The company refused to disclose its true profits.","u":"disclose","ez":"公司拒絕公開真實利潤。","s":"reveal, expose","f":"disclosure (n.)","id":345},{"w":"seize","p":"v.","i":"/siːz/","t":3,"c":"law","d":"to take something by force or legal authority","z":"扣押、奪取","e":"Customs officers seized thousands of fake watches.","u":"seized","ez":"海關人員扣押了數千隻假錶。","s":"confiscate, grab","f":"seizure (n.)","id":346},{"w":"inspector","p":"n.","i":"/ɪnˈspektə(r)/","t":2,"c":"gov","d":"an official who checks that rules are followed","z":"檢查員","e":"A health inspector visited the factory without warning.","u":"inspector","ez":"衛生檢查員不預警地造訪工廠。","s":"examiner","f":"inspect (v.), inspection (n.)","id":347},{"w":"ultimatum","p":"n.","i":"/ˌʌltɪˈmeɪtəm/","t":4,"c":"gen","d":"a final demand that threatens action if refused","z":"最後通牒","e":"The board gave the manager an ultimatum: resign or be fired.","u":"ultimatum","ez":"董事會給經理下了最後通牒：辭職或被解僱。","s":"final warning","f":"ultimatums (pl.)","id":348},{"w":"retaliate","p":"v.","i":"/rɪˈtælieɪt/","t":4,"c":"gen","d":"to hurt someone because they hurt you","z":"報復","e":"The country threatened to retaliate with new tariffs.","u":"retaliate","ez":"該國威脅要以新的關稅報復。","s":"strike back","f":"retaliation (n.)","id":349},{"w":"hostile","p":"adj.","i":"/ˈhɒstaɪl/","t":3,"c":"gen","d":"unfriendly or aggressive","z":"敵意的","e":"The company faced a hostile takeover bid.","u":"hostile","ez":"這家公司面對一場惡意收購。","s":"aggressive, unfriendly","f":"hostility (n.)","id":350},{"w":"intrude","p":"v.","i":"/ɪnˈtruːd/","t":4,"c":"gen","d":"to enter a place where you are not wanted","z":"闖入、打擾","e":"Reporters intruded on the family’s private ceremony.","u":"intruded","ez":"記者闖入了這個家庭的私人儀式。","s":"trespass","f":"intruder (n.)","id":351},{"w":"defy","p":"v.","i":"/dɪˈfaɪ/","t":4,"c":"gen","d":"to refuse openly to obey","z":"公然違抗","e":"The workers defied the order to stop the strike.","u":"defied","ez":"工人們公然違抗停工的命令。","s":"disobey, resist","f":"defiance (n.)","id":352},{"w":"leverage","p":"n.","i":"/ˈliːvərɪdʒ/","t":4,"c":"gen","d":"power to influence a person or situation","z":"影響力、籌碼","e":"Control of the port gave the company great leverage.","u":"leverage","ez":"控制港口讓這家公司擁有極大的籌碼。","s":"influence, advantage","f":"leverage (v.)","id":353},{"w":"exposure","p":"n.","i":"/ɪkˈspəʊʒə(r)/","t":3,"c":"gen","d":"the act of revealing something hidden","z":"曝光、揭露","e":"The exposure of the scandal ruined his career.","u":"exposure","ez":"醜聞曝光毀了他的事業。","s":"revelation","f":"expose (v.)","id":354},{"w":"backlash","p":"n.","i":"/ˈbæklæʃ/","t":4,"c":"gen","d":"a strong negative reaction by many people","z":"強烈反彈","e":"The new tax caused a public backlash.","u":"backlash","ez":"新稅制引起大眾強烈反彈。","s":"reaction, outcry","f":"backlash (v.)","id":355},{"w":"tycoon","p":"n.","i":"/taɪˈkuːn/","t":4,"c":"gen","d":"a very rich and powerful business person","z":"大亨","e":"The shipping tycoon owned forty vessels.","u":"tycoon","ez":"這位航運大亨擁有四十艘船。","s":"magnate","f":"tycoons (pl.)","id":356},{"w":"ally","p":"n.","i":"/ˈælaɪ/","t":3,"c":"gen","d":"a person or country that supports another","z":"盟友","e":"He found an unexpected ally in the finance director.","u":"ally","ez":"他在財務長身上找到了意想不到的盟友。","s":"supporter, partner","f":"alliance (n.)","id":357},{"w":"offline","p":"adj.","i":"/ˌɒfˈlaɪn/","t":3,"c":"tech","d":"not connected to the internet or a network","z":"離線的","e":"The data is stored on an offline server for safety.","u":"offline","ez":"資料為了安全存放在離線伺服器上。","s":"disconnected","f":"online (adj.)","id":358},{"w":"backup","p":"n.","i":"/ˈbækʌp/","t":2,"c":"tech","d":"a spare copy of computer data","z":"備份","e":"Always keep a backup of important files.","u":"backup","ez":"重要檔案一定要留一份備份。","s":"copy","f":"backups (pl.)","id":359},{"w":"server","p":"n.","i":"/ˈsɜːvə(r)/","t":2,"c":"tech","d":"a computer that stores data for other computers","z":"伺服器","e":"The server crashed and all the data was lost.","u":"server","ez":"伺服器當機，所有資料都遺失了。","s":"host computer","f":"servers (pl.)","id":360}]; /*END_BANK*/
@@ -6662,7 +8038,7 @@ const ICON = {
 let toastT;
 function toast(t) { const el = $("#toast"); el.textContent = t; el.classList.add("on"); clearTimeout(toastT); toastT = setTimeout(() => el.classList.remove("on"), 2600); }
 
-const VMAP = {"1:4":["Male"],"1:8":["Felix"],"1:12":["Finn","Finn"],"1:13":["Finn"],"1:14":["Finn"],"1:15":["Finn"],"1:16":["Felix"],"1:17":["Finn"],"1:18":["Felix"],"1:19":["Finn"],"2:4":["Finn","Finn"],"2:6":["Felix"],"2:7":["Finn"],"2:8":["Felix","Felix"],"2:10":["Finn"],"2:14":["Felix","Felix"],"3:1":["Maeve","Maeve"],"3:3":["Seamus"],"3:4":["Seamus"],"3:7":["Declan"],"3:8":["Declan"],"3:10":["Felix"],"3:11":["Declan","Declan"],"3:12":["Seamus"],"3:13":["Finn","Felix","Finn","Felix","Felix"],"4:3":["Felix"],"4:6":["Finn","Finn"],"4:7":["Felix","Felix","Finn","Felix"],"4:8":["Finn"],"4:9":["Felix","Finn","Felix"],"4:10":["Felix","Felix"],"4:11":["Felix","Felix"],"4:12":["Finn"],"4:13":["Male"],"4:15":["Felix"],"4:16":["Finn"],"4:17":["Felix"],"4:19":["Finn","Finn","Felix","Felix"],"4:20":["Felix","Felix"],"5:1":["Maeve","Maeve","Maeve"],"5:6":["Finn","Finn"],"5:7":["Felix","Felix"],"5:8":["Finn","Finn"],"5:11":["Finn"],"5:12":["Felix","Felix"],"5:13":["Finn","Finn"],"6:3":["Desmond"],"6:6":["Felix","Desmond","Desmond"],"6:7":["Felix"],"6:8":["Felix","Felix"],"6:9":["Felix"],"6:10":["Male","Felix","Felix"],"6:11":["Felix"],"7:2":["Felix","Felix"],"7:3":["Felix","Felix"],"7:4":["Finn"],"7:6":["Felix"],"7:7":["Finn","Felix"],"7:9":["Felix","Felix"],"7:10":["Finn","Finn"],"7:11":["Felix"],"7:15":["Felix","Finn","Finn"],"8:2":["Felix"],"8:3":["Finn"],"8:4":["Felix","Felix","Finn","Finn"],"8:14":["Female","Female"],"9:0":["Liam"],"9:2":["Felix"],"9:3":["Finn","Finn","Felix"],"9:4":["Felix"],"9:6":["Felix","Felix"],"9:7":["Felix","Felix"],"9:8":["Finn","Finn"],"9:9":["Felix"],"9:10":["Felix","Felix"],"9:12":["Felix"],"9:13":["Felix","Felix"],"9:14":["Finn","Finn"],"10:1":["Finn"],"10:2":["Felix","Felix"],"10:3":["Felix"],"10:4":["Felix","Finn"],"10:5":["Felix","Felix"],"10:9":["Male"],"10:10":["Felix","Felix"],"10:11":["Male","Felix","Felix"],"10:13":["Male"],"10:17":["Felix","Felix","Finn"],"11:3":["Felix"],"11:4":["Female"],"11:5":["Felix"],"11:6":["Female","Female"],"11:9":["Felix"],"11:10":["Felix"],"11:11":["Finn"],"12:3":["Felix"],"12:4":["Finn"],"12:5":["Felix"],"12:6":["Finn","Finn"],"12:8":["Felix","Felix"],"12:9":["Finn","Finn"],"13:0":["MacDonald"],"13:2":["Felix"],"13:3":["MacDonald","MacDonald"],"13:4":["MacDonald"],"13:6":["Finn","Finn"],"13:7":["MacDonald","MacDonald"],"13:9":["Felix"],"14:2":["Finn","Finn"],"14:3":["Felix","Felix"],"14:4":["Finn"],"14:5":["Finn","Finn","Felix","Felix","Felix"],"14:6":["Felix","Felix"],"14:7":["Finn","Felix","Felix"],"15:4":["Female"],"15:6":["Felix"],"15:8":["Male"],"15:9":["Finn"],"15:11":["Female"],"15:15":["Finn","Finn"],"15:16":["Felix","Finn","Finn","Felix","Felix"],"15:17":["Finn","Finn"]};
+const VMAP = {"1:4":["Male"],"1:8":["Felix"],"1:12":["Finn","Finn"],"1:13":["Finn"],"1:14":["Finn"],"1:15":["Finn"],"1:16":["Felix"],"1:17":["Finn"],"1:18":["Felix"],"1:19":["Finn"],"2:4":["Finn","Finn"],"2:6":["Felix"],"2:7":["Finn"],"2:8":["Felix","Felix"],"2:10":["Finn"],"2:14":["Felix","Felix"],"3:1":["Maeve","Maeve"],"3:3":["Seamus"],"3:4":["Seamus"],"3:7":["Declan"],"3:8":["Declan"],"3:10":["Felix"],"3:11":["Declan","Declan"],"3:12":["Seamus"],"3:13":["Finn","Felix","Finn","Felix","Felix"],"4:3":["Felix"],"4:6":["Finn","Finn"],"4:7":["Felix","Felix","Finn","Felix"],"4:8":["Finn"],"4:9":["Felix","Finn","Felix"],"4:10":["Felix","Felix"],"4:11":["Felix","Felix"],"4:12":["Finn"],"4:13":["Male"],"4:15":["Felix"],"4:16":["Finn"],"4:17":["Felix"],"4:19":["Finn","Finn","Felix","Felix"],"4:20":["Felix","Felix"],"5:1":["Maeve","Maeve","Maeve"],"5:6":["Finn","Finn"],"5:7":["Felix","Felix"],"5:8":["Finn","Finn"],"5:11":["Finn"],"5:12":["Felix","Felix"],"5:13":["Finn","Finn"],"6:3":["Desmond"],"6:6":["Felix","Desmond","Desmond"],"6:7":["Felix"],"6:8":["Felix","Felix"],"6:9":["Felix"],"6:10":["Male","Felix","Felix"],"6:11":["Felix"],"7:2":["Felix","Felix"],"7:3":["Felix","Felix"],"7:4":["Finn"],"7:6":["Felix"],"7:7":["Finn","Felix"],"7:9":["Felix","Felix"],"7:10":["Finn","Finn"],"7:11":["Felix"],"7:15":["Felix","Finn","Finn"],"8:2":["Felix"],"8:3":["Finn"],"8:4":["Felix","Felix","Finn","Finn"],"8:14":["Female","Female"],"9:0":["Liam"],"9:2":["Felix"],"9:3":["Finn","Finn","Felix"],"9:4":["Felix"],"9:6":["Felix","Felix"],"9:7":["Felix","Felix"],"9:8":["Finn","Finn"],"9:9":["Felix"],"9:10":["Felix","Felix"],"9:12":["Felix"],"9:13":["Felix","Felix"],"9:14":["Finn","Finn"],"10:1":["Finn"],"10:2":["Felix","Felix"],"10:3":["Felix"],"10:4":["Felix","Finn"],"10:5":["Felix","Felix"],"10:9":["Male"],"10:10":["Felix","Felix"],"10:11":["Male","Felix","Felix"],"10:13":["Male"],"10:17":["Felix","Felix","Finn"],"11:3":["Felix"],"11:4":["Female"],"11:5":["Felix"],"11:6":["Female","Female"],"11:9":["Felix"],"11:10":["Felix"],"11:11":["Finn"],"12:3":["Felix"],"12:4":["Finn"],"12:5":["Felix"],"12:6":["Finn","Finn"],"12:8":["Felix","Felix"],"12:9":["Finn","Finn"],"13:0":["MacDonald"],"13:2":["Felix"],"13:3":["MacDonald","MacDonald"],"13:4":["MacDonald"],"13:6":["Finn","Finn"],"13:7":["MacDonald","MacDonald"],"13:9":["Felix"],"14:2":["Finn","Finn"],"14:3":["Felix","Felix"],"14:4":["Finn"],"14:5":["Finn","Finn","Felix","Felix","Felix"],"14:6":["Felix","Felix"],"14:7":["Finn","Felix","Felix"],"15:4":["Female"],"15:6":["Felix"],"15:8":["Male"],"15:9":["Finn"],"15:11":["Female"],"15:15":["Finn","Finn"],"15:16":["Felix","Finn","Finn","Felix","Felix"],"15:17":["Finn","Finn"],"16:2":["Male","Male"],"16:4":["Felix"],"16:6":["Finn"],"16:7":["Finn"],"16:8":["Male"],"16:9":["Female","Female"],"16:10":["Finn"],"16:11":["Finn","Finn"],"17:3":["Maeve","Maeve"],"17:4":["Felix","Felix"],"17:8":["Felix","Felix"],"17:9":["Finn","Finn"],"17:10":["Felix","Felix"],"18:1":["Female"],"18:2":[null],"18:4":["Desmond"],"18:6":["Male","Female","Male"],"19:2":["Felix"],"19:4":["Finn","Finn"],"19:5":["Felix","Felix"],"19:6":["Finn"],"19:7":["Felix"],"19:8":["Felix","Felix"],"20:3":["Felix"],"20:4":["Finn","Finn"],"20:5":["Felix"],"20:6":["Finn"],"20:7":["Felix","Felix"]};
 /* ---------- British English speech ---------- */
 const synth = ("speechSynthesis" in window) ? window.speechSynthesis : null;
 let gbVoice = null;
@@ -6833,8 +8209,8 @@ function navHtml(r, dueN) {
 }
 function homeHtml() {
   const id = best(), all = STORIES.every(x => S.passed[x.id]), st = STORIES[Math.min(id, TOTAL) - 1], ss = srsStats(), w = wordOfDay();
-  let h = '<p class="eyebrow">雅思核心詞彙 × 英式英語朗讀 × 職場禁忌十五章連載</p><h1 class="brand">After Hours</h1><p class="brand-sub">律師菲利克斯與研究生芬恩的科克故事，共十五章。看故事、點單字、做測驗，通過才能解鎖下一章。</p>';
-  h += '<div class="card hero"><p class="eyebrow">' + dayLabel() + " ・ 今日課程</p>" + (all ? "<h3>十五章全部通過</h3><p>到複習版把單字再練一輪，或回頭重讀喜歡的章節。</p>" : "<h3>第 " + st.id + " 章　" + st.title + "</h3><p class=\"zh-title\">" + st.zh + "</p><p>" + st.words + " 個英文字，約 " + readMins(st) + " 分鐘讀完；收錄 " + st.vocab.length + " 個重點單字。</p>") +
+  let h = '<p class="eyebrow">雅思核心詞彙 × 英式英語朗讀 × 職場禁忌二十章連載</p><h1 class="brand">After Hours</h1><p class="brand-sub">律師菲利克斯與研究生芬恩的科克故事，共二十章。看故事、點單字、做測驗，通過才能解鎖下一章。</p>';
+  h += '<div class="card hero"><p class="eyebrow">' + dayLabel() + " ・ 今日課程</p>" + (all ? "<h3>二十章全部通過</h3><p>到複習版把單字再練一輪，或回頭重讀喜歡的章節。</p>" : "<h3>第 " + st.id + " 章　" + st.title + "</h3><p class=\"zh-title\">" + st.zh + "</p><p>" + st.words + " 個英文字，約 " + readMins(st) + " 分鐘讀完；收錄 " + st.vocab.length + " 個重點單字。</p>") +
     '<div class="row"><button type="button" class="btn" data-go="' + (all ? "review" : "s" + st.id) + '">' + (all ? "進入複習" : "現在就讀") + '</button>' + (ss.due ? '<button type="button" class="btn ghost" data-go="review">今日複習 ' + ss.due + " 張</button>" : "") + "</div></div>";
   h += '<div class="stats"><div><b>' + Math.max(streak(), S.days[todayN()] ? 1 : 0) + '</b><span>連續天數</span></div><div><b>' + STORIES.filter(x => S.passed[x.id]).length + '</b><span>已通過章</span></div><div><b>' + ss.learned + '</b><span>已學單字</span></div><div><b>' + ss.due + '</b><span>今日到期</span></div></div>';
   h += '<div class="card"><p class="eyebrow">今日單字</p><button type="button" class="wotd" data-wotd="' + w.id + '"><span class="w">' + w.w + '</span><span class="pos">' + w.p + '</span><span class="zh">' + w.z + "</span></button></div>";
@@ -6908,7 +8284,7 @@ function quizHtml(st) {
     h += '<div class="cta"><button type="button" class="btn" data-act="submit">送出答案</button><button type="button" class="btn ghost" data-go="s' + st.id + '">回到文章</button></div><p class="msg" id="qmsg"></p>';
   } else {
     const pass = Q.score >= PASS_MARK, last = st.id === TOTAL;
-    h += '<div class="result ' + (pass ? "pass" : "fail") + '" id="result"><h3>' + Q.score + " / " + st.quiz.length + (pass ? (last ? "　大結局通關" : "　通過，下一章已解鎖") : "　再試一次") + "</h3><p>" + (pass ? (last ? "十五章全部讀完了。到複習版把 " + STORIES.reduce((n, s) => n + s.vocab.length, 0) + " 個單字再練一輪。" : "第 " + (st.id + 1) + " 章「" + STORIES[st.id].title + "」現在可以閱讀。") : "再讀一次文章，留意有底線的單字。") + '</p><div class="cta">' +
+    h += '<div class="result ' + (pass ? "pass" : "fail") + '" id="result"><h3>' + Q.score + " / " + st.quiz.length + (pass ? (last ? "　大結局通關" : "　通過，下一章已解鎖") : "　再試一次") + "</h3><p>" + (pass ? (last ? "二十章全部讀完了。到複習版把 " + STORIES.reduce((n, s) => n + s.vocab.length, 0) + " 個單字再練一輪。" : "第 " + (st.id + 1) + " 章「" + STORIES[st.id].title + "」現在可以閱讀。") : "再讀一次文章，留意有底線的單字。") + '</p><div class="cta">' +
       (pass ? '<button type="button" class="btn ghost" data-act="sharequiz">分享成績圖卡</button>' : "") + (pass ? (last ? '<button type="button" class="btn" data-go="review">進入複習版</button>' : '<button type="button" class="btn" data-go="s' + (st.id + 1) + '">前往下一章</button><button type="button" class="btn ghost" data-go="review">先去複習</button>') : '<button type="button" class="btn" data-act="retry">重新測驗</button><button type="button" class="btn ghost" data-go="s' + st.id + '">回到文章</button>') + "</div></div>";
   }
   return h;
