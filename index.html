@@ -24947,7 +24947,32 @@ function setPlaying(on) {
   if (b) b.innerHTML = on ? ICON.stop + "停止" : ICON.play + "英式朗讀全文";
 }
 function clearNow() { document.querySelectorAll(".sent.now").forEach(e => e.classList.remove("now")); }
-function stopSpeech() { tok++; if (synth) synth.cancel(); clearNow(); setPlaying(false); }
+function stopSpeech() { tok++; if (curAudio) { try { curAudio.pause(); } catch (e) {} } if (synth) synth.cancel(); clearNow(); setPlaying(false); }
+let audioOK = location.protocol.startsWith("http") ? null : false, curAudio = null, AIDX = null;
+const chA = {};
+async function loadIdx() {
+  if (AIDX || audioOK === false) return;
+  try { const r = await fetch("audio/idx.json"); if (!r.ok) throw 0; AIDX = await r.json(); audioOK = true; } catch (e) { audioOK = false; }
+}
+function chAudio(ch) {
+  if (!chA[ch]) { const a = new Audio("audio/" + String(ch).padStart(2, "0") + ".mp3"); a.preload = "auto"; chA[ch] = a; }
+  return chA[ch];
+}
+function clip(ch, key, my) {
+  return new Promise(res => {
+    const seg = AIDX && AIDX[ch] && AIDX[ch][key]; if (!seg) { res(false); return; }
+    const a = chAudio(ch); curAudio = a; a.playbackRate = Math.min(Math.max(ui.rate || 1, 0.6), 1.3);
+    let done = false, timer = null;
+    const end = ok => { if (done) return; done = true; clearInterval(timer); a.onerror = null; try { a.pause(); } catch (e) {} res(ok); };
+    const go = () => {
+      a.currentTime = seg[0];
+      a.play().then(() => { timer = setInterval(() => { if (my !== tok) end(false); else if (a.currentTime >= seg[0] + seg[1] - 0.04 || a.ended) end(true); }, 40); }).catch(() => end(false));
+    };
+    a.onerror = () => end(false);
+    if (a.readyState >= 1) go(); else { a.addEventListener("loadedmetadata", go, { once: true }); a.load(); }
+  });
+}
+const pad = (n, w) => String(n).padStart(w, "0");
 async function playSentences(st, from, to) {
   if (!synth) { toast("這個瀏覽器不支援語音朗讀"); return; }
   const my = ++tok; synth.cancel(); await wait(70); if (my !== tok) return;
@@ -24962,10 +24987,14 @@ async function playSentences(st, from, to) {
       if (r.top < 80 || r.bottom > window.innerHeight - 80) el.scrollIntoView({ block: "center", behavior: "smooth" });
     }
     const sp = ui.cast && VMAP[st.id + ":" + i];
-    if (sp) {
-      const parts = st.s[i].split(/(“[^”]*”)/); let q = 0;
-      for (const t of parts) { if (my !== tok) return; if (!t.trim()) continue; if (/^“/.test(t)) await say(t, 0, sp[q++]); else await say(t, 0, "Narrator"); }
-    } else await say(st.s[i], 0, "Narrator");
+    const parts = st.s[i].split(/(“[^”]*”)/).filter(t => t.trim()); let q = 0;
+    for (let k = 0; k < parts.length; k++) {
+      if (my !== tok) return;
+      const t = parts[k], quote = /^“/.test(t), who = quote ? (sp ? sp[q++] : "Narrator") : "Narrator";
+      let ok = false;
+      if (audioOK !== false) { await loadIdx(); if (audioOK) { ok = await clip(st.id, i + "_" + k, my); if (my !== tok) return; } }
+      if (!ok) await say(t, 0, sp || !quote ? who : "Narrator");
+    }
   }
   if (my === tok) { clearNow(); setPlaying(false); }
 }
