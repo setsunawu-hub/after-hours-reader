@@ -24949,13 +24949,13 @@ function setPlaying(on) {
 function clearNow() { document.querySelectorAll(".sent.now").forEach(e => e.classList.remove("now")); }
 function stopSpeech() { tok++; if (curAudio) { try { curAudio.pause(); } catch (e) {} } if (synth) synth.cancel(); clearNow(); setPlaying(false); }
 let audioOK = location.protocol.startsWith("http") ? null : false, curAudio = null, AIDX = null;
-const chA = {};
+const chA = {}; let ABASE = "audio/";
 async function loadIdx() {
   if (AIDX || audioOK === false) return;
-  try { const r = await fetch("audio/idx.json"); if (!r.ok) throw 0; AIDX = await r.json(); audioOK = true; } catch (e) { audioOK = false; }
+  for (const b of ["audio/", ""]) { try { const r = await fetch(b + "idx.json"); if (!r.ok) continue; const j = await r.json(); if (!j || !j["1"]) continue; AIDX = j; ABASE = b; audioOK = true; break; } catch (e) {} } if (!AIDX) audioOK = false;
 }
 function chAudio(ch) {
-  if (!chA[ch]) { const a = new Audio("audio/" + String(ch).padStart(2, "0") + ".mp3"); a.preload = "auto"; chA[ch] = a; }
+  if (!chA[ch]) { const a = new Audio(ABASE + String(ch).padStart(2, "0") + ".mp3"); a.preload = "auto"; chA[ch] = a; }
   return chA[ch];
 }
 function clip(ch, key, my) {
@@ -24974,7 +24974,7 @@ function clip(ch, key, my) {
 }
 const pad = (n, w) => String(n).padStart(w, "0");
 function unlockAudio(ch) {
-  if (audioOK === false) return;
+  if (audioOK !== true) return;
   try { const a = chAudio(ch); a.muted = true; const p = a.play(); if (p && p.then) p.then(() => { a.pause(); a.muted = false; }).catch(() => { a.muted = false; }); } catch (e) {}
 }
 let audioWarned = false;
@@ -25439,6 +25439,7 @@ function spellCheck() {
 document.addEventListener("keydown", e => { if (e.key === "Enter" && e.target && e.target.id === "spellin") { e.preventDefault(); spellCheck(); } });
 window.addEventListener("hashchange", () => render(true));
 document.addEventListener("change", e => { if (e.target && e.target.id === "impfile" && e.target.files && e.target.files[0]) { const fr = new FileReader(); fr.onload = () => importBackup(String(fr.result || "")); fr.readAsText(e.target.files[0]); } });
+loadIdx();
 render(false);
 </script>
 <script>if("serviceWorker" in navigator&&location.protocol.startsWith("http"))navigator.serviceWorker.register("sw.js").catch(function(){});</script>
